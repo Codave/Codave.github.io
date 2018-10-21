@@ -5,9 +5,9 @@
   <subtitle>技术博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://codave.github.io/"/>
   <updated>2018-10-21T06:26:00.082Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://codave.github.io/</id>
   
   <author>
     <name>Codave</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>基于Hexo的NexT主题基础设置及优化</title>
-    <link href="http://yoursite.com/2018/10/20/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%BC%98%E5%8C%96/"/>
-    <id>http://yoursite.com/2018/10/20/基于Hexo的NexT主题基础设置及优化/</id>
+    <link href="https://codave.github.io/2018/10/20/%E5%9F%BA%E4%BA%8EHexo%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%BC%98%E5%8C%96/"/>
+    <id>https://codave.github.io/2018/10/20/基于Hexo的NexT主题基础设置及优化/</id>
     <published>2018-10-20T14:34:52.000Z</published>
     <updated>2018-10-21T06:26:00.082Z</updated>
     
@@ -27,19 +27,19 @@
     
     </summary>
     
-      <category term="NexT" scheme="http://yoursite.com/categories/NexT/"/>
+      <category term="NexT" scheme="https://codave.github.io/categories/NexT/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://codave.github.io/tags/Hexo/"/>
     
-      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+      <category term="NexT" scheme="https://codave.github.io/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/10/19/hello-world/"/>
-    <id>http://yoursite.com/2018/10/19/hello-world/</id>
+    <link href="https://codave.github.io/2018/10/19/hello-world/"/>
+    <id>https://codave.github.io/2018/10/19/hello-world/</id>
     <published>2018-10-19T09:03:25.489Z</published>
     <updated>2018-10-19T09:03:25.489Z</updated>
     
