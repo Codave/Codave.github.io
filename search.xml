@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[如何在NexT中添加网易云音乐播放器]]></title>
-    <url>%2F2018%2F10%2F21%2F%E5%A6%82%E4%BD%95%E5%9C%A8NexT%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%2F</url>
+    <url>%2FCodave.github.io%2F2018%2F10%2F21%2F%E5%A6%82%E4%BD%95%E5%9C%A8NexT%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%2F</url>
     <content type="text"></content>
       <categories>
         <category>NexT</category>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <title><![CDATA[基于Hexo的NexT主题基础设置及优化]]></title>
-    <url>%2F2018%2F10%2F20%2F%E5%9F%BA%E4%BA%8EHexo%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%BC%98%E5%8C%96%2F</url>
+    <url>%2FCodave.github.io%2F2018%2F10%2F20%2F%E5%9F%BA%E4%BA%8EHexo%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%BC%98%E5%8C%96%2F</url>
     <content type="text"></content>
       <categories>
         <category>NexT</category>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F10%2F19%2Fhello-world%2F</url>
+    <url>%2FCodave.github.io%2F2018%2F10%2F19%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
