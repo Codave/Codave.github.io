@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2018-10-21T15:22:56.728Z</updated>
+  <updated>2018-10-22T08:09:25.241Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://codave.github.io/2018/10/22/test/"/>
+    <id>https://codave.github.io/2018/10/22/test/</id>
+    <published>2018-10-22T08:09:25.000Z</published>
+    <updated>2018-10-22T08:09:25.241Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>如何在NexT中添加网易云音乐播放器</title>
