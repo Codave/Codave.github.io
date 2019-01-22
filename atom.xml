@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2019-01-22T12:26:09.629Z</updated>
+  <updated>2019-01-22T14:39:26.482Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在列表，字典，集合中根据条件筛选数据</title>
+    <link href="https://codave.github.io/2019/01/17/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%88%97%E8%A1%A8%EF%BC%8C%E5%AD%97%E5%85%B8%EF%BC%8C%E9%9B%86%E5%90%88%E4%B8%AD%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE/"/>
+    <id>https://codave.github.io/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/</id>
+    <published>2019-01-17T08:09:25.000Z</published>
+    <updated>2019-01-22T14:39:26.482Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><ol><li><p>过滤掉列表[3,9，-1，10,20，-2…]中的负数</p></li><li><p>筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项</p></li><li>筛选集合{77,89,32,20…}中能被3整除的元素</li></ol><p>对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-2</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">9</span>]</span><br><span class="line">res = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</span><br><span class="line">        res.append(x)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h2 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h2><ul><li><p>filter函数</p></li><li><p>列表解析</p><p>一.<strong>filter()</strong> 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p><p>该函数接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">print(data)</span><br><span class="line">res = filter(<span class="keyword">lambda</span> x: x &gt;= <span class="number">0</span>, data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><p>注：<strong>lambda</strong>函数是匿名函数</p><p>二.列表解析</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x for x in data if x &gt;= 0]</span><br></pre></td></tr></table></figure></li></ul><h2 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h2 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;实际案例&quot;&gt;&lt;a href=&quot;#实际案例&quot; class=&quot;headerlink&quot; title=&quot;实际案例&quot;&gt;&lt;/a&gt;实际案例&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;过滤掉列表[3,9，-1，10,20，-2…]中的负数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;筛选字典{‘Li
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://codave.github.io/categories/Python/"/>
+    
+    
+      <category term="filter" scheme="https://codave.github.io/tags/filter/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在NexT中添加网易云音乐播放器</title>
