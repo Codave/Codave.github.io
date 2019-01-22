@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2018%2F10%2F22%2Ftest%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[如何在NexT中添加网易云音乐播放器]]></title>
     <url>%2F2018%2F10%2F21%2F%E5%A6%82%E4%BD%95%E5%9C%A8NexT%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[本篇文章是在已经搭建好gitpage+hexo的博客的前提下]]></content>
       <categories>
         <category>NexT</category>
       </categories>

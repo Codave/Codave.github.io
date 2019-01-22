@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2018-10-22T08:09:25.241Z</updated>
+  <updated>2019-01-22T12:26:09.629Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -17,27 +17,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://codave.github.io/2018/10/22/test/"/>
-    <id>https://codave.github.io/2018/10/22/test/</id>
-    <published>2018-10-22T08:09:25.000Z</published>
-    <updated>2018-10-22T08:09:25.241Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>如何在NexT中添加网易云音乐播放器</title>
     <link href="https://codave.github.io/2018/10/21/%E5%A6%82%E4%BD%95%E5%9C%A8NexT%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     <id>https://codave.github.io/2018/10/21/如何在NexT中添加网易云音乐播放器/</id>
     <published>2018-10-21T15:19:54.449Z</published>
-    <updated>2018-10-21T15:22:56.728Z</updated>
+    <updated>2019-01-22T12:26:09.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>本篇文章是在已经搭建好gitpage+hexo的博客的前提下</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;本篇文章是在已经搭建好gitpage+hexo的博客的前提下&lt;/p&gt;
+
+      
     
     </summary>
     
