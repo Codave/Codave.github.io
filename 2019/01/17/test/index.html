@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="filter,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/archives/2019/index.html">
+<meta name="description" content="实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数  筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项  筛选集合{77,89,32,20…}中能被3整除的元素  对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data:    i">
+<meta name="keywords" content="filter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在列表，字典，集合中根据条件筛选数据">
+<meta property="og:url" content="https://codave.github.io/2019/01/17/test/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数  筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项  筛选集合{77,89,32,20…}中能被3整除的元素  对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data:    i">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-22T14:42:14.111Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="如何在列表，字典，集合中根据条件筛选数据">
+<meta name="twitter:description" content="实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数  筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项  筛选集合{77,89,32,20…}中能被3整除的元素  对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data:    i">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/archives/2019/">
+  <link rel="canonical" href="https://codave.github.io/2019/01/17/test/">
 
 
 
 
 
-  <title>归档 | 未来可期</title>
+  <title>如何在列表，字典，集合中根据条件筛选数据 | 未来可期</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,177 +300,286 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/01/17/test/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">如何在列表，字典，集合中根据条件筛选数据</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-17T16:09:25+08:00">
+                2019-01-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-22T22:42:14+08:00">
+                2019-01-22
+              </time>
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 7 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/17/test/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/17/test/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2019/01/17/test/" class="leancloud_visitors" data-flag-title="如何在列表，字典，集合中根据条件筛选数据">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">如何在Hexo博客中添加网易云音乐播放器</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  355字
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-23T13:49:33+08:00" content="2019-01-23">
-          01-23
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/23/Hexo上传图片在网页无法显示的解决办法/" itemprop="url">
-              
-                <span itemprop="name">Hexo上传图片在网页无法显示的解决办法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-23T13:47:23+08:00" content="2019-01-23">
-          01-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/17/test/" itemprop="url">
-              
-                <span itemprop="name">如何在列表，字典，集合中根据条件筛选数据</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-17T16:09:25+08:00" content="2019-01-17">
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><ol>
+<li><p>过滤掉列表[3,9，-1，10,20，-2…]中的负数</p>
+</li>
+<li><p>筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项</p>
+</li>
+<li>筛选集合{77,89,32,20…}中能被3整除的元素</li>
+</ol>
+<p>对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-2</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">9</span>]</span><br><span class="line">res = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</span><br><span class="line">        res.append(x)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h2><ul>
+<li><p>filter函数</p>
+</li>
+<li><p>列表解析</p>
+<p>一.<strong>filter()</strong> 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p>
+<p>该函数接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">print(data)</span><br><span class="line">res = filter(<span class="keyword">lambda</span> x: x &gt;= <span class="number">0</span>, data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<p>注：<strong>lambda</strong>函数是匿名函数</p>
+<p>二.列表解析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x for x in data if x &gt;= 0]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/" itemprop="url">
-              
-                <span itemprop="name">如何在列表，字典，集合中根据条件筛选数据</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-17T16:09:25+08:00" content="2019-01-17">
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/01/17/test/" title="如何在列表，字典，集合中根据条件筛选数据">https://codave.github.io/2019/01/17/test/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/filter/" rel="tag"><i class="fa fa-tag"></i> filter</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/" rel="next" title="如何在列表，字典，集合中根据条件筛选数据">
+                <i class="fa fa-chevron-left"></i> 如何在列表，字典，集合中根据条件筛选数据
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/23/Hexo上传图片在网页无法显示的解决办法/" rel="prev" title="Hexo上传图片在网页无法显示的解决办法">
+                Hexo上传图片在网页无法显示的解决办法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -476,6 +587,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -496,8 +614,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -594,6 +721,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实际案例"><span class="nav-number">1.</span> <span class="nav-text">实际案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在列表中根据条件筛选数据"><span class="nav-number">2.</span> <span class="nav-text">在列表中根据条件筛选数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在字典中根据条件筛选数据"><span class="nav-number">3.</span> <span class="nav-text">在字典中根据条件筛选数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在集合中根据条件筛选数据"><span class="nav-number">4.</span> <span class="nav-text">在集合中根据条件筛选数据</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -766,6 +909,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
