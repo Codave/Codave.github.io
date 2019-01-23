@@ -13,9 +13,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hexo上传图片在网页无法显示的解决办法]]></title>
-    <url>%2F2019%2F01%2F23%2FHexo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[如何在列表，字典，集合中根据条件筛选数据]]></title>
+    <url>%2F2019%2F01%2F17%2F%E5%A6%82%E4%BD%95%E5%9C%A8%E5%88%97%E8%A1%A8%EF%BC%8C%E5%AD%97%E5%85%B8%EF%BC%8C%E9%9B%86%E5%90%88%E4%B8%AD%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE%2F</url>
+    <content type="text"><![CDATA[实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数 筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项 筛选集合{77,89,32,20…}中能被3整除的元素 对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data: if x &gt;= 0: res.append(x)print(res) 在列表中根据条件筛选数据 filter函数 列表解析 一.filter() 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。 该函数接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。 12345from random import randintdata = [randint(-10, 10) for _ in range(10)]print(data)res = filter(lambda x: x &gt;= 0, data)print(res) 注：lambda函数是匿名函数 二.列表解析 1[x for x in data if x &gt;= 0] 在字典中根据条件筛选数据12345from random import randintd = &#123;x: randint(60, 100) for x in range(1, 21)&#125;print(d)res = &#123;k: v for k, v in d.iteritems() if v &gt; 90&#125;print(res) 在集合中根据条件筛选数据1234data = [randint(-10, 10) for _ in range(10)]s = set(data)res = &#123;x for x in s if x%3 == 0&#125;print(res)]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>filter</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
