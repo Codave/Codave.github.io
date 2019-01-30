@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数  筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项  筛选集合{77,89,32,20…}中能被3整除的元素  对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data:    i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T08:03:14.298Z">
+<meta property="og:updated_time" content="2019-01-30T15:54:23.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在列表，字典，集合中根据条件筛选数据">
 <meta name="twitter:description" content="实际案例 过滤掉列表[3,9，-1，10,20，-2…]中的负数  筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项  筛选集合{77,89,32,20…}中能被3整除的元素  对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下： 123456data = [1,5,-3,-2,6,0,9]res = []for x in data:    i">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-23T16:03:14+08:00">
-                2019-01-23
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-30T23:54:23+08:00">
+                2019-01-30
               </time>
             
           </span>
@@ -468,7 +468,7 @@
       
 
       
-        <h1 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h1><ol>
+        <h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><ol>
 <li><p>过滤掉列表[3,9，-1，10,20，-2…]中的负数</p>
 </li>
 <li><p>筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项</p>
@@ -477,7 +477,7 @@
 </ol>
 <p>对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-2</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">9</span>]</span><br><span class="line">res = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</span><br><span class="line">        res.append(x)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-<h1 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h1><ul>
+<h2 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h2><ul>
 <li><p>filter函数</p>
 </li>
 <li><p>列表解析</p>
@@ -489,8 +489,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x for x in data if x &gt;= 0]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-<h1 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -641,7 +641,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -652,7 +652,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -663,7 +663,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -731,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实际案例"><span class="nav-number">1.</span> <span class="nav-text">实际案例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在列表中根据条件筛选数据"><span class="nav-number">2.</span> <span class="nav-text">在列表中根据条件筛选数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在字典中根据条件筛选数据"><span class="nav-number">3.</span> <span class="nav-text">在字典中根据条件筛选数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在集合中根据条件筛选数据"><span class="nav-number">4.</span> <span class="nav-text">在集合中根据条件筛选数据</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实际案例"><span class="nav-number">1.</span> <span class="nav-text">实际案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在列表中根据条件筛选数据"><span class="nav-number">2.</span> <span class="nav-text">在列表中根据条件筛选数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在字典中根据条件筛选数据"><span class="nav-number">3.</span> <span class="nav-text">在字典中根据条件筛选数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在集合中根据条件筛选数据"><span class="nav-number">4.</span> <span class="nav-text">在集合中根据条件筛选数据</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +765,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">686</span>
+    <span title="全站字数总计">1.9k</span>
   
 </div>
 

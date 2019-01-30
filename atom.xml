@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2019-01-23T07:51:19.834Z</updated>
+  <updated>2019-01-30T15:31:35.901Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -17,17 +17,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>杂文-关于别人</title>
+    <link href="https://codave.github.io/2019/01/30/%E6%9D%82%E6%96%87-%E5%85%B3%E4%BA%8E%E5%88%AB%E4%BA%BA/"/>
+    <id>https://codave.github.io/2019/01/30/杂文-关于别人/</id>
+    <published>2019-01-30T14:59:37.000Z</published>
+    <updated>2019-01-30T15:31:35.901Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#160; &#160; &#160; &#160;这里是一个别人的故事。<br>&#160; &#160; &#160; &#160;高中的时候，我曾经交往过一个女朋友。有一天我半夜从梦中醒来，突然无比的想她。那时候手机还没有像现在这样普及，我的思念自然无从寄托。在床上瞪了一会儿眼睛以后，我跳起来麻利地穿好衣服，出门去找她了。尽管第二天上早自习我就能够见到她。那时候我以为了方便学习的名义在外面自己租房住，所以也不会遇到宿管大爷这种阻碍，可以来一场说走就走。出了门才发现外面下着大雪，地上已经有着厚厚的积雪，天空中雪花还如筛灰一般落下。但心怀着爱情的炽热，我丝毫没觉得冷。北方下雪的冬夜格外寂静，此时已经是凌晨两点以后，街上没有一个行人，只有我自己踏在积雪上的声音格外清晰。我穿过那条横穿这个小县城的街道，来到我当时女朋友家的楼下。然而我什么都做不了，楼门紧锁，况且即使开着我也没勇气在半夜里去挑战她母亲的忍耐度。于是我在楼下冒着大雪站了一会儿，抽了一支烟，惆怅了一阵子之后，就顺道拐去了网吧……直到很久以后，时过境迁，妹子已经再无联系，而我也不是那能半夜扛住风雪的鸡血少年，我才领悟自己当时的心态。那不过是一种表演罢了，除了把自己感动一下，制造一点自己痴情的假象，一点意义都没有。在感情中，我们往往觉得自己掏心掏肺，所做所为能够感天动地，闻者伤心，见者叹息，为什么偏偏感动不了你？我们总是容易用一种自虐的方式制造出一种痴情的假象来使得自己站在感情的道德制高点上，获得一种畸形的满足感和安全感。其实无论是雪夜去对方家楼下站会儿或者是冒着大雨给她送一杯奶茶什么的，自己回想起来往往觉得如乔峰大战聚贤庄、关羽千里走单骑一样壮怀激烈，而对于对方来说，一杯奶茶就是一杯奶茶，无法承载起你想要在上面寄托的山崩地裂的情怀。少年的时候，总是迫不及待地将自己的满腔爱意表达出来，而结果往往是陷入表演之中而不自知。所以两个人的记忆才会出现偏差，那些你觉得刻骨铭心的过去，对方往往没有同样的感觉，甚至茫然不知。成长的标志就是懂得克制自己。克制自己的情绪，克制自己的表演欲，甚至克制自己的喜欢。少年时候，喜欢一个人恨不能把她变成自己身体的一部分，她刚说冷，我这边心里已经结冰了，她说难过，我立马如丧考妣，比她还难过，唯恐无法将自己的爱意表达出来。而事实上，谁也无法承担起另一个人的价值寄托，只有做一个独立、有价值的人，才能真正学会去爱另一个人。也千万不要尝试改变另一个人，这注定是徒劳的。做自己就好，爱情的真谛在于相互的吸引、志趣相投的同行，而不是追逐和依附。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;这里是一个别人的故事。&lt;br&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;高中的时候，我曾经交往过一个女朋友。有一天我半夜从梦中醒来，突然无比的想她。那时候手机还没有像现在这样普及，我的思念自然无从寄托。在床上
+      
+    
+    </summary>
+    
+      <category term="思考" scheme="https://codave.github.io/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+      <category term="情感" scheme="https://codave.github.io/tags/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NTRU算法的分析</title>
+    <link href="https://codave.github.io/2019/01/23/NTRU%E7%AE%97%E6%B3%95%E7%9A%84%E5%88%86%E6%9E%90/"/>
+    <id>https://codave.github.io/2019/01/23/NTRU算法的分析/</id>
+    <published>2019-01-23T08:16:02.000Z</published>
+    <updated>2019-01-30T15:54:07.110Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="NTRU简述"><a href="#NTRU简述" class="headerlink" title="NTRU简述"></a>NTRU简述</h2><p>&#160; &#160; &#160; &#160;NTRU(Number Theory Research Unit)公开密钥体制是由美国布朗大学三位数学教授(Jeffrey Hoffstein,JillPipher,Joseph H.Silverman)发明的，其安全性是基于数论中在一个非常大的维数格中寻找一个很短向量的数学难题。相对于离散对数或大数分解等公开秘密体制来说，它有许多优势。在安全性方面，NTRU算法具有抵抗量子计算攻击的能力，而RSA和ECC算法是无法抵抗量子计算的。</p><h2 id="NTRU算法的描述"><a href="#NTRU算法的描述" class="headerlink" title="NTRU算法的描述"></a>NTRU算法的描述</h2><h3 id="NTRU算法的数论基础"><a href="#NTRU算法的数论基础" class="headerlink" title="NTRU算法的数论基础"></a>NTRU算法的数论基础</h3><p>&#160; &#160; &#160; &#160;设有整数环Z、整数N$ \geq$2，用R表示多项式截断环时，R可以写成：R=Z[X]/(X^N^-1)，对于任意的正整数q，令R _q_ 代表模q的多项式截断环时，R _q_可以写成：</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;NTRU简述&quot;&gt;&lt;a href=&quot;#NTRU简述&quot; class=&quot;headerlink&quot; title=&quot;NTRU简述&quot;&gt;&lt;/a&gt;NTRU简述&lt;/h2&gt;&lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;NTRU(Number Theory Research
+      
+    
+    </summary>
+    
+      <category term="密码学" scheme="https://codave.github.io/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="NTRU" scheme="https://codave.github.io/tags/NTRU/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何在Hexo博客中添加网易云音乐播放器</title>
     <link href="https://codave.github.io/2019/01/23/%E5%A6%82%E4%BD%95%E5%9C%A8Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     <id>https://codave.github.io/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/</id>
     <published>2019-01-23T05:49:33.000Z</published>
-    <updated>2019-01-23T07:51:19.834Z</updated>
+    <updated>2019-01-30T15:57:57.461Z</updated>
     
-    <content type="html"><![CDATA[<p>​    在已经搭建好Github Page博客的前提下，我们可以在自己的博客中加上音乐播放器，那就非常完美啦！这里我选择网易云音乐。<a id="more"></a></p><p>1.首先，打开网易云音乐网站，登录自己的账号打开自己的歌单（歌单可以在PC端或者APP客户端上自由创建），也可以不登录直接搜索自己最近最喜欢的一首歌，点击后找到生成外链的链接，如下图：</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/1.jpg" alt="图1"></p><p>2.你将会看到如下信息，网易云提供两种方式，一种iframe标签嵌套，另一个是flash插件，两种实现都可以。这里选择第一个。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/2.jpg" alt="图2"></p><p>3.接下来，可以根据自己需求选择尺寸。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/3.jpg" alt="图3"></p><p>4.然后，复制HTML代码，在根目录下的/theme/next/layout/_macro/sidebar.swig文件（侧边栏布局文件）中，选择你要添加播放器的位置，这里我选择添加在第136行处，并修改width=350，height=110。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/4.jpg" alt="图4"></p><p>5.效果如下图:</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/5.jpg" alt="图5"></p>]]></content>
+    <content type="html"><![CDATA[<p>&#160; &#160; &#160; &#160;在已经搭建好Github Page博客的前提下，我们可以在自己的博客中加上音乐播放器，那就非常完美啦！这里我选择网易云音乐。<a id="more"></a></p><h2 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h2><p>&#160; &#160; &#160; &#160;首先，打开网易云音乐网站，登录自己的账号打开自己的歌单（歌单可以在PC端或者APP客户端上自由创建），也可以不登录直接搜索自己最近最喜欢的一首歌，点击后找到生成外链的链接，如下图：</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/1.jpg" alt="图1"></p><h2 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h2><p>&#160; &#160; &#160; &#160;你将会看到如下信息，网易云提供两种方式，一种iframe标签嵌套，另一个是flash插件，两种实现都可以。这里选择第一个。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/2.jpg" alt="图2"></p><h2 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h2><p>&#160; &#160; &#160; &#160;接下来，可以根据自己需求选择尺寸。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/3.jpg" alt="图3"></p><h2 id="步骤四"><a href="#步骤四" class="headerlink" title="步骤四"></a>步骤四</h2><p>&#160; &#160; &#160; &#160;然后，复制HTML代码，在根目录下的/theme/next/layout/_macro/sidebar.swig文件（侧边栏布局文件）中，选择你要添加播放器的位置，这里我选择添加在第136行处，并修改width=350，height=110。</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/4.jpg" alt="图4"></p><h2 id="步骤五"><a href="#步骤五" class="headerlink" title="步骤五"></a>步骤五</h2><p>&#160; &#160; &#160; &#160;大功告成！效果如下图:</p><p><img src="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/5.jpg" alt="图5"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;​    在已经搭建好Github Page博客的前提下，我们可以在自己的博客中加上音乐播放器，那就非常完美啦！这里我选择网易云音乐。&lt;/p&gt;
+      &lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;在已经搭建好Github Page博客的前提下，我们可以在自己的博客中加上音乐播放器，那就非常完美啦！这里我选择网易云音乐。&lt;/p&gt;
     
     </summary>
     
@@ -45,15 +95,15 @@
     <link href="https://codave.github.io/2019/01/17/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%88%97%E8%A1%A8%EF%BC%8C%E5%AD%97%E5%85%B8%EF%BC%8C%E9%9B%86%E5%90%88%E4%B8%AD%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E7%AD%9B%E9%80%89%E6%95%B0%E6%8D%AE/"/>
     <id>https://codave.github.io/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/</id>
     <published>2019-01-17T08:09:25.000Z</published>
-    <updated>2019-01-23T08:03:14.298Z</updated>
+    <updated>2019-01-30T15:54:23.526Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h1><ol><li><p>过滤掉列表[3,9，-1，10,20，-2…]中的负数</p></li><li><p>筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项</p></li><li>筛选集合{77,89,32,20…}中能被3整除的元素</li></ol><p>对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-2</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">9</span>]</span><br><span class="line">res = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</span><br><span class="line">        res.append(x)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h1 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h1><ul><li><p>filter函数</p></li><li><p>列表解析</p><p>一.<strong>filter()</strong> 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p><p>该函数接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">print(data)</span><br><span class="line">res = filter(<span class="keyword">lambda</span> x: x &gt;= <span class="number">0</span>, data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><p>注：<strong>lambda</strong>函数是匿名函数</p><p>二.列表解析</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x for x in data if x &gt;= 0]</span><br></pre></td></tr></table></figure></li></ul><h1 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h1 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><ol><li><p>过滤掉列表[3,9，-1，10,20，-2…]中的负数</p></li><li><p>筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项</p></li><li>筛选集合{77,89,32,20…}中能被3整除的元素</li></ol><p>对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">1</span>,<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-2</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">9</span>]</span><br><span class="line">res = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= <span class="number">0</span>:</span><br><span class="line">        res.append(x)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h2 id="在列表中根据条件筛选数据"><a href="#在列表中根据条件筛选数据" class="headerlink" title="在列表中根据条件筛选数据"></a>在列表中根据条件筛选数据</h2><ul><li><p>filter函数</p></li><li><p>列表解析</p><p>一.<strong>filter()</strong> 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p><p>该函数接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">print(data)</span><br><span class="line">res = filter(<span class="keyword">lambda</span> x: x &gt;= <span class="number">0</span>, data)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><p>注：<strong>lambda</strong>函数是匿名函数</p><p>二.列表解析</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x for x in data if x &gt;= 0]</span><br></pre></td></tr></table></figure></li></ul><h2 id="在字典中根据条件筛选数据"><a href="#在字典中根据条件筛选数据" class="headerlink" title="在字典中根据条件筛选数据"></a>在字典中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line">d = &#123;x: randint(<span class="number">60</span>, <span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">21</span>)&#125;</span><br><span class="line">print(d)</span><br><span class="line">res = &#123;k: v <span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems() <span class="keyword">if</span> v &gt; <span class="number">90</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure><h2 id="在集合中根据条件筛选数据"><a href="#在集合中根据条件筛选数据" class="headerlink" title="在集合中根据条件筛选数据"></a>在集合中根据条件筛选数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [randint(<span class="number">-10</span>, <span class="number">10</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line">s = set(data)</span><br><span class="line">res = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;实际案例&quot;&gt;&lt;a href=&quot;#实际案例&quot; class=&quot;headerlink&quot; title=&quot;实际案例&quot;&gt;&lt;/a&gt;实际案例&lt;/h1&gt;&lt;ol&gt;
+        &lt;h2 id=&quot;实际案例&quot;&gt;&lt;a href=&quot;#实际案例&quot; class=&quot;headerlink&quot; title=&quot;实际案例&quot;&gt;&lt;/a&gt;实际案例&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;过滤掉列表[3,9，-1，10,20，-2…]中的负数&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;筛选字典{‘Li
