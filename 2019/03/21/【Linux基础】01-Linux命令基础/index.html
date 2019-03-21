@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Linux基础,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/index.html">
+<meta name="description" content="01 常用Linux命令的基本使用   序号 命令 对应英文 作用     01 ls list 查看当前文件夹下的内容   02 pwd print work directory 查看当前文件夹路径   03 cd[目录名] change directory 切换文件夹   04 touch[文件名] touch 新建文件   05 mkdir[目录名] make directory 创建目录">
+<meta name="keywords" content="Linux基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Linux基础】01-Linux命令基础">
+<meta property="og:url" content="https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令基础/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="01 常用Linux命令的基本使用   序号 命令 对应英文 作用     01 ls list 查看当前文件夹下的内容   02 pwd print work directory 查看当前文件夹路径   03 cd[目录名] change directory 切换文件夹   04 touch[文件名] touch 新建文件   05 mkdir[目录名] make directory 创建目录">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-21T11:36:30.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="【Linux基础】01-Linux命令基础">
+<meta name="twitter:description" content="01 常用Linux命令的基本使用   序号 命令 对应英文 作用     01 ls list 查看当前文件夹下的内容   02 pwd print work directory 查看当前文件夹路径   03 cd[目录名] change directory 切换文件夹   04 touch[文件名] touch 新建文件   05 mkdir[目录名] make directory 创建目录">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/">
+  <link rel="canonical" href="https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令基础/">
 
 
 
 
 
-  <title>未来可期</title>
+  <title>【Linux基础】01-Linux命令基础 | 未来可期</title>
   
 
 
@@ -162,8 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,9 +299,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -330,9 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/【Linux基础】01-Linux命令基础/" itemprop="url">【Linux基础】01-Linux命令基础</a></h1>
+          <h1 class="post-title" itemprop="name headline">【Linux基础】01-Linux命令基础</h1>
         
 
         <div class="post-meta">
@@ -469,48 +468,94 @@
       
 
       
-        
-          
-          01 常用Linux命令的基本使用
+        <h3 id="01-常用Linux命令的基本使用"><a href="#01-常用Linux命令的基本使用" class="headerlink" title="01 常用Linux命令的基本使用"></a>01 常用Linux命令的基本使用</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>对应英文</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>ls</td>
+<td>list</td>
+<td>查看当前文件夹下的内容</td>
+</tr>
+<tr>
+<td>02</td>
+<td>pwd</td>
+<td>print work directory</td>
+<td>查看当前文件夹路径</td>
+</tr>
+<tr>
+<td>03</td>
+<td>cd[目录名]</td>
+<td>change directory</td>
+<td>切换文件夹</td>
+</tr>
+<tr>
+<td>04</td>
+<td>touch[文件名]</td>
+<td>touch</td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td>05</td>
+<td>mkdir[目录名]</td>
+<td>make directory</td>
+<td>创建目录</td>
+</tr>
+<tr>
+<td>06</td>
+<td>rm[文件名]</td>
+<td>remove</td>
+<td>删除指定的文件名</td>
+</tr>
+<tr>
+<td>07</td>
+<td>clear</td>
+<td>clear</td>
+<td>清屏</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong><em>小技巧</em></strong></p>
+<ul>
+<li><code>ctrl + shift + =</code><strong>放大</strong>终端窗口的字体显示</li>
+<li><code>ctrl + -</code><strong>缩小</strong>终端窗口的字体显示 </li>
+</ul>
+</blockquote>
+<h3 id="02-自动补全"><a href="#02-自动补全" class="headerlink" title="02 自动补全"></a>02 自动补全</h3><p>在敲出<code>文件</code>/<code>目录</code>/<code>命令</code>的前几个字母之后，按下<code>tab</code>键</p>
+<ul>
+<li>如果输入的没有歧义，系统会自动补全</li>
+</ul>
+<h3 id="03-Linux终端命令格式"><a href="#03-Linux终端命令格式" class="headerlink" title="03 Linux终端命令格式"></a>03 Linux终端命令格式</h3><p> <strong>03-1 终端命令格式</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command [-options] [parameter]</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<ul>
+<li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li>
+<li><code>[-options]</code>:选项，可用来对命令进行控制，也可以省略</li>
+<li><code>parameter</code>:传给命令的参数，可以是<strong>零个、一个或者多个</strong></li>
+</ul>
+<p><strong>03-2 查阅命令帮助信息</strong></p>
+<ul>
+<li><strong>–help</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command --help</span><br></pre></td></tr></table></figure>
+<p>说明：显示<code>command</code>命令的帮助信息</p>
+<ul>
+<li><strong>man</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man command</span><br></pre></td></tr></table></figure>
+<p>说明：查阅<code>command</code>命令的使用手册</p>
+<blockquote>
+<p><code>man</code>是manual的缩写，是Linux提供的一个手册，包含了绝大多数的命令、函数的详细使用说明</p>
+</blockquote>
 
-
-序号
-命令
-对应英文
-作用
-
-
-
-
-01
-ls
-list
-查看当前文件夹下的内容
-
-
-02
-pwd
-print work directory
-查看当前文件夹路径
-
-
-03
-cd[目录名]
-change directory
-切换文件夹
-
-
-04
-touch[文件
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/21/【Linux基础】01-Linux命令基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
     
@@ -518,453 +563,69 @@ touch[文件
     
 	<div>
 	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
 	</div>
     
 
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令基础/" title="【Linux基础】01-Linux命令基础">https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令基础/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/01/30/少年时代的爱,不过是表演【选自意林】/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Codave">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未来可期">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/30/少年时代的爱,不过是表演【选自意林】/" itemprop="url">少年时代的爱,不过是表演【选自意林】</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T22:59:37+08:00">
-                2019-01-30
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T18:23:15+08:00">
-                2019-02-21
-              </time>
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/思考/" itemprop="url" rel="index">
-                    <span itemprop="name">思考</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Linux基础/" rel="tag"><i class="fa fa-tag"></i> Linux基础</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/30/少年时代的爱,不过是表演【选自意林】/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/30/少年时代的爱,不过是表演【选自意林】/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/01/30/少年时代的爱,不过是表演【选自意林】/" class="leancloud_visitors" data-flag-title="少年时代的爱,不过是表演【选自意林】">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  922字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3分钟
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          &#160; &#160; &#160; &#160;高中的时候，我曾经交往过一个女朋友。有一天我半夜从梦中醒来，突然无比的想她。那时候手机还没有像现在这样普及，我的思念自然无从寄托。在床上瞪了一会儿眼睛以后，我跳起来麻利地穿好衣服，出门去找她了。尽管第二天上早自习我就能够见到她。那时候我以为了方便
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/30/少年时代的爱,不过是表演【选自意林】/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/30/少年时代的爱,不过是表演【选自意林】/" rel="next" title="少年时代的爱,不过是表演【选自意林】">
+                <i class="fa fa-chevron-left"></i> 少年时代的爱,不过是表演【选自意林】
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-	<div>
-	
-	</div>
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/01/23/NTRU算法的分析/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Codave">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未来可期">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/23/NTRU算法的分析/" itemprop="url">NTRU算法的分析</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T16:16:02+08:00">
-                2019-01-23
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T19:07:19+08:00">
-                2019-02-21
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/密码学/" itemprop="url" rel="index">
-                    <span itemprop="name">密码学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/23/NTRU算法的分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/23/NTRU算法的分析/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/01/23/NTRU算法的分析/" class="leancloud_visitors" data-flag-title="NTRU算法的分析">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  250字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          NTRU简述&#160; &#160; &#160; &#160;NTRU(Number Theory Research Unit)公开密钥体制是由美国布朗大学三位数学教授(Jeffrey Hoffstein,JillPipher,Joseph H.Silverman)发明的，其安全性是基于数论中在
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/23/NTRU算法的分析/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-	<div>
-	
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -974,646 +635,25 @@ touch[文件
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Codave">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未来可期">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/" itemprop="url">如何在Hexo博客中添加网易云音乐播放器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T13:49:33+08:00">
-                2019-01-23
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-30T23:57:57+08:00">
-                2019-01-30
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/" class="leancloud_visitors" data-flag-title="如何在Hexo博客中添加网易云音乐播放器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  296字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&#160; &#160; &#160; &#160;在已经搭建好Github Page博客的前提下，我们可以在自己的博客中加上音乐播放器，那就非常完美啦！这里我选择网易云音乐。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/23/如何在Hexo博客中添加网易云音乐播放器/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-	<div>
-	
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Codave">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未来可期">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/" itemprop="url">如何在列表，字典，集合中根据条件筛选数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-17T16:09:25+08:00">
-                2019-01-17
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-30T23:54:23+08:00">
-                2019-01-30
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/" class="leancloud_visitors" data-flag-title="如何在列表，字典，集合中根据条件筛选数据">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  355字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          实际案例
-过滤掉列表[3,9，-1，10,20，-2…]中的负数
-
-筛选字典{‘LiLei’:79,’Jim’:88,’Lucy’:92…}中值高于90的项
-
-筛选集合{77,89,32,20…}中能被3整除的元素
-
-对于以上问题，通常做法是通过迭代循环解决。比如问题1解决代码如下：
-123456d
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/17/如何在列表，字典，集合中根据条件筛选数据/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
     </div>
-    
-    
-    
-	<div>
-	
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2018/10/19/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Codave">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未来可期">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/19/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-19T17:03:25+08:00">
-                2018-10-19
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-22T12:12:17+08:00">
-                2018-10-22
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/19/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/19/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/10/19/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-				 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  73字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/19/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-	<div>
-	
-	</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
   
 
 
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1634,8 +674,17 @@ touch[文件
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1732,6 +781,22 @@ touch[文件
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#01-常用Linux命令的基本使用"><span class="nav-number">1.</span> <span class="nav-text">01 常用Linux命令的基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#02-自动补全"><span class="nav-number">2.</span> <span class="nav-text">02 自动补全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#03-Linux终端命令格式"><span class="nav-number">3.</span> <span class="nav-text">03 Linux终端命令格式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1904,6 +969,10 @@ touch[文件
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
