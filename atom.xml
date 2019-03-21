@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2019-03-21T11:45:24.552Z</updated>
+  <updated>2019-03-21T12:45:11.628Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【Linux基础】01-Linux命令基础</title>
-    <link href="https://codave.github.io/2019/03/21/%E3%80%90Linux%E5%9F%BA%E7%A1%80%E3%80%9101-Linux%E5%91%BD%E4%BB%A4%E5%9F%BA%E7%A1%80/"/>
-    <id>https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令基础/</id>
-    <published>2019-03-21T09:45:45.000Z</published>
-    <updated>2019-03-21T11:45:24.552Z</updated>
+    <title>【Linux基础】02-目录相关命令</title>
+    <link href="https://codave.github.io/2019/03/21/%E3%80%90Linux%E5%9F%BA%E7%A1%80%E3%80%9102-%E7%9B%AE%E5%BD%95%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
+    <id>https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/</id>
+    <published>2019-03-21T11:54:41.000Z</published>
+    <updated>2019-03-21T12:45:11.628Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="01-常用Linux命令的基本使用"><a href="#01-常用Linux命令的基本使用" class="headerlink" title="01 常用Linux命令的基本使用"></a>01 常用Linux命令的基本使用</h1><table><thead><tr><th>序号</th><th>命令</th><th>对应英文</th><th>作用</th></tr></thead><tbody><tr><td>01</td><td>ls</td><td>list</td><td>查看当前文件夹下的内容</td></tr><tr><td>02</td><td>pwd</td><td>print work directory</td><td>查看当前文件夹路径</td></tr><tr><td>03</td><td>cd[目录名]</td><td>change directory</td><td>切换文件夹</td></tr><tr><td>04</td><td>touch[文件名]</td><td>touch</td><td>新建文件</td></tr><tr><td>05</td><td>mkdir[目录名]</td><td>make directory</td><td>创建目录</td></tr><tr><td>06</td><td>rm[文件名]</td><td>remove</td><td>删除指定的文件名</td></tr><tr><td>07</td><td>clear</td><td>clear</td><td>清屏</td></tr></tbody></table><blockquote><p><strong><em>小技巧</em></strong></p><ul><li><code>ctrl + shift + =</code><strong>放大</strong>终端窗口的字体显示</li><li><code>ctrl + -</code><strong>缩小</strong>终端窗口的字体显示 </li></ul></blockquote><h1 id="02-自动补全"><a href="#02-自动补全" class="headerlink" title="02 自动补全"></a>02 自动补全</h1><p>在敲出<code>文件</code>/<code>目录</code>/<code>命令</code>的前几个字母之后，按下<code>tab</code>键</p><ul><li>如果输入的没有歧义，系统会自动补全</li></ul><h1 id="03-Linux终端命令格式"><a href="#03-Linux终端命令格式" class="headerlink" title="03 Linux终端命令格式"></a>03 Linux终端命令格式</h1><p> <strong>03-1 终端命令格式</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command [-options] [parameter]</span><br></pre></td></tr></table></figure><p><strong>说明：</strong></p><ul><li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li><li><code>[-options]</code>:选项，可用来对命令进行控制，也可以省略</li><li><code>parameter</code>:传给命令的参数，可以是<strong>零个、一个或者多个</strong></li></ul><p><strong>03-2 查阅命令帮助信息</strong></p><ul><li><p><strong>–help</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command --help</span><br></pre></td></tr></table></figure><p>说明：显示<code>command</code>命令的帮助信息</p></li><li><p><strong>man</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man command</span><br></pre></td></tr></table></figure><p>说明：查阅<code>command</code>命令的使用手册</p><blockquote><p><code>man</code>是manual的缩写，是Linux提供的一个手册，包含了绝大多数的命令、函数的详细使用说明</p></blockquote></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="01-ls命令说明"><a href="#01-ls命令说明" class="headerlink" title="01 ls命令说明"></a>01 ls命令说明</h1><blockquote><p><strong>Linux下文件和目录的特点</strong></p><ul><li>Linux文件或目录名称最长可以有256个字符</li><li>以<code>.</code>开头的文件为隐藏文件，需要<code>-a</code>参数才能显示</li><li><code>.</code>代表当前目录</li><li><code>..</code>代表上一级目录</li><li><code>/</code>代表根目录</li><li><code>~</code>代表<strong>当前用户</strong>home目录</li></ul></blockquote><h2 id="01-1-ls常用选项"><a href="#01-1-ls常用选项" class="headerlink" title="01-1 ls常用选项"></a>01-1 ls常用选项</h2><table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody><tr><td>-a</td><td>显示指定目录下所有子目录与文件</td></tr><tr><td>-l</td><td>以列表方式显示文件的详细信息</td></tr><tr><td>-h</td><td>配合 -l 以人性化的方式显示文件大小</td></tr></tbody></table><h2 id="01-2-ls通配符的使用"><a href="#01-2-ls通配符的使用" class="headerlink" title="01-2 ls通配符的使用"></a>01-2 ls通配符的使用</h2><table><thead><tr><th>通配符</th><th>含义</th></tr></thead><tbody><tr><td>*</td><td>代表任意个数字字符</td></tr><tr><td>？</td><td>代表任意一个字符，至少一个</td></tr><tr><td>[]</td><td>表示可以匹配字符组中的任意一个</td></tr><tr><td>[abc]</td><td>匹配a、b、c中的任意一个</td></tr><tr><td>[a-f]</td><td>匹配从a 到 f 范围内的任意一个字符</td></tr></tbody></table><p>说明：这里是正则表达式的知识。</p><h1 id="02-切换目录"><a href="#02-切换目录" class="headerlink" title="02 切换目录"></a>02 切换目录</h1><h2 id="02-1-cd"><a href="#02-1-cd" class="headerlink" title="02-1 cd"></a>02-1 cd</h2><ul><li><code>cd</code>是<strong>change directory</strong>的简写，其作用是更改当前的工作目录。</li></ul><blockquote><p>注意：Linux所有的目录和文件名都是大小写敏感的。</p></blockquote><table><thead><tr><th>命令</th><th>含义</th></tr></thead><tbody><tr><td>cd</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd ~</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd .</td><td>保持在当前目录不变</td></tr><tr><td>cd ..</td><td>切换到上级目录</td></tr><tr><td>cd *</td><td>可以在最近两次工作目录之间来回切换</td></tr></tbody></table><h2 id="02-2-相对路径和绝对路径"><a href="#02-2-相对路径和绝对路径" class="headerlink" title="02-2 相对路径和绝对路径"></a>02-2 相对路径和绝对路径</h2><ul><li><strong>相对路径</strong> 在输入路径时，最前面不是 / 或者 ~，表示相对当前目录所在的目录位置。</li><li><strong>绝对路径</strong> 在输入路径时，最前面是 / 或者 ~，表示从根目录 / 家目录开始的具体位置。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;01-ls命令说明&quot;&gt;&lt;a href=&quot;#01-ls命令说明&quot; class=&quot;headerlink&quot; title=&quot;01 ls命令说明&quot;&gt;&lt;/a&gt;01 ls命令说明&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Linux下文件和目录的特点&lt;/stron
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://codave.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux基础" scheme="https://codave.github.io/tags/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Linux基础】01-Linux命令简介</title>
+    <link href="https://codave.github.io/2019/03/21/%E3%80%90Linux%E5%9F%BA%E7%A1%80%E3%80%9101-Linux%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B/"/>
+    <id>https://codave.github.io/2019/03/21/【Linux基础】01-Linux命令简介/</id>
+    <published>2019-03-21T09:45:45.000Z</published>
+    <updated>2019-03-21T12:08:45.225Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="01-常用Linux命令的基本使用"><a href="#01-常用Linux命令的基本使用" class="headerlink" title="01 常用Linux命令的基本使用"></a>01 常用Linux命令的基本使用</h1><table><thead><tr><th>序号</th><th>命令</th><th>对应英文</th><th>作用</th></tr></thead><tbody><tr><td>01</td><td>ls</td><td>list</td><td>查看当前文件夹下的内容</td></tr><tr><td>02</td><td>pwd</td><td>print work directory</td><td>查看当前文件夹路径</td></tr><tr><td>03</td><td>cd[目录名]</td><td>change directory</td><td>切换文件夹</td></tr><tr><td>04</td><td>touch[文件名]</td><td>touch</td><td>新建文件</td></tr><tr><td>05</td><td>mkdir[目录名]</td><td>make directory</td><td>创建目录</td></tr><tr><td>06</td><td>rm[文件名]</td><td>remove</td><td>删除指定的文件名</td></tr><tr><td>07</td><td>clear</td><td>clear</td><td>清屏</td></tr></tbody></table><blockquote><p><strong><em>小技巧</em></strong></p><ul><li><code>ctrl + shift + =</code><strong>放大</strong>终端窗口的字体显示</li><li><code>ctrl + -</code><strong>缩小</strong>终端窗口的字体显示 </li></ul></blockquote><h1 id="02-自动补全"><a href="#02-自动补全" class="headerlink" title="02 自动补全"></a>02 自动补全</h1><p>在敲出<code>文件</code>/<code>目录</code>/<code>命令</code>的前几个字母之后，按下<code>tab</code>键</p><ul><li>如果输入的没有歧义，系统会自动补全</li></ul><h1 id="03-Linux终端命令格式"><a href="#03-Linux终端命令格式" class="headerlink" title="03 Linux终端命令格式"></a>03 Linux终端命令格式</h1><h2 id="03-1-终端命令格式"><a href="#03-1-终端命令格式" class="headerlink" title="03-1 终端命令格式"></a>03-1 终端命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command [-options] [parameter]</span><br></pre></td></tr></table></figure><p><strong>说明：</strong></p><ul><li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li><li><code>[-options]</code>:选项，可用来对命令进行控制，也可以省略</li><li><code>parameter</code>:传给命令的参数，可以是<strong>零个、一个或者多个</strong></li></ul><h2 id="03-2-查阅命令帮助信息"><a href="#03-2-查阅命令帮助信息" class="headerlink" title="03-2 查阅命令帮助信息"></a>03-2 查阅命令帮助信息</h2><ul><li><p><strong>–help</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command --help</span><br></pre></td></tr></table></figure><p>说明：显示<code>command</code>命令的帮助信息</p></li><li><p><strong>man</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man command</span><br></pre></td></tr></table></figure><p>说明：查阅<code>command</code>命令的使用手册</p><blockquote><p><code>man</code>是manual的缩写，是Linux提供的一个手册，包含了绝大多数的命令、函数的详细使用说明</p></blockquote></li></ul>]]></content>
     
     <summary type="html">
     
