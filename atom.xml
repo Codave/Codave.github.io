@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2019-03-21T12:45:11.628Z</updated>
+  <updated>2019-03-21T12:54:11.207Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -17,13 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【Linux基础】03-文件相关命令</title>
+    <link href="https://codave.github.io/2019/03/21/%E3%80%90Linux%E5%9F%BA%E7%A1%80%E3%80%9103-%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
+    <id>https://codave.github.io/2019/03/21/【Linux基础】03-文件相关命令/</id>
+    <published>2019-03-21T12:53:42.000Z</published>
+    <updated>2019-03-21T12:54:11.207Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://codave.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux基础" scheme="https://codave.github.io/tags/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Linux基础】02-目录相关命令</title>
     <link href="https://codave.github.io/2019/03/21/%E3%80%90Linux%E5%9F%BA%E7%A1%80%E3%80%9102-%E7%9B%AE%E5%BD%95%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
     <id>https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/</id>
     <published>2019-03-21T11:54:41.000Z</published>
-    <updated>2019-03-21T12:45:11.628Z</updated>
+    <updated>2019-03-21T12:52:16.118Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="01-ls命令说明"><a href="#01-ls命令说明" class="headerlink" title="01 ls命令说明"></a>01 ls命令说明</h1><blockquote><p><strong>Linux下文件和目录的特点</strong></p><ul><li>Linux文件或目录名称最长可以有256个字符</li><li>以<code>.</code>开头的文件为隐藏文件，需要<code>-a</code>参数才能显示</li><li><code>.</code>代表当前目录</li><li><code>..</code>代表上一级目录</li><li><code>/</code>代表根目录</li><li><code>~</code>代表<strong>当前用户</strong>home目录</li></ul></blockquote><h2 id="01-1-ls常用选项"><a href="#01-1-ls常用选项" class="headerlink" title="01-1 ls常用选项"></a>01-1 ls常用选项</h2><table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody><tr><td>-a</td><td>显示指定目录下所有子目录与文件</td></tr><tr><td>-l</td><td>以列表方式显示文件的详细信息</td></tr><tr><td>-h</td><td>配合 -l 以人性化的方式显示文件大小</td></tr></tbody></table><h2 id="01-2-ls通配符的使用"><a href="#01-2-ls通配符的使用" class="headerlink" title="01-2 ls通配符的使用"></a>01-2 ls通配符的使用</h2><table><thead><tr><th>通配符</th><th>含义</th></tr></thead><tbody><tr><td>*</td><td>代表任意个数字字符</td></tr><tr><td>？</td><td>代表任意一个字符，至少一个</td></tr><tr><td>[]</td><td>表示可以匹配字符组中的任意一个</td></tr><tr><td>[abc]</td><td>匹配a、b、c中的任意一个</td></tr><tr><td>[a-f]</td><td>匹配从a 到 f 范围内的任意一个字符</td></tr></tbody></table><p>说明：这里是正则表达式的知识。</p><h1 id="02-切换目录"><a href="#02-切换目录" class="headerlink" title="02 切换目录"></a>02 切换目录</h1><h2 id="02-1-cd"><a href="#02-1-cd" class="headerlink" title="02-1 cd"></a>02-1 cd</h2><ul><li><code>cd</code>是<strong>change directory</strong>的简写，其作用是更改当前的工作目录。</li></ul><blockquote><p>注意：Linux所有的目录和文件名都是大小写敏感的。</p></blockquote><table><thead><tr><th>命令</th><th>含义</th></tr></thead><tbody><tr><td>cd</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd ~</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd .</td><td>保持在当前目录不变</td></tr><tr><td>cd ..</td><td>切换到上级目录</td></tr><tr><td>cd *</td><td>可以在最近两次工作目录之间来回切换</td></tr></tbody></table><h2 id="02-2-相对路径和绝对路径"><a href="#02-2-相对路径和绝对路径" class="headerlink" title="02-2 相对路径和绝对路径"></a>02-2 相对路径和绝对路径</h2><ul><li><strong>相对路径</strong> 在输入路径时，最前面不是 / 或者 ~，表示相对当前目录所在的目录位置。</li><li><strong>绝对路径</strong> 在输入路径时，最前面是 / 或者 ~，表示从根目录 / 家目录开始的具体位置。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="01-ls命令说明"><a href="#01-ls命令说明" class="headerlink" title="01 ls命令说明"></a>01 ls命令说明</h1><blockquote><p><strong>Linux下文件和目录的特点</strong></p><ul><li>Linux文件或目录名称最长可以有256个字符</li><li>以<code>.</code>开头的文件为隐藏文件，需要<code>-a</code>参数才能显示</li><li><code>.</code>代表当前目录</li><li><code>..</code>代表上一级目录</li><li><code>/</code>代表根目录</li><li><code>~</code>代表<strong>当前用户</strong>home目录</li></ul></blockquote><h2 id="01-1-ls常用选项"><a href="#01-1-ls常用选项" class="headerlink" title="01-1 ls常用选项"></a>01-1 ls常用选项</h2><table><thead><tr><th>参数</th><th>含义</th></tr></thead><tbody><tr><td>-a</td><td>显示指定目录下所有子目录与文件</td></tr><tr><td>-l</td><td>以列表方式显示文件的详细信息</td></tr><tr><td>-h</td><td>配合 -l 以人性化的方式显示文件大小</td></tr></tbody></table><h2 id="01-2-ls通配符的使用"><a href="#01-2-ls通配符的使用" class="headerlink" title="01-2 ls通配符的使用"></a>01-2 ls通配符的使用</h2><table><thead><tr><th>通配符</th><th>含义</th></tr></thead><tbody><tr><td>*</td><td>代表任意个数字字符</td></tr><tr><td>？</td><td>代表任意一个字符，至少一个</td></tr><tr><td>[]</td><td>表示可以匹配字符组中的任意一个</td></tr><tr><td>[abc]</td><td>匹配a、b、c中的任意一个</td></tr><tr><td>[a-f]</td><td>匹配从a 到 f 范围内的任意一个字符</td></tr></tbody></table><p>说明：这里是正则表达式的知识。</p><h1 id="02-切换目录"><a href="#02-切换目录" class="headerlink" title="02 切换目录"></a>02 切换目录</h1><h2 id="02-1-cd"><a href="#02-1-cd" class="headerlink" title="02-1 cd"></a>02-1 cd</h2><ul><li><code>cd</code>是<strong>change directory</strong>的简写，其作用是更改当前的工作目录。</li></ul><blockquote><p>注意：Linux所有的目录和文件名都是大小写敏感的。</p></blockquote><table><thead><tr><th>命令</th><th>含义</th></tr></thead><tbody><tr><td>cd</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd ~</td><td>切换到当前用户的主目录（/home/用户目录）</td></tr><tr><td>cd .</td><td>保持在当前目录不变</td></tr><tr><td>cd ..</td><td>切换到上级目录</td></tr><tr><td>cd -</td><td>可以在最近两次工作目录之间来回切换</td></tr></tbody></table><h2 id="02-2-相对路径和绝对路径"><a href="#02-2-相对路径和绝对路径" class="headerlink" title="02-2 相对路径和绝对路径"></a>02-2 相对路径和绝对路径</h2><ul><li><strong>相对路径</strong> 在输入路径时，最前面不是 / 或者 ~，表示相对当前目录所在的目录位置。</li><li><strong>绝对路径</strong> 在输入路径时，最前面是 / 或者 ~，表示从根目录 / 家目录开始的具体位置。</li></ul>]]></content>
     
     <summary type="html">
     
