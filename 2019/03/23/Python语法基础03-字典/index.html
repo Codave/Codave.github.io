@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="dict,">
+  <meta name="keywords" content="dict,字典,">
 
 
 
@@ -98,19 +98,19 @@
 
 
 
-<meta name="description" content="03. 字典3.1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键 和 值">
-<meta name="keywords" content="dict">
+<meta name="description" content="目录  [TOC] 1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键">
+<meta name="keywords" content="dict,字典">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python语法基础03-字典">
 <meta property="og:url" content="https://codave.github.io/2019/03/23/Python语法基础03-字典/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="03. 字典3.1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键 和 值">
+<meta property="og:description" content="目录  [TOC] 1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://codave.github.io/2019/03/23/Python语法基础03-字典/002_字典示意图.png">
-<meta property="og:updated_time" content="2019-03-23T04:43:57.145Z">
+<meta property="og:updated_time" content="2019-03-23T08:43:38.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python语法基础03-字典">
-<meta name="twitter:description" content="03. 字典3.1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键 和 值">
+<meta name="twitter:description" content="目录  [TOC] 1 字典的定义 dictionary（字典） 是 除列表以外 Python 之中 最灵活 的数据类型 字典同样可以用来 存储多个数据 通常用于存储 描述一个 物体 的相关信息    和列表的区别 列表 是 有序 的对象集合 字典 是 无序 的对象集合   字典用 {} 定义 字典使用 键值对 存储数据，键值对之间使用 , 分隔 键 key 是索引 值 value 是数据 键">
 <meta name="twitter:image" content="https://codave.github.io/2019/03/23/Python语法基础03-字典/002_字典示意图.png">
 
 
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T12:43:57+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T16:43:38+08:00">
                 2019-03-23
               </time>
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  471字
+                  467字
                 </span>
               
 
@@ -470,7 +470,11 @@
       
 
       
-        <h1 id="03-字典"><a href="#03-字典" class="headerlink" title="03. 字典"></a>03. 字典</h1><h2 id="3-1-字典的定义"><a href="#3-1-字典的定义" class="headerlink" title="3.1 字典的定义"></a>3.1 字典的定义</h2><ul>
+        <blockquote>
+<p>目录</p>
+</blockquote>
+<p>[TOC]</p>
+<h1 id="1-字典的定义"><a href="#1-字典的定义" class="headerlink" title="1 字典的定义"></a>1 字典的定义</h1><ul>
 <li><code>dictionary</code>（字典） 是 <strong>除列表以外</strong> <code>Python</code> 之中 <strong>最灵活</strong> 的数据类型</li>
 <li>字典同样可以用来 <strong>存储多个数据</strong><ul>
 <li>通常用于存储 <strong>描述一个 <code>物体</code> 的相关信息</strong> </li>
@@ -493,7 +497,7 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xiaoming = &#123;<span class="string">"name"</span>: <span class="string">"小明"</span>,</span><br><span class="line">            <span class="string">"age"</span>: <span class="number">18</span>,</span><br><span class="line">            <span class="string">"gender"</span>: <span class="keyword">True</span>,</span><br><span class="line">            <span class="string">"height"</span>: <span class="number">1.75</span>&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/03/23/Python语法基础03-字典/002_字典示意图.png" alt="002_字典示意图"></p>
-<h2 id="3-2-字典常用操作"><a href="#3-2-字典常用操作" class="headerlink" title="3.2 字典常用操作"></a>3.2 字典常用操作</h2><ul>
+<h1 id="2-字典常用操作"><a href="#2-字典常用操作" class="headerlink" title="2 字典常用操作"></a>2 字典常用操作</h1><ul>
 <li>在 <code>ipython3</code> 中定义一个 <strong>字典</strong>，例如：<code>xiaoming = {}</code></li>
 <li>输入 <code>xiaoming.</code> 按下 <code>TAB</code> 键，<code>ipython</code> 会提示 <strong>字典</strong> 能够使用的函数如下：</li>
 </ul>
@@ -501,14 +505,14 @@
 <blockquote>
 <p>有关 <strong>字典</strong> 的 <strong>常用操作</strong> 可以参照上图练习</p>
 </blockquote>
-<h2 id="3-3-循环遍历"><a href="#3-3-循环遍历" class="headerlink" title="3.3 循环遍历"></a>3.3 循环遍历</h2><ul>
+<h1 id="3-循环遍历"><a href="#3-循环遍历" class="headerlink" title="3 循环遍历"></a>3 循环遍历</h1><ul>
 <li><strong>遍历</strong> 就是 <strong>依次</strong> 从 <strong>字典</strong> 中获取所有键值对</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># for 循环内部使用的 `key 的变量` in 字典</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> xiaoming:</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"%s: %s"</span> % (k, xiaoming[k]))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>提示：在实际开发中，由于字典中每一个键值对保存数据的类型是不同的，所以针对字典的循环遍历需求并不是很多</p>
 </blockquote>
-<h2 id="3-4-应用场景"><a href="#3-4-应用场景" class="headerlink" title="3.4 应用场景"></a>3.4 <strong>应用场景</strong></h2><ul>
+<h1 id="4-应用场景"><a href="#4-应用场景" class="headerlink" title="4 应用场景"></a>4 <strong>应用场景</strong></h1><ul>
 <li>尽管可以使用 <code>for in</code> 遍历 <strong>字典</strong></li>
 <li>但是在开发中，更多的应用场景是：<ul>
 <li>使用 <strong>多个键值对</strong>，存储 <strong>描述一个 <code>物体</code> 的相关信息</strong> —— 描述更复杂的数据信息</li>
@@ -560,6 +564,8 @@
         <div class="post-tags">
           
             <a href="/tags/dict/" rel="tag"><i class="fa fa-tag"></i> dict</a>
+          
+            <a href="/tags/字典/" rel="tag"><i class="fa fa-tag"></i> 字典</a>
           
         </div>
       
@@ -677,7 +683,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -688,7 +694,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -756,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#03-字典"><span class="nav-number">1.</span> <span class="nav-text">03. 字典</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-字典的定义"><span class="nav-number">1.1.</span> <span class="nav-text">3.1 字典的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-字典常用操作"><span class="nav-number">1.2.</span> <span class="nav-text">3.2 字典常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-循环遍历"><span class="nav-number">1.3.</span> <span class="nav-text">3.3 循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-应用场景"><span class="nav-number">1.4.</span> <span class="nav-text">3.4 应用场景</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字典的定义"><span class="nav-number">1.</span> <span class="nav-text">1 字典的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-字典常用操作"><span class="nav-number">2.</span> <span class="nav-text">2 字典常用操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-循环遍历"><span class="nav-number">3.</span> <span class="nav-text">3 循环遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-应用场景"><span class="nav-number">4.</span> <span class="nav-text">4 应用场景</span></a></li></ol></div>
             
 
           </div>
@@ -790,7 +796,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">7.6k</span>
+    <span title="全站字数总计">9.4k</span>
   
 </div>
 

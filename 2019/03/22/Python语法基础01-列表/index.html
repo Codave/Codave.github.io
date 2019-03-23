@@ -98,20 +98,20 @@
 
 
 
-<meta name="description" content="知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有 非数字型变量 都支持以下特点">
+<meta name="description" content="目录  [TOC] 1. 知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有">
 <meta name="keywords" content="list">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python语法基础01-列表">
 <meta property="og:url" content="https://codave.github.io/2019/03/22/Python语法基础01-列表/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有 非数字型变量 都支持以下特点">
+<meta property="og:description" content="目录  [TOC] 1. 知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://codave.github.io/2019/03/22/Python语法基础01-列表/001_列表示意图.png">
 <meta property="og:image" content="https://codave.github.io/2019/03/22/Python语法基础01-列表/002_forin循环流程图.png">
-<meta property="og:updated_time" content="2019-03-23T04:13:18.356Z">
+<meta property="og:updated_time" content="2019-03-23T08:48:56.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python语法基础01-列表">
-<meta name="twitter:description" content="知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有 非数字型变量 都支持以下特点">
+<meta name="twitter:description" content="目录  [TOC] 1. 知识点提要 Python 中数据类型可以分为 数字型 和 非数字型 数字型 整型 (int) 浮点型（float） 布尔型（bool）  真 True 非 0 数 —— 非零即真 假 False 0   复数型 (complex) 主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题     非数字型  字符串 列表 元组 字典   在 Python 中，所有">
 <meta name="twitter:image" content="https://codave.github.io/2019/03/22/Python语法基础01-列表/001_列表示意图.png">
 
 
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T12:13:18+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T16:48:56+08:00">
                 2019-03-23
               </time>
             
@@ -471,7 +471,11 @@
       
 
       
-        <h1 id="知识点提要"><a href="#知识点提要" class="headerlink" title="知识点提要"></a>知识点提要</h1><ul>
+        <blockquote>
+<p>目录</p>
+</blockquote>
+<p>[TOC]</p>
+<h1 id="1-知识点提要"><a href="#1-知识点提要" class="headerlink" title="1. 知识点提要"></a>1. 知识点提要</h1><ul>
 <li>Python 中数据类型可以分为 <strong>数字型</strong> 和 <strong>非数字型</strong></li>
 <li>数字型<ul>
 <li>整型 (<code>int</code>)</li>
@@ -506,7 +510,7 @@
 </ol>
 </li>
 </ul>
-<h1 id="01-列表"><a href="#01-列表" class="headerlink" title="01. 列表"></a>01. 列表</h1><h2 id="1-1-列表的定义"><a href="#1-1-列表的定义" class="headerlink" title="1.1 列表的定义"></a>1.1 列表的定义</h2><ul>
+<h1 id="2-列表"><a href="#2-列表" class="headerlink" title="2. 列表"></a>2. 列表</h1><h2 id="2-1-列表的定义"><a href="#2-1-列表的定义" class="headerlink" title="2.1 列表的定义"></a>2.1 列表的定义</h2><ul>
 <li><code>List</code>（列表） 是 <code>Python</code> 中使用 <strong>最频繁</strong> 的数据类型，在其他语言中通常叫做 <strong>数组</strong></li>
 <li>专门用于存储 <strong>一串 信息</strong></li>
 <li>列表用 <code>[]</code> 定义，<strong>数据</strong> 之间使用 <code>,</code> 分隔</li>
@@ -520,7 +524,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name_list = [<span class="string">"zhangsan"</span>, <span class="string">"lisi"</span>, <span class="string">"wangwu"</span>]</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/03/22/Python语法基础01-列表/001_列表示意图.png" alt="001_列表示意图"></p>
-<h2 id="1-2-列表常用操作"><a href="#1-2-列表常用操作" class="headerlink" title="1.2 列表常用操作"></a>1.2 列表常用操作</h2><ul>
+<h2 id="2-2-列表常用操作"><a href="#2-2-列表常用操作" class="headerlink" title="2.2 列表常用操作"></a>2.2 列表常用操作</h2><ul>
 <li>在 <code>ipython3</code> 中定义一个 <strong>列表</strong>，例如：<code>name_list = []</code></li>
 <li>输入 <code>name_list.</code> 按下 <code>TAB</code> 键，<code>ipython</code> 会提示 <strong>列表</strong> 能够使用的 <strong>方法</strong> 如下：</li>
 </ul>
@@ -621,7 +625,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="del-关键字（科普）"><a href="#del-关键字（科普）" class="headerlink" title="del 关键字（科普）"></a>del 关键字（科普）</h3><ul>
+<h3 id="del-关键字"><a href="#del-关键字" class="headerlink" title="del 关键字"></a>del 关键字</h3><ul>
 <li>使用 <code>del</code> 关键字(<code>delete</code>) 同样可以删除列表中元素</li>
 <li><code>del</code> 关键字本质上是用来 <strong>将一个变量从内存中删除的</strong></li>
 <li>如果使用 <code>del</code> 关键字将变量从内存中删除，后续的代码就不能再使用这个变量了</li>
@@ -630,7 +634,7 @@
 <blockquote>
 <p>在日常开发中，要从列表删除数据，建议 <strong>使用列表提供的方法</strong></p>
 </blockquote>
-<h3 id="关键字、函数和方法（科普）"><a href="#关键字、函数和方法（科普）" class="headerlink" title="关键字、函数和方法（科普）"></a>关键字、函数和方法（科普）</h3><ul>
+<h3 id="关键字、函数和方法"><a href="#关键字、函数和方法" class="headerlink" title="关键字、函数和方法"></a>关键字、函数和方法</h3><ul>
 <li><strong>关键字</strong> 是 Python 内置的、具有特殊意义的标识符</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">1</span>]: <span class="keyword">import</span> keyword</span><br><span class="line">In [<span class="number">2</span>]: print(keyword.kwlist)</span><br><span class="line">In [<span class="number">3</span>]: print(len(keyword.kwlist))</span><br></pre></td></tr></table></figure>
@@ -652,7 +656,7 @@
 <blockquote>
 <p>在变量后面输入 <code>.</code>，然后选择针对这个变量要执行的操作，记忆起来比函数要简单很多</p>
 </blockquote>
-<h2 id="1-3-循环遍历"><a href="#1-3-循环遍历" class="headerlink" title="1.3 循环遍历"></a>1.3 循环遍历</h2><ul>
+<h2 id="2-3-循环遍历"><a href="#2-3-循环遍历" class="headerlink" title="2.3 循环遍历"></a>2.3 循环遍历</h2><ul>
 <li><p><strong>遍历</strong> 就是 <strong>从头到尾</strong> <strong>依次</strong> 从 <strong>列表</strong> 中获取数据</p>
 <ul>
 <li>在 <strong>循环体内部</strong> 针对 <strong>每一个元素</strong>，执行相同的操作</li>
@@ -664,7 +668,7 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># for 循环内部使用的变量 in 列表</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> name_list:</span><br><span class="line"></span><br><span class="line">    <span class="comment">#循环内部针对列表元素进行操作</span></span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/03/22/Python语法基础01-列表/002_forin循环流程图.png" alt="002_forin循环流程图-w420"></p>
-<h2 id="1-4-应用场景"><a href="#1-4-应用场景" class="headerlink" title="1.4 应用场景"></a>1.4 <strong>应用场景</strong></h2><ul>
+<h2 id="2-4-应用场景"><a href="#2-4-应用场景" class="headerlink" title="2.4 应用场景"></a>2.4 <strong>应用场景</strong></h2><ul>
 <li>尽管 <code>Python</code> 的 <strong>列表</strong> 中可以 <strong>存储不同类型的数据</strong></li>
 <li>但是在开发中，更多的应用场景是：<ol>
 <li><strong>列表</strong> 存储相同类型的数据</li>
@@ -833,7 +837,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -844,7 +848,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -912,7 +916,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点提要"><span class="nav-number">1.</span> <span class="nav-text">知识点提要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-列表"><span class="nav-number">2.</span> <span class="nav-text">01. 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-列表的定义"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 列表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-列表常用操作"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 列表常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del-关键字（科普）"><span class="nav-number">2.2.1.</span> <span class="nav-text">del 关键字（科普）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字、函数和方法（科普）"><span class="nav-number">2.2.2.</span> <span class="nav-text">关键字、函数和方法（科普）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-循环遍历"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-应用场景"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 应用场景</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-知识点提要"><span class="nav-number">1.</span> <span class="nav-text">1. 知识点提要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-列表"><span class="nav-number">2.</span> <span class="nav-text">2. 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-列表的定义"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 列表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表常用操作"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 列表常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del-关键字"><span class="nav-number">2.2.1.</span> <span class="nav-text">del 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字、函数和方法"><span class="nav-number">2.2.2.</span> <span class="nav-text">关键字、函数和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-循环遍历"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-应用场景"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 应用场景</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -946,7 +950,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">7.6k</span>
+    <span title="全站字数总计">9.4k</span>
   
 </div>
 
