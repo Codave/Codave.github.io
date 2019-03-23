@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Linux基础,">
+  <meta name="keywords" content="tuple,">
 
 
 
@@ -98,18 +98,20 @@
 
 
 
-<meta name="description" content="01 ls命令说明 Linux下文件和目录的特点  Linux文件或目录名称最长可以有256个字符 以.开头的文件为隐藏文件，需要-a参数才能显示 .代表当前目录 ..代表上一级目录 /代表根目录 ~代表当前用户home目录   1.1 ls常用选项   参数 含义     -a 显示指定目录下所有子目录与文件   -l 以列表方式显示文件的详细信息   -h 配合 -l 以人性化的方式显示文件大">
-<meta name="keywords" content="Linux基础">
+<meta name="description" content="02. 元组2.1 元组的定义 Tuple（元组）与列表类似，不同之处在于元组的 元素不能修改 元组 表示多个元素组成的序列 元组 在 Python 开发中，有特定的应用场景   用于存储 一串 信息，数据 之间使用 , 分隔 元组用 () 定义 元组的 索引 从 0 开始 索引 就是数据在 元组 中的位置编号    1info_tuple = (&quot;zhangsan&quot;, 18, 1.75) 创建空">
+<meta name="keywords" content="tuple">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Linux基础】02-目录相关命令">
-<meta property="og:url" content="https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/index.html">
+<meta property="og:title" content="Python语法基础02-元组">
+<meta property="og:url" content="https://codave.github.io/2019/03/23/Python语法基础02-元组/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="01 ls命令说明 Linux下文件和目录的特点  Linux文件或目录名称最长可以有256个字符 以.开头的文件为隐藏文件，需要-a参数才能显示 .代表当前目录 ..代表上一级目录 /代表根目录 ~代表当前用户home目录   1.1 ls常用选项   参数 含义     -a 显示指定目录下所有子目录与文件   -l 以列表方式显示文件的详细信息   -h 配合 -l 以人性化的方式显示文件大">
+<meta property="og:description" content="02. 元组2.1 元组的定义 Tuple（元组）与列表类似，不同之处在于元组的 元素不能修改 元组 表示多个元素组成的序列 元组 在 Python 开发中，有特定的应用场景   用于存储 一串 信息，数据 之间使用 , 分隔 元组用 () 定义 元组的 索引 从 0 开始 索引 就是数据在 元组 中的位置编号    1info_tuple = (&quot;zhangsan&quot;, 18, 1.75) 创建空">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-21T13:22:53.570Z">
+<meta property="og:image" content="https://codave.github.io/2019/03/23/Python语法基础02-元组/003_元组示意图.png">
+<meta property="og:updated_time" content="2019-03-23T04:33:18.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Linux基础】02-目录相关命令">
-<meta name="twitter:description" content="01 ls命令说明 Linux下文件和目录的特点  Linux文件或目录名称最长可以有256个字符 以.开头的文件为隐藏文件，需要-a参数才能显示 .代表当前目录 ..代表上一级目录 /代表根目录 ~代表当前用户home目录   1.1 ls常用选项   参数 含义     -a 显示指定目录下所有子目录与文件   -l 以列表方式显示文件的详细信息   -h 配合 -l 以人性化的方式显示文件大">
+<meta name="twitter:title" content="Python语法基础02-元组">
+<meta name="twitter:description" content="02. 元组2.1 元组的定义 Tuple（元组）与列表类似，不同之处在于元组的 元素不能修改 元组 表示多个元素组成的序列 元组 在 Python 开发中，有特定的应用场景   用于存储 一串 信息，数据 之间使用 , 分隔 元组用 () 定义 元组的 索引 从 0 开始 索引 就是数据在 元组 中的位置编号    1info_tuple = (&quot;zhangsan&quot;, 18, 1.75) 创建空">
+<meta name="twitter:image" content="https://codave.github.io/2019/03/23/Python语法基础02-元组/003_元组示意图.png">
 
 
 
@@ -139,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/">
+  <link rel="canonical" href="https://codave.github.io/2019/03/23/Python语法基础02-元组/">
 
 
 
 
 
-  <title>【Linux基础】02-目录相关命令 | 未来可期</title>
+  <title>Python语法基础02-元组 | 未来可期</title>
   
 
 
@@ -314,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/03/23/Python语法基础02-元组/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Codave">
@@ -331,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【Linux基础】02-目录相关命令</h1>
+          <h1 class="post-title" itemprop="name headline">Python语法基础02-元组</h1>
         
 
         <div class="post-meta">
@@ -343,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T19:54:41+08:00">
-                2019-03-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T12:20:51+08:00">
+                2019-03-23
               </time>
             
 
@@ -359,8 +361,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-21T21:22:53+08:00">
-                2019-03-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T12:33:18+08:00">
+                2019-03-23
               </time>
             
           </span>
@@ -396,8 +398,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/21/【Linux基础】02-目录相关命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/21/【Linux基础】02-目录相关命令/" itemprop="commentCount"></span>
+                <a href="/2019/03/23/Python语法基础02-元组/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/Python语法基础02-元组/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,7 +407,7 @@
 
           
           
-             <span id="/2019/03/21/【Linux基础】02-目录相关命令/" class="leancloud_visitors" data-flag-title="【Linux基础】02-目录相关命令">
+             <span id="/2019/03/23/Python语法基础02-元组/" class="leancloud_visitors" data-flag-title="Python语法基础02-元组">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -431,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  427字
+                  540字
                 </span>
               
 
@@ -468,111 +470,63 @@
       
 
       
-        <h1 id="01-ls命令说明"><a href="#01-ls命令说明" class="headerlink" title="01 ls命令说明"></a>01 ls命令说明</h1><blockquote>
-<p><strong>Linux下文件和目录的特点</strong></p>
-<ul>
-<li>Linux文件或目录名称最长可以有256个字符</li>
-<li>以<code>.</code>开头的文件为隐藏文件，需要<code>-a</code>参数才能显示</li>
-<li><code>.</code>代表当前目录</li>
-<li><code>..</code>代表上一级目录</li>
-<li><code>/</code>代表根目录</li>
-<li><code>~</code>代表<strong>当前用户</strong>home目录</li>
+        <h1 id="02-元组"><a href="#02-元组" class="headerlink" title="02. 元组"></a>02. 元组</h1><h2 id="2-1-元组的定义"><a href="#2-1-元组的定义" class="headerlink" title="2.1 元组的定义"></a>2.1 元组的定义</h2><ul>
+<li><code>Tuple</code>（元组）与列表类似，不同之处在于元组的 <strong>元素不能修改</strong><ul>
+<li><strong>元组</strong> 表示多个元素组成的序列</li>
+<li><strong>元组</strong> 在 <code>Python</code> 开发中，有特定的应用场景</li>
 </ul>
-</blockquote>
-<h2 id="1-1-ls常用选项"><a href="#1-1-ls常用选项" class="headerlink" title="1.1 ls常用选项"></a>1.1 ls常用选项</h2><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-a</td>
-<td>显示指定目录下所有子目录与文件</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>以列表方式显示文件的详细信息</td>
-</tr>
-<tr>
-<td>-h</td>
-<td>配合 -l 以人性化的方式显示文件大小</td>
-</tr>
-</tbody>
-</table>
-<h2 id="1-2-ls通配符的使用"><a href="#1-2-ls通配符的使用" class="headerlink" title="1.2 ls通配符的使用"></a>1.2 ls通配符的使用</h2><table>
-<thead>
-<tr>
-<th>通配符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*</td>
-<td>代表任意个数字字符</td>
-</tr>
-<tr>
-<td>？</td>
-<td>代表任意一个字符，至少一个</td>
-</tr>
-<tr>
-<td>[]</td>
-<td>表示可以匹配字符组中的任意一个</td>
-</tr>
-<tr>
-<td>[abc]</td>
-<td>匹配a、b、c中的任意一个</td>
-</tr>
-<tr>
-<td>[a-f]</td>
-<td>匹配从a 到 f 范围内的任意一个字符</td>
-</tr>
-</tbody>
-</table>
-<p>说明：这里是正则表达式的知识。</p>
-<h1 id="02-切换目录"><a href="#02-切换目录" class="headerlink" title="02 切换目录"></a>02 切换目录</h1><h2 id="2-1-cd"><a href="#2-1-cd" class="headerlink" title="2.1 cd"></a>2.1 cd</h2><ul>
-<li><code>cd</code>是<strong>change directory</strong>的简写，其作用是更改当前的工作目录。</li>
+</li>
+<li>用于存储 <strong>一串 信息</strong>，<strong>数据</strong> 之间使用 <code>,</code> 分隔</li>
+<li>元组用 <code>()</code> 定义</li>
+<li>元组的 <strong>索引</strong> 从 <code>0</code> 开始<ul>
+<li><strong>索引</strong> 就是数据在 <strong>元组</strong> 中的位置编号</li>
 </ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = (<span class="string">"zhangsan"</span>, <span class="number">18</span>, <span class="number">1.75</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="创建空元组"><a href="#创建空元组" class="headerlink" title="创建空元组"></a>创建空元组</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = ()</span><br></pre></td></tr></table></figure>
+<h4 id="元组中-只包含一个元素-时，需要-在元素后面添加逗号"><a href="#元组中-只包含一个元素-时，需要-在元素后面添加逗号" class="headerlink" title="元组中 只包含一个元素 时，需要 在元素后面添加逗号"></a>元组中 <strong>只包含一个元素</strong> 时，需要 <strong>在元素后面添加逗号</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info_tuple = (<span class="number">50</span>, )</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/23/Python语法基础02-元组/003_元组示意图.png" alt="003_元组示意图-w500"></p>
+<h2 id="2-2-元组常用操作"><a href="#2-2-元组常用操作" class="headerlink" title="2.2 元组常用操作"></a>2.2 元组常用操作</h2><ul>
+<li>在 <code>ipython3</code> 中定义一个 <strong>元组</strong>，例如：<code>info = ()</code></li>
+<li>输入 <code>info.</code> 按下 <code>TAB</code> 键，<code>ipython</code> 会提示 <strong>元组</strong> 能够使用的函数如下：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info.count  info.index</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>注意：Linux所有的目录和文件名都是大小写敏感的。</p>
+<p>有关 <strong>元组</strong> 的 <strong>常用操作</strong> 可以参照上图练习</p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cd</td>
-<td>切换到当前用户的主目录（/home/用户目录）</td>
-</tr>
-<tr>
-<td>cd ~</td>
-<td>切换到当前用户的主目录（/home/用户目录）</td>
-</tr>
-<tr>
-<td>cd .</td>
-<td>保持在当前目录不变</td>
-</tr>
-<tr>
-<td>cd ..</td>
-<td>切换到上级目录</td>
-</tr>
-<tr>
-<td>cd -</td>
-<td>可以在最近两次工作目录之间来回切换</td>
-</tr>
-</tbody>
-</table>
-<h2 id="2-2-相对路径和绝对路径"><a href="#2-2-相对路径和绝对路径" class="headerlink" title="2.2 相对路径和绝对路径"></a>2.2 相对路径和绝对路径</h2><ul>
-<li><strong>相对路径</strong> 在输入路径时，最前面不是 / 或者 ~，表示相对当前目录所在的目录位置。</li>
-<li><strong>绝对路径</strong> 在输入路径时，最前面是 / 或者 ~，表示从根目录 / 家目录开始的具体位置。</li>
+<h2 id="2-3-循环遍历"><a href="#2-3-循环遍历" class="headerlink" title="2.3 循环遍历"></a>2.3 循环遍历</h2><ul>
+<li><strong>取值</strong> 就是从 <strong>元组</strong> 中获取存储在指定位置的数据</li>
+<li><strong>遍历</strong> 就是 <strong>从头到尾</strong> <strong>依次</strong> 从 <strong>元组</strong> 中获取数据</li>
 </ul>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># for 循环内部使用的变量 in 元组</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> info:</span><br><span class="line"></span><br><span class="line">    循环内部针对元组元素进行操作</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>在 <code>Python</code> 中，可以使用 <code>for</code> 循环遍历所有非数字型类型的变量：<strong>列表</strong>、<strong>元组</strong>、<strong>字典</strong> 以及 <strong>字符串</strong></li>
+<li>提示：在实际开发中，除非 <strong>能够确认元组中的数据类型</strong>，否则针对元组的循环遍历需求并不是很多</li>
+</ul>
+</blockquote>
+<h2 id="2-4-应用场景"><a href="#2-4-应用场景" class="headerlink" title="2.4 应用场景"></a>2.4 应用场景</h2><ul>
+<li>尽管可以使用 <code>for in</code> 遍历 <strong>元组</strong></li>
+<li>但是在开发中，更多的应用场景是：<ul>
+<li><strong>函数的 参数 和 返回值</strong>，一个函数可以接收 <strong>任意多个参数</strong>，或者 <strong>一次返回多个数据</strong><ul>
+<li>有关 <strong>函数的参数 和 返回值</strong>，在后续 <strong>函数高级</strong> 给大家介绍</li>
+</ul>
+</li>
+<li><strong>格式字符串</strong>，格式化字符串后面的 <code>()</code> 本质上就是一个元组</li>
+<li><strong>让列表不可以被修改</strong>，以保护数据安全</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">info = (<span class="string">"zhangsan"</span>, <span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"%s 的年龄是 %d"</span> % info)</span><br></pre></td></tr></table></figure>
+<h4 id="元组和列表之间的转换"><a href="#元组和列表之间的转换" class="headerlink" title="元组和列表之间的转换"></a>元组和列表之间的转换</h4><ul>
+<li>使用 <code>list</code> 函数可以把元组转换成列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list(元组)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>tuple</code> 函数可以把列表转换成元组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tuple(列表)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -600,7 +554,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/" title="【Linux基础】02-目录相关命令">https://codave.github.io/2019/03/21/【Linux基础】02-目录相关命令/</a>
+    <a href="https://codave.github.io/2019/03/23/Python语法基础02-元组/" title="Python语法基础02-元组">https://codave.github.io/2019/03/23/Python语法基础02-元组/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -615,7 +569,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux基础/" rel="tag"><i class="fa fa-tag"></i> Linux基础</a>
+            <a href="/tags/tuple/" rel="tag"><i class="fa fa-tag"></i> tuple</a>
           
         </div>
       
@@ -628,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/21/【Linux基础】01-Linux命令简介/" rel="next" title="【Linux基础】01-Linux命令简介">
-                <i class="fa fa-chevron-left"></i> 【Linux基础】01-Linux命令简介
+              <a href="/2019/03/22/Python语法基础01-列表/" rel="next" title="Python语法基础01-列表">
+                <i class="fa fa-chevron-left"></i> Python语法基础01-列表
               </a>
             
           </div>
@@ -638,8 +592,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/21/【Linux基础】03-文件相关命令/" rel="prev" title="【Linux基础】03-文件相关命令">
-                【Linux基础】03-文件相关命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/23/Python语法基础03-字典/" rel="prev" title="Python语法基础03-字典">
+                Python语法基础03-字典 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#01-ls命令说明"><span class="nav-number">1.</span> <span class="nav-text">01 ls命令说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-ls常用选项"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 ls常用选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-ls通配符的使用"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ls通配符的使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-切换目录"><span class="nav-number">2.</span> <span class="nav-text">02 切换目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-cd"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 cd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-相对路径和绝对路径"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 相对路径和绝对路径</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#02-元组"><span class="nav-number">1.</span> <span class="nav-text">02. 元组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-元组的定义"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 元组的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建空元组"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">创建空元组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元组中-只包含一个元素-时，需要-在元素后面添加逗号"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">元组中 只包含一个元素 时，需要 在元素后面添加逗号</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-元组常用操作"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 元组常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-循环遍历"><span class="nav-number">1.3.</span> <span class="nav-text">2.3 循环遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-应用场景"><span class="nav-number">1.4.</span> <span class="nav-text">2.4 应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#元组和列表之间的转换"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">元组和列表之间的转换</span></a></li></ol></li></ol></div>
             
 
           </div>
