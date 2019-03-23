@@ -98,20 +98,20 @@
 
 
 
-<meta name="description" content="目录  [TOC] 1 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用">
+<meta name="description" content="1. 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用 &amp;quot; 定义">
 <meta name="keywords" content="str">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python语法基础04-字符串">
 <meta property="og:url" content="https://codave.github.io/2019/03/23/Python语法基础04-字符串/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="目录  [TOC] 1 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用">
+<meta property="og:description" content="1. 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用 &amp;quot; 定义">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://codave.github.io/2019/03/23/Python语法基础04-字符串/005_字符串示意图.png">
 <meta property="og:image" content="https://codave.github.io/2019/03/23/Python语法基础04-字符串/006_字符串索引示意图.png">
-<meta property="og:updated_time" content="2019-03-23T08:38:47.412Z">
+<meta property="og:updated_time" content="2019-03-23T09:18:10.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python语法基础04-字符串">
-<meta name="twitter:description" content="目录  [TOC] 1 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用">
+<meta name="twitter:description" content="1. 字符串的定义 字符串 就是 一串字符，是编程语言中表示文本的数据类型 在 Python 中可以使用 一对双引号 &amp;quot; 或者 一对单引号 &amp;#39; 定义一个字符串 虽然可以使用 \&amp;quot; 或者 \&amp;#39; 做字符串的转义，但是在实际开发中： 如果字符串内部需要使用 &amp;quot;，可以使用 &amp;#39; 定义字符串 如果字符串内部需要使用 &amp;#39;，可以使用 &amp;quot; 定义">
 <meta name="twitter:image" content="https://codave.github.io/2019/03/23/Python语法基础04-字符串/005_字符串示意图.png">
 
 
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T16:38:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T17:18:10+08:00">
                 2019-03-23
               </time>
             
@@ -471,11 +471,7 @@
       
 
       
-        <blockquote>
-<p>目录</p>
-</blockquote>
-<p>[TOC]</p>
-<h1 id="1-字符串的定义"><a href="#1-字符串的定义" class="headerlink" title="1 字符串的定义"></a>1 字符串的定义</h1><ul>
+        <h1 id="1-字符串的定义"><a href="#1-字符串的定义" class="headerlink" title="1. 字符串的定义"></a>1. 字符串的定义</h1><ul>
 <li><strong>字符串</strong> 就是 <strong>一串字符</strong>，是编程语言中表示文本的数据类型</li>
 <li>在 Python 中可以使用 <strong>一对双引号</strong> <code>&quot;</code> 或者 <strong>一对单引号</strong> <code>&#39;</code> 定义一个字符串<ul>
 <li>虽然可以使用 <code>\&quot;</code> 或者 <code>\&#39;</code> 做字符串的转义，但是在实际开发中：<ul>
@@ -493,7 +489,7 @@
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"Hello Python"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> string:</span><br><span class="line">    print(c)</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/03/23/Python语法基础04-字符串/005_字符串示意图.png" alt="005_字符串示意图-w500"></p>
-<h1 id="2-字符串的常用操作"><a href="#2-字符串的常用操作" class="headerlink" title="2 字符串的常用操作"></a>2 字符串的常用操作</h1><ul>
+<h1 id="2-字符串的常用操作"><a href="#2-字符串的常用操作" class="headerlink" title="2. 字符串的常用操作"></a>2. 字符串的常用操作</h1><ul>
 <li>在 <code>ipython3</code> 中定义一个 <strong>字符串</strong>，例如：<code>hello_str = &quot;&quot;</code></li>
 <li>输入 <code>hello_str.</code> 按下 <code>TAB</code> 键，<code>ipython</code> 会提示 <strong>字符串</strong> 能够使用的 <strong>方法</strong> 如下：</li>
 </ul>
@@ -689,7 +685,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="3-字符串的切片"><a href="#3-字符串的切片" class="headerlink" title="3 字符串的切片"></a>3 字符串的切片</h1><ul>
+<h1 id="3-字符串的切片"><a href="#3-字符串的切片" class="headerlink" title="3. 字符串的切片"></a>3. 字符串的切片</h1><ul>
 <li><strong>切片</strong> 方法适用于 <strong>字符串</strong>、<strong>列表</strong>、<strong>元组</strong><ul>
 <li><strong>切片</strong> 使用 <strong>索引值</strong> 来限定范围，从一个大的 <strong>字符串</strong> 中 <strong>切出</strong> 小的 <strong>字符串</strong></li>
 <li><strong>列表</strong> 和 <strong>元组</strong> 都是 <strong>有序</strong> 的集合，都能够 <strong>通过索引值</strong> 获取到对应的数据</li>
@@ -992,7 +988,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字符串的定义"><span class="nav-number">1.</span> <span class="nav-text">1 字符串的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-字符串的常用操作"><span class="nav-number">2.</span> <span class="nav-text">2 字符串的常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-判断类型-9"><span class="nav-number">2.1.</span> <span class="nav-text">1) 判断类型 - 9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-查找和替换-7"><span class="nav-number">2.2.</span> <span class="nav-text">2) 查找和替换 - 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-大小写转换-5"><span class="nav-number">2.3.</span> <span class="nav-text">3) 大小写转换 - 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-文本对齐-3"><span class="nav-number">2.4.</span> <span class="nav-text">4) 文本对齐 - 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-去除空白字符-3"><span class="nav-number">2.5.</span> <span class="nav-text">5) 去除空白字符 - 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-拆分和连接-5"><span class="nav-number">2.6.</span> <span class="nav-text">6) 拆分和连接 - 5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-字符串的切片"><span class="nav-number">3.</span> <span class="nav-text">3 字符串的切片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-演练需求"><span class="nav-number">4.</span> <span class="nav-text">4. 演练需求</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字符串的定义"><span class="nav-number">1.</span> <span class="nav-text">1. 字符串的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-字符串的常用操作"><span class="nav-number">2.</span> <span class="nav-text">2. 字符串的常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-判断类型-9"><span class="nav-number">2.1.</span> <span class="nav-text">1) 判断类型 - 9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-查找和替换-7"><span class="nav-number">2.2.</span> <span class="nav-text">2) 查找和替换 - 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-大小写转换-5"><span class="nav-number">2.3.</span> <span class="nav-text">3) 大小写转换 - 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-文本对齐-3"><span class="nav-number">2.4.</span> <span class="nav-text">4) 文本对齐 - 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-去除空白字符-3"><span class="nav-number">2.5.</span> <span class="nav-text">5) 去除空白字符 - 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-拆分和连接-5"><span class="nav-number">2.6.</span> <span class="nav-text">6) 拆分和连接 - 5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-字符串的切片"><span class="nav-number">3.</span> <span class="nav-text">3. 字符串的切片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-演练需求"><span class="nav-number">4.</span> <span class="nav-text">4. 演练需求</span></a></li></ol></div>
             
 
           </div>
