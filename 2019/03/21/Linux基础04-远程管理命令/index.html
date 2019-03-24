@@ -512,7 +512,7 @@
 </blockquote>
 <ul>
 <li><p>常用命令示例：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>重新启动操作系统，其中 now 表示现在</span><br><span class="line"><span class="meta">$</span> shutdown -r now</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>立刻关机，其中 now 表示现在</span><br><span class="line"><span class="meta">$</span> shutdown now</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>系统在今天的 13:14 会关机</span><br><span class="line"><span class="meta">$</span> shutdown 13:14</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>系统再过十分钟后自动关机</span><br><span class="line"><span class="meta">$</span> shutdown +10</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>取消之前指定的关机计划</span><br><span class="line"><span class="meta">$</span> shutdown -c</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">重新启动操作系统，其中 now 表示现在</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> shutdown -r now</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">立刻关机，其中 now 表示现在</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> shutdown now</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">系统在今天的 13:14 会关机</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> shutdown 13:14</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">系统再过十分钟后自动关机</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> shutdown +10</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">取消之前指定的关机计划</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> shutdown -c</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="2-查看或配置网卡信息"><a href="#2-查看或配置网卡信息" class="headerlink" title="2. 查看或配置网卡信息"></a>2. 查看或配置网卡信息</h1><table>
@@ -541,7 +541,7 @@
 </table>
 <h2 id="2-1-ifconfig"><a href="#2-1-ifconfig" class="headerlink" title="2.1 ifconfig"></a>2.1 ifconfig</h2><ul>
 <li><p><code>ifconfig</code>可以查看/配置计算机当前的网卡配置信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看网卡配置信息</span><br><span class="line"><span class="meta">$</span> ifconfig</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看网卡对应的IP地址</span><br><span class="line"><span class="meta">$</span> ifconfig | grep inet</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看网卡配置信息</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看网卡对应的IP地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ifconfig | grep inet</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>提示：一台计算机中有可能会有一个物理地址和多个虚拟网卡，在Linux中物理网卡的名字通常以<code>ensXX</code>表示</p>
 </blockquote>
@@ -549,7 +549,7 @@
 <li><p><code>127.0.0.1</code>被称为本地回环/环回地址，一般用来测试本机网卡是否正常</p>
 </li>
 </ul>
-<h2 id="2-2-ping"><a href="#2-2-ping" class="headerlink" title="2.2 ping"></a>2.2 ping</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>检测到目标主机是否连接正常</span><br><span class="line"><span class="meta">$</span> ping IP地址</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>检测本地网卡工作正常</span><br><span class="line"><span class="meta">$</span> ping 127.0.0.1</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-ping"><a href="#2-2-ping" class="headerlink" title="2.2 ping"></a>2.2 ping</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">检测到目标主机是否连接正常</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ping IP地址</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">检测本地网卡工作正常</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ping 127.0.0.1</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><code>ping</code> 一般用于检测当前计算机到目标计算机之间的网络 <strong>是否通畅</strong>，<strong>数值越大，速度越慢</strong></p>
 <blockquote>
@@ -784,8 +784,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/21/Linux基础03-文件相关命令/" rel="next" title="Linux基础03-文件相关命令">
-                <i class="fa fa-chevron-left"></i> Linux基础03-文件相关命令
+              <a href="/2019/03/21/【Linux基础】04-远程管理命令/" rel="next" title="【Linux基础】04-远程管理命令">
+                <i class="fa fa-chevron-left"></i> 【Linux基础】04-远程管理命令
               </a>
             
           </div>
@@ -878,7 +878,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1002,7 +1002,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">13.3k</span>
+    <span title="全站字数总计">15.1k</span>
   
 </div>
 
