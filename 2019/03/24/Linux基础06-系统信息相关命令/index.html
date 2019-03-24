@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Linux基础,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/categories/Linux/index.html">
+<meta name="description" content="1. 时间和日期   序号 命令 作用     01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历    2. 磁盘信息   序号 命令 作用     01 df -h disk free 显示磁盘剩余空间   02 du -h [目录名] disk usage 显示目录下的文件大小     选项说明     参数 含义     -h 以人性化">
+<meta name="keywords" content="Linux基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基础06-系统信息相关命令">
+<meta property="og:url" content="https://codave.github.io/2019/03/24/Linux基础06-系统信息相关命令/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="1. 时间和日期   序号 命令 作用     01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历    2. 磁盘信息   序号 命令 作用     01 df -h disk free 显示磁盘剩余空间   02 du -h [目录名] disk usage 显示目录下的文件大小     选项说明     参数 含义     -h 以人性化">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-24T05:32:16.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="Linux基础06-系统信息相关命令">
+<meta name="twitter:description" content="1. 时间和日期   序号 命令 作用     01 date 查看系统时间   02 cal calendar 查看日历，-y 选项可以查看一年的日历    2. 磁盘信息   序号 命令 作用     01 df -h disk free 显示磁盘剩余空间   02 du -h [目录名] disk usage 显示目录下的文件大小     选项说明     参数 含义     -h 以人性化">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/categories/Linux/">
+  <link rel="canonical" href="https://codave.github.io/2019/03/24/Linux基础06-系统信息相关命令/">
 
 
 
 
 
-  <title>分类: Linux | 未来可期</title>
+  <title>Linux基础06-系统信息相关命令 | 未来可期</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,209 +300,385 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Linux<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/03/24/Linux基础06-系统信息相关命令/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/24/Linux基础07-其他命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础07-其他命令</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Linux基础06-系统信息相关命令</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T13:03:16+08:00" content="2019-03-24">
-          03-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T13:02:08+08:00">
+                2019-03-24
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-24T13:32:16+08:00">
+                2019-03-24
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/24/Linux基础06-系统信息相关命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/24/Linux基础06-系统信息相关命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/24/Linux基础06-系统信息相关命令/" class="leancloud_visitors" data-flag-title="Linux基础06-系统信息相关命令">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  320字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/24/Linux基础06-系统信息相关命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础06-系统信息相关命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T13:02:08+08:00" content="2019-03-24">
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/24/Linux基础05-用户权限相关命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础05-用户权限相关命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T13:00:11+08:00" content="2019-03-24">
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/21/Linux基础04-远程管理命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础04-远程管理命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T21:14:25+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/21/Linux基础03-文件相关命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础03-文件相关命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T20:53:42+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/21/Linux基础02-目录相关命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础02-目录相关命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T19:54:41+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/21/Linux基础01-Linux命令简介/" itemprop="url">
-              
-                <span itemprop="name">Linux基础01-Linux命令简介</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T17:45:45+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="1-时间和日期"><a href="#1-时间和日期" class="headerlink" title="1. 时间和日期"></a>1. 时间和日期</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>date</td>
+<td>查看系统时间</td>
+</tr>
+<tr>
+<td>02</td>
+<td>cal</td>
+<td><code>calendar</code> 查看日历，<code>-y</code> 选项可以查看一年的日历</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2-磁盘信息"><a href="#2-磁盘信息" class="headerlink" title="2. 磁盘信息"></a>2. 磁盘信息</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>df -h</td>
+<td><code>disk free</code> 显示磁盘剩余空间</td>
+</tr>
+<tr>
+<td>02</td>
+<td>du -h [目录名]</td>
+<td><code>disk usage</code> 显示目录下的文件大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>选项说明</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-h</td>
+<td>以人性化的方式显示文件大小</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-进程信息"><a href="#3-进程信息" class="headerlink" title="3. 进程信息"></a>3. 进程信息</h1><ul>
+<li>所谓 <strong>进程</strong>，通俗地说就是 <strong>当前正在执行的一个程序</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>ps aux</td>
+<td><code>process status</code> 查看进程的详细状况</td>
+</tr>
+<tr>
+<td>02</td>
+<td>top</td>
+<td>动态显示运行中的进程并且排序</td>
+</tr>
+<tr>
+<td>03</td>
+<td>kill [-9] 进程代号</td>
+<td>终止指定代号的进程，<code>-9</code> 表示强行终止</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>ps</code> 默认只会显示当前用户通过终端启动的应用程序</p>
+</blockquote>
+<ul>
+<li><code>ps</code> 选项说明功能</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>显示终端上的所有进程，包括其他用户的进程</td>
+</tr>
+<tr>
+<td>u</td>
+<td>显示进程的详细状态</td>
+</tr>
+<tr>
+<td>x</td>
+<td>显示没有控制终端的进程</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>提示：使用 <code>kill</code> 命令时，最好只终止由当前用户开启的进程，而不要终止 <code>root</code> 身份开启的进程，否则可能导致系统崩溃</p>
+<ul>
+<li>要退出 <code>top</code> 可以直接输入 <code>q</code></li>
+</ul>
+</blockquote>
 
       
     </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
 
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/03/24/Linux基础06-系统信息相关命令/" title="Linux基础06-系统信息相关命令">https://codave.github.io/2019/03/24/Linux基础06-系统信息相关命令/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux基础/" rel="tag"><i class="fa fa-tag"></i> Linux基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/24/Linux基础05-用户权限相关命令/" rel="next" title="Linux基础05-用户权限相关命令">
+                <i class="fa fa-chevron-left"></i> Linux基础05-用户权限相关命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/24/Linux基础07-其他命令/" rel="prev" title="Linux基础07-其他命令">
+                Linux基础07-其他命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -508,6 +686,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -528,8 +713,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -626,6 +820,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-时间和日期"><span class="nav-number">1.</span> <span class="nav-text">1. 时间和日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-磁盘信息"><span class="nav-number">2.</span> <span class="nav-text">2. 磁盘信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-进程信息"><span class="nav-number">3.</span> <span class="nav-text">3. 进程信息</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -798,6 +1008,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
