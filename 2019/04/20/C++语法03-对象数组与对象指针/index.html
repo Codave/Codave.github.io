@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="1. 对象数组 所谓对象数组是指每一个数组元素都是对象的数组，也就是说，若一个类有若干个对象，我们把这一系列的对象用一个数组来存放。对象数组的元素是对象，不仅具有数据成员，而且还有函数成员。  定义一个一维数组的格式如下： 类名 数组名[下标表达式] 例如有10个复数，每个复数的属性包括实部与虚部。如果为每一个复数建立一个对象，需要分别取10个对象名。显然用程序处理起来很不方便。这时可以定义一个复">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-20T12:15:22.219Z">
+<meta property="og:updated_time" content="2019-04-20T13:18:03.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法03-对象数组与对象指针">
 <meta name="twitter:description" content="1. 对象数组 所谓对象数组是指每一个数组元素都是对象的数组，也就是说，若一个类有若干个对象，我们把这一系列的对象用一个数组来存放。对象数组的元素是对象，不仅具有数据成员，而且还有函数成员。  定义一个一维数组的格式如下： 类名 数组名[下标表达式] 例如有10个复数，每个复数的属性包括实部与虚部。如果为每一个复数建立一个对象，需要分别取10个对象名。显然用程序处理起来很不方便。这时可以定义一个复">
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-20T20:15:22+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-20T21:18:03+08:00">
                 2019-04-20
               </time>
             
@@ -493,7 +493,8 @@
 <p><strong>（2）用对象指针访问对象数组</strong></p>
 <p>​    对象指针不仅能引用单个对象，也能访问对象数组。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    exe ob[<span class="number">2</span>]; <span class="comment">//定义类exe的对象数组ob[2]</span></span><br><span class="line">    exe *p; <span class="comment">//定义指向类exe的对象指针变量p</span></span><br><span class="line">    ob[<span class="number">0</span>].set_a(<span class="number">10</span>); <span class="comment">//</span></span><br><span class="line">    ob[<span class="number">0</span>].set_b(<span class="number">20</span>);</span><br><span class="line">    p=ob;</span><br><span class="line">    p-&gt;show_a();</span><br><span class="line">    p++;      <span class="comment">//一般而言，当指针加1或减1时，它总是指向其基本类型中相邻的一个元素，对象指针也是如此</span></span><br><span class="line">    p-&gt;show_a();	  </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="3-this指针"><a href="#3-this指针" class="headerlink" title="3. this指针"></a>3. this指针</h1>
+<h1 id="3-this指针"><a href="#3-this指针" class="headerlink" title="3. this指针"></a>3. this指针</h1><p>// TODO</p>
+
       
     </div>
     
@@ -560,6 +561,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/C++语法04-向函数传递对象/" rel="prev" title="C++语法03-向函数传递对象">
+                C++语法03-向函数传递对象 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -641,7 +646,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -663,7 +668,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -765,7 +770,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">18.3k</span>
+    <span title="全站字数总计">19.1k</span>
   
 </div>
 
