@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "550b02dd"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="构造函数,析构函数,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="未来可期" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="1. 对象的初始化和构造函数 类是一种抽象的数据类型，它不占存储空间，不能容纳具体的数据。因此在类声明中不能给数据成员赋初值。与使用变量一样，使用对象时也应该先定义，后使用。在定义对象时，对数据成员赋初值，称为对象的初始化。在定义对象时，如果某一数据成员没有被赋值，则它的值是不可预知的。对象是一个实体，在使用对象时，它的每一个数据成员都应该有确定的值。  如果一个类中的所有成员，都是共有的，则可以">
+<meta name="keywords" content="构造函数,析构函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++语法02-构造函数和析构函数">
+<meta property="og:url" content="https://codave.github.io/2019/04/19/C++语法02-构造函数和析构函数/index.html">
+<meta property="og:site_name" content="未来可期">
+<meta property="og:description" content="1. 对象的初始化和构造函数 类是一种抽象的数据类型，它不占存储空间，不能容纳具体的数据。因此在类声明中不能给数据成员赋初值。与使用变量一样，使用对象时也应该先定义，后使用。在定义对象时，对数据成员赋初值，称为对象的初始化。在定义对象时，如果某一数据成员没有被赋值，则它的值是不可预知的。对象是一个实体，在使用对象时，它的每一个数据成员都应该有确定的值。  如果一个类中的所有成员，都是共有的，则可以">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-20T05:19:06.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++语法02-构造函数和析构函数">
+<meta name="twitter:description" content="1. 对象的初始化和构造函数 类是一种抽象的数据类型，它不占存储空间，不能容纳具体的数据。因此在类声明中不能给数据成员赋初值。与使用变量一样，使用对象时也应该先定义，后使用。在定义对象时，对数据成员赋初值，称为对象的初始化。在定义对象时，如果某一数据成员没有被赋值，则它的值是不可预知的。对象是一个实体，在使用对象时，它的每一个数据成员都应该有确定的值。  如果一个类中的所有成员，都是共有的，则可以">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://codave.github.io/2019/04/19/C++语法02-构造函数和析构函数/">
+
+
+
+
+
+  <title>C++语法02-构造函数和析构函数 | 未来可期</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">未来可期</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">技术博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/04/19/C++语法02-构造函数和析构函数/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C++语法02-构造函数和析构函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-19T20:58:37+08:00">
+                2019-04-19
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-20T13:19:06+08:00">
+                2019-04-20
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/19/C++语法02-构造函数和析构函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/19/C++语法02-构造函数和析构函数/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/19/C++语法02-构造函数和析构函数/" class="leancloud_visitors" data-flag-title="C++语法02-构造函数和析构函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.3k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-对象的初始化和构造函数"><a href="#1-对象的初始化和构造函数" class="headerlink" title="1. 对象的初始化和构造函数"></a>1. 对象的初始化和构造函数</h1><blockquote>
+<p><strong>类是一种抽象的数据类型，它不占存储空间，不能容纳具体的数据。因此在类声明中不能给数据成员赋初值。</strong>与使用变量一样，使用对象时也应该先定义，后使用。在定义对象时，对数据成员赋初值，称为对象的初始化。在定义对象时，如果某一数据成员没有被赋值，则它的值是不可预知的。对象是一个实体，在使用对象时，它的每一个数据成员都应该有确定的值。</p>
+</blockquote>
+<p>如果一个类中的所有成员，都是共有的，则可以在定义对象时对数据成员进行初始化。例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">		<span class="keyword">double</span> real;</span><br><span class="line">    	<span class="keyword">double</span> imag;</span><br><span class="line">&#125;;</span><br><span class="line">Complex c1=&#123;<span class="number">1.1</span>,<span class="number">2.2</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>说明：这种方法类似于结构体变量初始化的方法。但是，如果类中包含私有的或保护的成员时，就不能用这种方法进行初始化。除了调用公有成员函数来给数据成员赋值，C++提供了一个更好的方法，利用构造函数来完成对象的初始化。</p>
+<blockquote>
+<p>构造函数是一种特殊的成员函数，它主要用于为对象分配对象，进行初始化。构造函数的名字必须和类名相同，而不能由用户任意命名。它可以有任意类型的参数，但不能具有返回值类型。它不需要用户来调用，而是在建立对象时自动执行的。</p>
+</blockquote>
+<p><strong>在建立对象的同时，采用构造函数给成员赋初值，通常有以下两种形式。</strong></p>
+<p><strong>形式1：</strong></p>
+<p><strong>类名  对象名[(实参表)]</strong></p>
+<p><strong>形式2：</strong></p>
+<p><strong>类名  *指针变量名=new 类名[(实参表)]</strong></p>
+<p>说明：这时编译系统开辟了一段内存空间，并在此空间中存放了一个Complex类对象，同时调用了该类的构造函数给数据成员赋初值。这个对象没有名字，称为无名对象。但是该对象有地址，这个地址存放在指针变量pa中。访问用new动态建立的对象一般是不用对象的，而是通过指针访问。</p>
+<p><strong>注意：</strong></p>
+<p>（1）当new建立的对象使用结束时，不再需要它时，可以用delete运算符予以释放<code>delete pa</code>。</p>
+<p>（2）与普通成员函数一样，构造函数的函数体可写在类体内（系统将构造函数作为内联函数处理），也可以写在类体外。</p>
+<p>（3）构造函数一般声明为公有函数，它是在定义对象的同时被自动调用的，而且只执行一次。</p>
+<p>（4）如果没有给类定义构造函数，则编译系统自动地生成一个默认构造函数。<strong>（这个默认的构造函数不带任何参数，函数体是空的，它只能为对象开辟数据成员存储空间，而不能给对象中的数据成员赋值）</strong></p>
+<p>（5）构造函数可以不带参数，例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Complex()&#123;   <span class="comment">//不带参数的构造函数</span></span><br><span class="line">    real=<span class="number">0</span>;</span><br><span class="line">    imag=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Complex A;   <span class="comment">//定义类Complex的对象A时调用不要带参数，也不要要带括号！！！</span></span><br></pre></td></tr></table></figure>
+<h1 id="2-用成员初始化列表对数据成员初始化"><a href="#2-用成员初始化列表对数据成员初始化" class="headerlink" title="2. 用成员初始化列表对数据成员初始化"></a>2. 用成员初始化列表对数据成员初始化</h1><blockquote>
+<p>C++还提供另一种初始化数据成员的方法——用成员初始化列表对数据成员初始化。这种方法不在函数体内用赋值语句对数据成员初始化，而是在函数首部实现的。</p>
+</blockquote>
+<p>带有成员初始化列表的构造函数的一般形式如下：</p>
+<p><strong>类名：：构造函数名（[参数表])[:(成员初始化列表)]{</strong></p>
+<p>​        <strong>//构造函数体</strong></p>
+<p><strong>}</strong></p>
+<p>成员初始化列表的一般形式为：</p>
+<p><strong>数据成员名1（初始值1），数据成员名2（初始值2），…..</strong></p>
+<p><strong>注意:</strong></p>
+<p>（1）对于用<code>const</code>修饰的数据成员，或是引用类型的数据成员，是不允许用赋值语句直接赋值的。因此，只能用成员初始化列表对其进行初始化。</p>
+<p>（2）数据成员是按照它们在类中声明的顺序进行初始化的，与它们在成员初始化列表中列出的顺序无关。</p>
+<h1 id="3-构造函数的重载"><a href="#3-构造函数的重载" class="headerlink" title="3. 构造函数的重载"></a>3. 构造函数的重载</h1><blockquote>
+<p>与一般的成员函数一样，C++允许构造函数重载，以适应不同的场合。</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<p>（1）使用无参构造函数创建对象时，应该用语句“Date date1；”，而不能用语句“Date date1()；”。因为语句“Date date1()；”表示声明一个名为date1的普通函数，此函数的返回值为Date类型。</p>
+<p>（2）如果在类中用户没有定义构造函数，系统会自动提供一个函数体为空的默认构造函数。但是，只要类中定义了一个构造函数（不一定是无参构造函数），系统将不再给它提供默认构造函数。</p>
+<h1 id="4-带默认参数的构造函数"><a href="#4-带默认参数的构造函数" class="headerlink" title="4. 带默认参数的构造函数"></a>4. 带默认参数的构造函数</h1><blockquote>
+<p>对于带参数的构造函数，在定义对象时必须给构造函数的形参传递参数的值，否则构造函数将不被执行。但在实际使用中，有些构造函数的参数值在大部分情况是相同的，只有在特殊情况下才需要改变它的参数值。</p>
+</blockquote>
+<p><strong>说明：</strong></p>
+<p>（1）如果构造函数在类的声明外定义，那么默认参数在类内声明构造函数原型时指定，而不能在类外构造函数定义时指定。因为类的声明是放在头文件中的，用户可以看到，而构造函数的定义是类的实现细节，用户往往看不到。因此，在声明时指定默认参数，可以保证用户在建立对象时知道怎么使用默认参数。</p>
+<p>（2）如果构造函数的全部参数都指定了默认值，则在定义对象时可以指定1个或几个实参，也可以不给出实参，这时的构造函数也属于默认构造函数。<strong>因为一个类只能有一个默认构造函数，因此不能同时再声明无参数的默认构造函数。</strong>否则，编译系统将无法识别应该调用哪个构造函数，因此产生了二义性。</p>
+<p>（3）在一个类中定义了全部是默认参数的构造函数后，不能再定义重载构造函数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例如在一个类中有以下构造函数的声明</span><br><span class="line">Complex(<span class="keyword">double</span> r=<span class="number">0.0</span>, <span class="keyword">double</span> i=<span class="number">0.0</span>);</span><br><span class="line">Complex(<span class="keyword">double</span> r);</span><br><span class="line"></span><br><span class="line">如果用以下语句定义对象</span><br><span class="line">Complex S2（<span class="number">1.1</span>）；     <span class="comment">//无法判断应该调用以上哪个构造函数</span></span><br></pre></td></tr></table></figure>
+<p>因此，一般不要同时使用构造函数的重载和有默认参数的构造函数。</p>
+<h1 id="5-析构函数"><a href="#5-析构函数" class="headerlink" title="5. 析构函数"></a>5. 析构函数</h1><blockquote>
+<p>析构函数也是一种特殊的成员函数。它执行与构造函数相反的操作，通常用于执行一些清理任务，如释放分配给对象的内存空间等。析构函数有如下一些特点：</p>
+<p>（1）析构函数名与类名相同，但它前面必须加一个波浪号（~）。</p>
+<p>（2）析构函数不返回任何值。在定义析构函数时，是不能说明它的类型的，甚至说明为void也不行。</p>
+<p>（3）析构函数没有参数，因此它不能被重载。<strong>一个类可以有多个构造函数，但只能有一个析构函数。</strong></p>
+<p>（4）撤销对象时，编译系统会自动地调用析构函数。</p>
+</blockquote>
+<p><strong>说明：</strong></p>
+<p>（1）每个类必须有一个析构函数。若没有显示地为一个类定义析构函数，则编译系统会自动地生成一个默认析构函数。**对于大多数而言，这个默认析构函数就能满足要求。但是，如果在一个对象撤销之前需要完成另外一些处理工作的话，则应该显示地定义析构函数。例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String_data</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        String_data(<span class="keyword">char</span> *s)&#123;</span><br><span class="line">            str=<span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(s)+<span class="number">1</span>];</span><br><span class="line">            <span class="built_in">strcpy</span>(str, s);</span><br><span class="line">        &#125;</span><br><span class="line">        ~String_data()&#123;</span><br><span class="line">            <span class="keyword">delete</span> str;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">get_info</span><span class="params">(<span class="keyword">char</span>*)</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">sent_info</span><span class="params">(<span class="keyword">char</span>*)</span></span>;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">char</span> *str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是构造函数和析构函数最常见的用法，即在构造函数中用运算符new为字符串分配存储空间，最后在析构函数中用运算符delete释放已分配的存储空间。</p>
+<p>（2）除了在主函数结束（或调用exit函数）时，对象被撤销，系统会自动调用析构函数外，在以下情况，析构函数也会被调用：</p>
+<ul>
+<li>如果一个对象被定义在一个函数体内，则当这个函数被调用结束时，该对象将释放，析构函数被自动调用。</li>
+<li>若一个对象时使用new运算符动态创建的，在使用delete运算符释放它时，delete会自动调用析构函数。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/04/19/C++语法02-构造函数和析构函数/" title="C++语法02-构造函数和析构函数">https://codave.github.io/2019/04/19/C++语法02-构造函数和析构函数/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/构造函数/" rel="tag"><i class="fa fa-tag"></i> 构造函数</a>
+          
+            <a href="/tags/析构函数/" rel="tag"><i class="fa fa-tag"></i> 析构函数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/07/C++语法01-类和对象的基本概念/" rel="next" title="C++语法01-类和对象的基本概念">
+                <i class="fa fa-chevron-left"></i> C++语法01-类和对象的基本概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/20/C++语法03-对象数组与对象指针/" rel="prev" title="C++语法03-对象数组与对象指针">
+                C++语法03-对象数组与对象指针 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/header.jpg" alt="Codave">
+            
+              <p class="site-author-name" itemprop="name">Codave</p>
+              <p class="site-description motion-element" itemprop="description">不负过往，不惧未来。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+          </nav>
+		  
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Codave" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/6909281/#/" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/du-chen-guang-94/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-ioxhost"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/3905887432/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="350" height="110" src="//music.163.com/outchain/player?type=0&id=2067973966&auto=1&height=90"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-对象的初始化和构造函数"><span class="nav-number">1.</span> <span class="nav-text">1. 对象的初始化和构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-用成员初始化列表对数据成员初始化"><span class="nav-number">2.</span> <span class="nav-text">2. 用成员初始化列表对数据成员初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-构造函数的重载"><span class="nav-number">3.</span> <span class="nav-text">3. 构造函数的重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-带默认参数的构造函数"><span class="nav-number">4.</span> <span class="nav-text">4. 带默认参数的构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-析构函数"><span class="nav-number">5.</span> <span class="nav-text">5. 析构函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Codave</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">全站字数总计&#58;</span>
+    
+    <span title="全站字数总计">18.3k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'xFCNAK1gVyvdeaylFTz8muV9-gzGzoHsz',
+        appKey: 'OkAJ0pSCCgFyL7xgyO6ejd6L',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("xFCNAK1gVyvdeaylFTz8muV9-gzGzoHsz", "OkAJ0pSCCgFyL7xgyO6ejd6L");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
