@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="类的组合,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/tags/Linux/index.html">
+<meta name="description" content="在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。  使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成">
+<meta name="keywords" content="类的组合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++语法07-类的组合">
+<meta property="og:url" content="https://codave.github.io/2019/04/21/C++语法07-类的组合/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。  使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-21T12:01:10.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="C++语法07-类的组合">
+<meta name="twitter:description" content="在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。  使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/tags/Linux/">
+  <link rel="canonical" href="https://codave.github.io/2019/04/21/C++语法07-类的组合/">
 
 
 
 
 
-  <title>标签: Linux | 未来可期</title>
+  <title>C++语法07-类的组合 | 未来可期</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,52 +300,274 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Linux<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/04/21/C++语法07-类的组合/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/24/Linux基础07-其他命令/" itemprop="url">
-              
-                <span itemprop="name">Linux基础07-其他命令</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">C++语法07-类的组合</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T13:03:16+08:00" content="2019-03-24">
-          03-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-21T18:36:48+08:00">
+                2019-04-21
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-21T20:01:10+08:00">
+                2019-04-21
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/21/C++语法07-类的组合/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/21/C++语法07-类的组合/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/21/C++语法07-类的组合/" class="leancloud_visitors" data-flag-title="C++语法07-类的组合">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  509字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。</p>
+</blockquote>
+<p>使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成员初始化，又要对内嵌的对象成员进行初始化。含有对象成员的类，其构造函数和不含对象成员的构造函数有所不同。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Class X&#123;</span><br><span class="line">    类名<span class="number">1</span>	对象成员<span class="number">1</span>；</span><br><span class="line">    类名<span class="number">2</span>	对象成员<span class="number">2</span>；</span><br><span class="line">        ...</span><br><span class="line">    类名n	对象成员n;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>一般来说，类X的构造函数的定义形式为：</p>
+<p><strong>X::X（形参表0）：对象成员1（形参表1），对象成员2（形参表2），……{</strong></p>
+<p>​    <strong>//类X的构造函数体</strong></p>
+<p><strong>}</strong></p>
+<p>当调用构造函数X::X()时，首先按各内嵌对象成员在类声明中的顺序依次调用它们的构造函数，对这些对象初始化。最后再执行类X的构造函数体，初始化类X中的其他成员。析构函数的调用顺序与构造函数的调用顺序相反。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">例：对象成员的初始化。</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span> x1,<span class="keyword">float</span> y1)&#123;</span><br><span class="line">        x=x1;</span><br><span class="line">        y=y1;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"\n x="</span>&lt;&lt; x &lt;&lt; <span class="string">"y="</span> &lt;&lt;y;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">float</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    B(<span class="keyword">int</span> x1,<span class="keyword">float</span> y1, <span class="keyword">int</span> z1):a(x1,y1)&#123;</span><br><span class="line">        z=z1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        a.show();</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"z="</span>&lt;&lt; z;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="keyword">int</span> z;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">B <span class="title">b</span><span class="params">(<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>)</span></span>;</span><br><span class="line">    b.show();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
 
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/04/21/C++语法07-类的组合/" title="C++语法07-类的组合">https://codave.github.io/2019/04/21/C++语法07-类的组合/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/类的组合/" rel="tag"><i class="fa fa-tag"></i> 类的组合</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/21/C++语法06-静态成员/" rel="next" title="C++语法06-静态成员">
+                <i class="fa fa-chevron-left"></i> C++语法06-静态成员
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/21/C++语法08-常类型/" rel="prev" title="C++语法08-常类型">
+                C++语法08-常类型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +575,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -389,7 +620,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -411,7 +642,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -497,7 +728,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">21.4k</span>
+    <span title="全站字数总计">22.6k</span>
   
 </div>
 
@@ -641,6 +872,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1144,26 +1379,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
