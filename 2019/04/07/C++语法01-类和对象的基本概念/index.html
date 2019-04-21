@@ -106,10 +106,12 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="1. 结构体的扩充 结构体是C语言的一种自定义的数据类型，在结构体中可以含有多种不同类型的数据。C++语言对结构体类型进行了扩充，它不仅可以含有不同类型的数据，而且还可以含有函数。  例如下面声明了一个扩充的结构体Complex: 12345678910111213struct Complex&amp;#123;	//声明了一个名为Complex的结构体    double real;	//复试的实部">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-21T08:39:21.253Z">
+<meta property="og:image" content="https://codave.github.io/2019/04/07/C++语法01-类和对象的基本概念/1.png">
+<meta property="og:updated_time" content="2019-04-21T09:05:03.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法01-类和对象的基本概念">
 <meta name="twitter:description" content="1. 结构体的扩充 结构体是C语言的一种自定义的数据类型，在结构体中可以含有多种不同类型的数据。C++语言对结构体类型进行了扩充，它不仅可以含有不同类型的数据，而且还可以含有函数。  例如下面声明了一个扩充的结构体Complex: 12345678910111213struct Complex&amp;#123;	//声明了一个名为Complex的结构体    double real;	//复试的实部">
+<meta name="twitter:image" content="https://codave.github.io/2019/04/07/C++语法01-类和对象的基本概念/1.png">
 
 
 
@@ -359,7 +361,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-21T16:39:21+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-21T17:05:03+08:00">
                 2019-04-21
               </time>
             
@@ -518,7 +520,9 @@
 <p>（2）<strong>通过指向对象的指针访问对象中的成员</strong></p>
 <p>​    在定义对象时，若我们定义的是指向此对象的指针，则访问此对象的成员时，不能用<code>.</code>操作符，而应该使用<code>-&gt;</code>操作符。例如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> year;</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br><span class="line">Date d,*ptr;</span><br><span class="line">ptr=&amp;d;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;ptr-&gt;year;</span><br></pre></td></tr></table></figure>
-<p>在此，<code>ptr-&gt;year</code>表示<code>ptr</code>当前指向对象中<code>d</code>中的成员<code>year</code>，因为<code>（*ptr)</code>就是对象<code>d</code>，<code>(*ptr).year</code>表示的也就是对象<code>d</code>中的成员<code>year</code>。所以，在此<br>$$<br>\begin{aligned}<br>&amp;d.year   \<br>&amp;(*ptr).year\<br>&amp;ptr-&gt;year<br>\end{aligned}<br>\left}<br>\begin{array}{rcl}<br>\<br>三者是等价的\<br>\<br>\end{array} \right.<br>$$<br>（3）<strong>通过对象的引用访问对象中的成员</strong></p>
+<p>在此，<code>ptr-&gt;year</code>表示<code>ptr</code>当前指向对象中<code>d</code>中的成员<code>year</code>，因为<code>（*ptr)</code>就是对象<code>d</code>，<code>(*ptr).year</code>表示的也就是对象<code>d</code>中的成员<code>year</code>。所以有如下等价关系：</p>
+<p><img src="/2019/04/07/C++语法01-类和对象的基本概念/1.png" alt="图1"></p>
+<p>（3）<strong>通过对象的引用访问对象中的成员</strong></p>
 <p>​    如果为了一个对象定义了一个引用，也就是为这个对象起了一个别名、因此完全可以通过引用来访问对象中的成员，其方法与通过对象名来访问对象中的成员是相同的。例如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> year;</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br><span class="line">Date d1;</span><br><span class="line">Date &amp;d2=d1;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;d1.year;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;d2.year;</span><br></pre></td></tr></table></figure>
 <p>由于d2是d1的引用（即d2和d1占有相同的存储单），因此d2.year和d1.year是相同的。</p>
