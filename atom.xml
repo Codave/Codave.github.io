@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://codave.github.io/"/>
-  <updated>2019-04-21T12:45:16.835Z</updated>
+  <updated>2019-04-24T13:18:10.680Z</updated>
   <id>https://codave.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++语法10-派生类的构造和析构</title>
+    <link href="https://codave.github.io/2019/04/22/C++%E8%AF%AD%E6%B3%9510-%E6%B4%BE%E7%94%9F%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%92%8C%E6%9E%90%E6%9E%84/"/>
+    <id>https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/</id>
+    <published>2019-04-22T04:54:34.000Z</published>
+    <updated>2019-04-24T13:18:10.680Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。<strong>但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。</strong>与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的构造函数所需要的参数进行设置。同样，对撤销派生类对象时的扫尾、清理工作也需要加入新的析构函数来完成。</p></blockquote><h1 id="1-派生类构造函数和析构函数的执行顺序"><a href="#1-派生类构造函数和析构函数的执行顺序" class="headerlink" title="1. 派生类构造函数和析构函数的执行顺序"></a>1. 派生类构造函数和析构函数的执行顺序</h1><p>通常情况下，当创建派生类的对象时，首先执行基类的构造函数，随后再执行派生类的构造函数；当撤销派生类对象时，则先执行派生类的析构函数，随后再执行基类的析构函数。</p><h1 id="2-派生类构造函数和析构函数的构造规则"><a href="#2-派生类构造函数和析构函数的构造规则" class="headerlink" title="2. 派生类构造函数和析构函数的构造规则"></a>2. 派生类构造函数和析构函数的构造规则</h1><h1 id="2-1-简单的派生类的构造函数"><a href="#2-1-简单的派生类的构造函数" class="headerlink" title="2.1 简单的派生类的构造函数"></a>2.1 简单的派生类的构造函数</h1><p>当基类的构造函数没有参数，或没有显示定义构造函数时，派生类可以不向基类传递参数，甚至可以不定义构造函数。<strong>当基类含有带参数的构造函数时，派生类必须定义构造函数，以提供把参数传递给基类构造函数的途径。</strong></p><p>在C++中，派生类构造函数的一般格式为：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">派生类名（总参数表）：基类名（参数表）&#123;</span><br><span class="line">  </span><br><span class="line">    派生类新增数据成员的初始化语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面的程序说明如何传递一个参数给派生类的构造函数和传递一个参数给基类的构造函数。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>&#123;</span><span class="comment">//声明基类Student</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Student(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1)&#123;<span class="comment">//基类构造函数</span></span><br><span class="line">            number=number1;</span><br><span class="line">            name=name1;</span><br><span class="line">            score=score1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"number:"</span>&lt;&lt;number&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"name:"</span>&lt;&lt;name&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"score:"</span>&lt;&lt;score&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">protected</span>:</span><br><span class="line">        <span class="keyword">int</span> number;</span><br><span class="line">        <span class="built_in">string</span> name;</span><br><span class="line">        <span class="keyword">float</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UStudent</span>:</span><span class="keyword">public</span> Student&#123;<span class="comment">//声明公有派生类Ustudent</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1)</span><br><span class="line">        :Student(number1,name1,score1)<span class="comment">//定义派生类构造函数要加上调用的基类的构造函数及其参数</span></span><br><span class="line">        &#123;</span><br><span class="line">            major=major1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print1</span><span class="params">()</span></span>&#123;</span><br><span class="line">            print();</span><br><span class="line">            count&lt;&lt;<span class="string">"major:"</span>&lt;&lt;major&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">private</span>：</span><br><span class="line">        <span class="built_in">string</span> major;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    UStudent stu(22116,"张志"，95，"信息安全")；</span><br><span class="line">    stu.print();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明：</p><p>（1）可以将派生类构造函数定义在类的外部，而在类体内只写该函数的声明。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1);</span><br></pre></td></tr></table></figure><p>而在类的外部定义派生类的构造函数：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">UStudent::UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1)</span><br><span class="line">:Student(number1,name1,score1)<span class="comment">//定义派生类构造函数要加上调用的基类的构造函数及其参数</span></span><br><span class="line">&#123;</span><br><span class="line">major=major1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意：在类中声明派生类构造函数时，不包括基类构造函数名及其参数表(即Student(number1,name1,score1))，只在类外定义构造函数时才将它列出。</p><p>（2）若在类使用默认构造函数或不带参数的构造函数，则在派生类中定义构造函数时可略去”：基类名（参数表）”，此时若派生类不需要构造函数，则可不定义派生类构造函数。</p><p>（3）当基类构造函数不带参数时，派生类不一定需要定义构造函数，然后当基类的构造函数哪怕只带有一个参数，它所有的派生类都必须定义构造函数，甚至所定义的派生类构造函数的函数体可能为空，仅仅起参数的传递作用。</p><h1 id="2-2-派生类的析构函数"><a href="#2-2-派生类的析构函数" class="headerlink" title="2.2 派生类的析构函数"></a>2.2 派生类的析构函数</h1><blockquote><p>在派生类中可以根据需要定义自己的析构函数，用来对派生类中的所增加的成员进行清理工作。基类的清理工作仍然由基类的析构函数负责。由于析构函数是不带参数的，在派生系统中是否要自定义析构函数与它所属基类的析构函数无关。在执行派生类的析构函数时，系统会自动调用基类的析构函数，对基类的对象进行清理工作。</p></blockquote><h1 id="2-3-含有对象成员（子对象）的派生类的构造函数"><a href="#2-3-含有对象成员（子对象）的派生类的构造函数" class="headerlink" title="2.3 含有对象成员（子对象）的派生类的构造函数"></a>2.3 含有对象成员（子对象）的派生类的构造函数</h1><p>当派生类中含有内嵌的对象成员（也称子对象）时，其构造函数的一般形式为：</p><p><strong>派生类名（参数总表）：基类名（参数表0），对象成员名1（参数表1），……，对象成员名n（参数表n）</strong>{</p><p>​    <strong>派生类新增成员的初始化语句；</strong></p><p><strong>}</strong></p><p>在定义派生类对象时，构造函数的执行顺序如下：</p><ul><li>调用基类的构造函数，对基类数据成员初始化；</li><li>调用内嵌对象成员的构造函数，对内嵌对象成员的数据成员初始化；</li><li>执行派生类的构造函数体，对派生类数据成员初始化。</li></ul><p>撤销对象时，析构函数的调用顺序与构造函数的调用顺序正好相反。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Base(<span class="keyword">int</span> i)&#123;</span><br><span class="line">            x=i;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Constrcting base class\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ~Base()&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructing base class\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"x="</span>&lt;&lt;x&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span><span class="keyword">public</span> Base&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    Derived(<span class="keyword">int</span> i):Base(i),d(i)<span class="comment">//缀上要调用的基类构造函数和对象成员构造函数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Constructing derived class\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Derived()&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructing derived class\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    Base d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">Derived <span class="title">obj</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">    obj.show();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>说明：</p><p>（1）在派生类中含有多个内嵌对象成员时，调用内嵌对象成员的构造函数顺序由它们在类中声明的顺序确定。</p><p>（2）如果派生类的基类也是一个派生类，每个派生类只需要负责其直接基类数据成员的初始化。依次上溯。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。&lt;strong&gt;但是基类的构造函数和析构函数不能被继承，在派生类中，如果
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://codave.github.io/categories/C/"/>
+    
+    
+      <category term="构造函数" scheme="https://codave.github.io/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="析构函数" scheme="https://codave.github.io/tags/%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/"/>
+    
+      <category term="派生类" scheme="https://codave.github.io/tags/%E6%B4%BE%E7%94%9F%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++语法09-派生类的概念</title>
+    <link href="https://codave.github.io/2019/04/21/C++%E8%AF%AD%E6%B3%9509-%E6%B4%BE%E7%94%9F%E7%B1%BB%E7%9A%84%E6%A6%82%E5%BF%B5/"/>
+    <id>https://codave.github.io/2019/04/21/C++语法09-派生类的概念/</id>
+    <published>2019-04-21T13:24:59.000Z</published>
+    <updated>2019-04-22T04:50:41.875Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-派生类的声明"><a href="#1-派生类的声明" class="headerlink" title="1. 派生类的声明"></a>1. 派生类的声明</h1><p>声明一个派生类的一般格式为：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class 派生类名：[继承方式]  基类名&#123;</span><br><span class="line">    派生类新增的数据成员和成员函数</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure><p>如果不显示地给出继承方式关键字，系统默认为私有继承（private)。</p><h1 id="2-基类成员在派生类中的访问属性"><a href="#2-基类成员在派生类中的访问属性" class="headerlink" title="2. 基类成员在派生类中的访问属性"></a>2. 基类成员在派生类中的访问属性</h1><p>派生类可以继承基类中除了构造函数与析构函数之外的成员，但是这些成员的访问属性在派生过程中是可以调整的。从基类继承来的成员在派生类中的访问属性是由继承方式控制的。</p><table><thead><tr><th>基类中的成员</th><th>在公有派生类中的访问属性</th><th>在私有派生类中的访问属性</th><th>在保护派生类中的访问属性</th></tr></thead><tbody><tr><td>私有成员</td><td>不可直接访问</td><td>不可直接访问</td><td>不可直接访问</td></tr><tr><td>公有成员</td><td>公有</td><td>私有</td><td>保护</td></tr><tr><td>保护成员</td><td>保护</td><td>私有</td><td>保护</td></tr></tbody></table><p>从上表中可以归纳出以下几点：</p><p>（1）基类中的私有成员</p><p>​    <strong>无论哪种继承方式，基类中的私有成员不允许派生类继承，即在派生类中是不可直接访问的</strong>。</p><p>（2）基类中的公有成员</p><p>​    当类的继承方式为公有继承时，基类中的所有公有成员在派生类中仍以公有成员的身份出现。</p><p>​    当类的继承方式为私有继承时，基类中的所有公有成员在派生类中仍以私有成员的身份出现。</p><p>​    当类的继承方式为保护继承时，基类中的所有公有成员在派生类中仍以保护成员的身份出现。</p><p>（3）基类中的保护成员</p><p>​    当类的继承方式为公有继承时，基类中的所有保护成员在派生类中仍以保护成员的身份出现。</p><p>​    当类的继承方式为私有继承时，基类中的所有保护成员在派生类中仍以私有成员的身份出现。</p><p>​    当类的继承方式为保护继承时，基类中的所有保护成员在派生类中仍以保护成员的身份出现。</p><h1 id="3-派生类对基类成员的访问规则"><a href="#3-派生类对基类成员的访问规则" class="headerlink" title="3. 派生类对基类成员的访问规则"></a>3. 派生类对基类成员的访问规则</h1><p>派生类对基类成员的访问形式主要有以下两种：</p><p>（1）内部访问。由派生类中新增的成员函数对基类继承来的成员的访问</p><p>（2）对象访问。由派生类外部，通过派生类的对象对从基类继承来的成员的访问。</p><h1 id="3-1-私有继承的访问规则"><a href="#3-1-私有继承的访问规则" class="headerlink" title="3.1 私有继承的访问规则"></a>3.1 私有继承的访问规则</h1><table><thead><tr><th>基类中的成员</th><th>私有成员</th><th>公有成员</th><th>保护成员</th></tr></thead><tbody><tr><td>内部访问</td><td>不可访问</td><td>可访问</td><td>可访问</td></tr><tr><td>对象访问</td><td>不可访问</td><td>不可访问</td><td>不可访问</td></tr></tbody></table><p>说明：</p><p>（1）基类中的私有成员在被私有继承时既不能被派生类的对象访问，也不能被派生类的成员函数访问，只能被基类自己的成员函数访问。因此，我们在设计积累时，总要为它的私有数据成员提供公有成员函数，如成员函数showx等，以便使派生类可以间接访问这些数据成员。</p><p>（2）经历了私有继承之后，所有基类的成员都成为了派生类的私有成员或不可直接访问的成员，如果进一步派生的话，基类的全部成员都无法在新的派生类中被访问。</p><h1 id="3-2-公有继承的访问规则"><a href="#3-2-公有继承的访问规则" class="headerlink" title="3.2 公有继承的访问规则"></a>3.2 公有继承的访问规则</h1><table><thead><tr><th>基类中的成员</th><th>私有成员</th><th>公有成员</th><th>保护成员</th></tr></thead><tbody><tr><td>内部访问</td><td>不可访问</td><td>可访问</td><td>可访问</td></tr><tr><td>对象访问</td><td>不可访问</td><td>可访问</td><td>不可访问</td></tr></tbody></table><h1 id="3-3-保护继承的访问规则"><a href="#3-3-保护继承的访问规则" class="headerlink" title="3.3 保护继承的访问规则"></a>3.3 保护继承的访问规则</h1><table><thead><tr><th>基类中的成员</th><th>私有成员</th><th>公有成员</th><th>保护成员</th></tr></thead><tbody><tr><td>内部访问</td><td>不可访问</td><td>可访问</td><td>可访问</td></tr><tr><td>对象访问</td><td>不可访问</td><td>不可访问</td><td>不可访问</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-派生类的声明&quot;&gt;&lt;a href=&quot;#1-派生类的声明&quot; class=&quot;headerlink&quot; title=&quot;1. 派生类的声明&quot;&gt;&lt;/a&gt;1. 派生类的声明&lt;/h1&gt;&lt;p&gt;声明一个派生类的一般格式为：&lt;/p&gt;
+&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://codave.github.io/categories/C/"/>
+    
+    
+      <category term="派生" scheme="https://codave.github.io/tags/%E6%B4%BE%E7%94%9F/"/>
+    
+      <category term="继承" scheme="https://codave.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>C++语法08-常类型</title>
@@ -498,57 +556,6 @@
     
     
       <category term="Linux基础" scheme="https://codave.github.io/tags/Linux%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux基础01-Linux命令简介</title>
-    <link href="https://codave.github.io/2019/03/21/Linux%E5%9F%BA%E7%A1%8001-Linux%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B/"/>
-    <id>https://codave.github.io/2019/03/21/Linux基础01-Linux命令简介/</id>
-    <published>2019-03-21T09:45:45.000Z</published>
-    <updated>2019-03-24T04:54:02.805Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-常用Linux命令的基本使用"><a href="#1-常用Linux命令的基本使用" class="headerlink" title="1. 常用Linux命令的基本使用"></a>1. 常用Linux命令的基本使用</h1><table><thead><tr><th>序号</th><th>命令</th><th>对应英文</th><th>作用</th></tr></thead><tbody><tr><td>01</td><td>ls</td><td>list</td><td>查看当前文件夹下的内容</td></tr><tr><td>02</td><td>pwd</td><td>print work directory</td><td>查看当前文件夹路径</td></tr><tr><td>03</td><td>cd[目录名]</td><td>change directory</td><td>切换文件夹</td></tr><tr><td>04</td><td>touch[文件名]</td><td>touch</td><td>新建文件</td></tr><tr><td>05</td><td>mkdir[目录名]</td><td>make directory</td><td>创建目录</td></tr><tr><td>06</td><td>rm[文件名]</td><td>remove</td><td>删除指定的文件名</td></tr><tr><td>07</td><td>clear</td><td>clear</td><td>清屏</td></tr></tbody></table><blockquote><p><strong><em>小技巧</em></strong></p><ul><li><code>ctrl + shift + =</code><strong>放大</strong>终端窗口的字体显示</li><li><code>ctrl + -</code><strong>缩小</strong>终端窗口的字体显示 </li></ul></blockquote><h1 id="2-自动补全"><a href="#2-自动补全" class="headerlink" title="2. 自动补全"></a>2. 自动补全</h1><h2 id="2-1-自动补全"><a href="#2-1-自动补全" class="headerlink" title="2.1 自动补全"></a>2.1 自动补全</h2><p>在敲出<code>文件</code>/<code>目录</code>/<code>命令</code>的前几个字母之后，按下<code>tab</code>键</p><ul><li>如果输入的没有歧义，系统会自动补全</li><li>如果还有其他<code>文件</code>/<code>目录</code>/<code>命令</code>,再按一下<code>tab</code>键，系统会提示可能存在的命令。</li></ul><h2 id="2-2-曾经使用过的命令"><a href="#2-2-曾经使用过的命令" class="headerlink" title="2.2 曾经使用过的命令"></a>2.2 曾经使用过的命令</h2><ul><li>按<code>上</code>/<code>下</code>光标键可以在曾经使用的命令之间来回切换</li><li>如果想要退出选择，并且不想执行当前选中的命令，可以按<code>ctrl + c</code></li></ul><h1 id="3-Linux终端命令格式"><a href="#3-Linux终端命令格式" class="headerlink" title="3. Linux终端命令格式"></a>3. Linux终端命令格式</h1><h2 id="3-1-终端命令格式"><a href="#3-1-终端命令格式" class="headerlink" title="3.1 终端命令格式"></a>3.1 终端命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command [-options] [parameter]</span><br></pre></td></tr></table></figure><p><strong>说明：</strong></p><ul><li><code>command</code>：命令名，相应功能的英文单词或单词的缩写</li><li><code>[-options]</code>:选项，可用来对命令进行控制，也可以省略</li><li><code>parameter</code>:传给命令的参数，可以是<strong>零个、一个或者多个</strong></li></ul><h2 id="3-2-查阅命令帮助信息"><a href="#3-2-查阅命令帮助信息" class="headerlink" title="3.2 查阅命令帮助信息"></a>3.2 查阅命令帮助信息</h2><ul><li><p><strong>–help</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command --help</span><br></pre></td></tr></table></figure><p>说明：显示<code>command</code>命令的帮助信息</p></li><li><p><strong>man</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man command</span><br></pre></td></tr></table></figure><p>说明：查阅<code>command</code>命令的使用手册</p><blockquote><p><code>man</code>是manual的缩写，是Linux提供的一个手册，包含了绝大多数的命令、函数的详细使用说明</p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-常用Linux命令的基本使用&quot;&gt;&lt;a href=&quot;#1-常用Linux命令的基本使用&quot; class=&quot;headerlink&quot; title=&quot;1. 常用Linux命令的基本使用&quot;&gt;&lt;/a&gt;1. 常用Linux命令的基本使用&lt;/h1&gt;&lt;table&gt;
-&lt;thead&gt;
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://codave.github.io/categories/Linux/"/>
-    
-    
-      <category term="Linux基础" scheme="https://codave.github.io/tags/Linux%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>少年时代的爱,不过是表演【选自意林】</title>
-    <link href="https://codave.github.io/2019/01/30/%E5%B0%91%E5%B9%B4%E6%97%B6%E4%BB%A3%E7%9A%84%E7%88%B1,%E4%B8%8D%E8%BF%87%E6%98%AF%E8%A1%A8%E6%BC%94%E3%80%90%E9%80%89%E8%87%AA%E6%84%8F%E6%9E%97%E3%80%91/"/>
-    <id>https://codave.github.io/2019/01/30/少年时代的爱,不过是表演【选自意林】/</id>
-    <published>2019-01-30T14:59:37.000Z</published>
-    <updated>2019-02-21T10:23:15.590Z</updated>
-    
-    <content type="html"><![CDATA[<p>&#160; &#160; &#160; &#160;高中的时候，我曾经交往过一个女朋友。有一天我半夜从梦中醒来，突然无比的想她。那时候手机还没有像现在这样普及，我的思念自然无从寄托。在床上瞪了一会儿眼睛以后，我跳起来麻利地穿好衣服，出门去找她了。尽管第二天上早自习我就能够见到她。那时候我以为了方便学习的名义在外面自己租房住，所以也不会遇到宿管大爷这种阻碍，可以来一场说走就走。出了门才发现外面下着大雪，地上已经有着厚厚的积雪，天空中雪花还如筛灰一般落下。但心怀着爱情的炽热，我丝毫没觉得冷。北方下雪的冬夜格外寂静，此时已经是凌晨两点以后，街上没有一个行人，只有我自己踏在积雪上的声音格外清晰。我穿过那条横穿这个小县城的街道，来到我当时女朋友家的楼下。然而我什么都做不了，楼门紧锁，况且即使开着我也没勇气在半夜里去挑战她母亲的忍耐度。于是我在楼下冒着大雪站了一会儿，抽了一支烟，惆怅了一阵子之后，就顺道拐去了网吧……直到很久以后，时过境迁，妹子已经再无联系，而我也不是那能半夜扛住风雪的鸡血少年，我才领悟自己当时的心态。那不过是一种表演罢了，除了把自己感动一下，制造一点自己痴情的假象，一点意义都没有。在感情中，我们往往觉得自己掏心掏肺，所做所为能够感天动地，闻者伤心，见者叹息，为什么偏偏感动不了你？我们总是容易用一种自虐的方式制造出一种痴情的假象来使得自己站在感情的道德制高点上，获得一种畸形的满足感和安全感。其实无论是雪夜去对方家楼下站会儿或者是冒着大雨给她送一杯奶茶什么的，自己回想起来往往觉得如乔峰大战聚贤庄、关羽千里走单骑一样壮怀激烈，而对于对方来说，一杯奶茶就是一杯奶茶，无法承载起你想要在上面寄托的山崩地裂的情怀。少年的时候，总是迫不及待地将自己的满腔爱意表达出来，而结果往往是陷入表演之中而不自知。所以两个人的记忆才会出现偏差，那些你觉得刻骨铭心的过去，对方往往没有同样的感觉，甚至茫然不知。成长的标志就是懂得克制自己。克制自己的情绪，克制自己的表演欲，甚至克制自己的喜欢。少年时候，喜欢一个人恨不能把她变成自己身体的一部分，她刚说冷，我这边心里已经结冰了，她说难过，我立马如丧考妣，比她还难过，唯恐无法将自己的爱意表达出来。而事实上，谁也无法承担起另一个人的价值寄托，只有做一个独立、有价值的人，才能真正学会去爱另一个人。也千万不要尝试改变另一个人，这注定是徒劳的。做自己就好，爱情的真谛在于相互的吸引、志趣相投的同行，而不是追逐和依附。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;高中的时候，我曾经交往过一个女朋友。有一天我半夜从梦中醒来，突然无比的想她。那时候手机还没有像现在这样普及，我的思念自然无从寄托。在床上瞪了一会儿眼睛以后，我跳起来麻利地穿好衣服，出门去找她了。尽管第二天上早自习我就能够
-      
-    
-    </summary>
-    
-      <category term="思考" scheme="https://codave.github.io/categories/%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="情感" scheme="https://codave.github.io/tags/%E6%83%85%E6%84%9F/"/>
     
   </entry>
   

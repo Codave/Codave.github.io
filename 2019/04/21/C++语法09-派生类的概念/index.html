@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="派生,继承,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/tags/str/index.html">
+<meta name="description" content="1. 派生类的声明声明一个派生类的一般格式为： 123Class 派生类名：[继承方式]  基类名&amp;#123;    派生类新增的数据成员和成员函数&amp;#125;； 如果不显示地给出继承方式关键字，系统默认为私有继承（private)。 2. 基类成员在派生类中的访问属性派生类可以继承基类中除了构造函数与析构函数之外的成员，但是这些成员的访问属性在派生过程中是可以调整的。从基类继承来的成员在派生类中">
+<meta name="keywords" content="派生,继承">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++语法09-派生类的概念">
+<meta property="og:url" content="https://codave.github.io/2019/04/21/C++语法09-派生类的概念/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="1. 派生类的声明声明一个派生类的一般格式为： 123Class 派生类名：[继承方式]  基类名&amp;#123;    派生类新增的数据成员和成员函数&amp;#125;； 如果不显示地给出继承方式关键字，系统默认为私有继承（private)。 2. 基类成员在派生类中的访问属性派生类可以继承基类中除了构造函数与析构函数之外的成员，但是这些成员的访问属性在派生过程中是可以调整的。从基类继承来的成员在派生类中">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-22T04:50:41.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="C++语法09-派生类的概念">
+<meta name="twitter:description" content="1. 派生类的声明声明一个派生类的一般格式为： 123Class 派生类名：[继承方式]  基类名&amp;#123;    派生类新增的数据成员和成员函数&amp;#125;； 如果不显示地给出继承方式关键字，系统默认为私有继承（private)。 2. 基类成员在派生类中的访问属性派生类可以继承基类中除了构造函数与析构函数之外的成员，但是这些成员的访问属性在派生过程中是可以调整的。从基类继承来的成员在派生类中">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/tags/str/">
+  <link rel="canonical" href="https://codave.github.io/2019/04/21/C++语法09-派生类的概念/">
 
 
 
 
 
-  <title>标签: str | 未来可期</title>
+  <title>C++语法09-派生类的概念 | 未来可期</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,52 +300,388 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>str<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/04/21/C++语法09-派生类的概念/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/23/Python语法基础04-字符串/" itemprop="url">
-              
-                <span itemprop="name">Python语法基础04-字符串</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">C++语法09-派生类的概念</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-23T12:22:58+08:00" content="2019-03-23">
-          03-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-21T21:24:59+08:00">
+                2019-04-21
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-22T12:50:41+08:00">
+                2019-04-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/21/C++语法09-派生类的概念/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/21/C++语法09-派生类的概念/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/21/C++语法09-派生类的概念/" class="leancloud_visitors" data-flag-title="C++语法09-派生类的概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-派生类的声明"><a href="#1-派生类的声明" class="headerlink" title="1. 派生类的声明"></a>1. 派生类的声明</h1><p>声明一个派生类的一般格式为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class 派生类名：[继承方式]  基类名&#123;</span><br><span class="line">    派生类新增的数据成员和成员函数</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
+<p>如果不显示地给出继承方式关键字，系统默认为私有继承（private)。</p>
+<h1 id="2-基类成员在派生类中的访问属性"><a href="#2-基类成员在派生类中的访问属性" class="headerlink" title="2. 基类成员在派生类中的访问属性"></a>2. 基类成员在派生类中的访问属性</h1><p>派生类可以继承基类中除了构造函数与析构函数之外的成员，但是这些成员的访问属性在派生过程中是可以调整的。从基类继承来的成员在派生类中的访问属性是由继承方式控制的。</p>
+<table>
+<thead>
+<tr>
+<th>基类中的成员</th>
+<th>在公有派生类中的访问属性</th>
+<th>在私有派生类中的访问属性</th>
+<th>在保护派生类中的访问属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>私有成员</td>
+<td>不可直接访问</td>
+<td>不可直接访问</td>
+<td>不可直接访问</td>
+</tr>
+<tr>
+<td>公有成员</td>
+<td>公有</td>
+<td>私有</td>
+<td>保护</td>
+</tr>
+<tr>
+<td>保护成员</td>
+<td>保护</td>
+<td>私有</td>
+<td>保护</td>
+</tr>
+</tbody>
+</table>
+<p>从上表中可以归纳出以下几点：</p>
+<p>（1）基类中的私有成员</p>
+<p>​    <strong>无论哪种继承方式，基类中的私有成员不允许派生类继承，即在派生类中是不可直接访问的</strong>。</p>
+<p>（2）基类中的公有成员</p>
+<p>​    当类的继承方式为公有继承时，基类中的所有公有成员在派生类中仍以公有成员的身份出现。</p>
+<p>​    当类的继承方式为私有继承时，基类中的所有公有成员在派生类中仍以私有成员的身份出现。</p>
+<p>​    当类的继承方式为保护继承时，基类中的所有公有成员在派生类中仍以保护成员的身份出现。</p>
+<p>（3）基类中的保护成员</p>
+<p>​    当类的继承方式为公有继承时，基类中的所有保护成员在派生类中仍以保护成员的身份出现。</p>
+<p>​    当类的继承方式为私有继承时，基类中的所有保护成员在派生类中仍以私有成员的身份出现。</p>
+<p>​    当类的继承方式为保护继承时，基类中的所有保护成员在派生类中仍以保护成员的身份出现。</p>
+<h1 id="3-派生类对基类成员的访问规则"><a href="#3-派生类对基类成员的访问规则" class="headerlink" title="3. 派生类对基类成员的访问规则"></a>3. 派生类对基类成员的访问规则</h1><p>派生类对基类成员的访问形式主要有以下两种：</p>
+<p>（1）内部访问。由派生类中新增的成员函数对基类继承来的成员的访问</p>
+<p>（2）对象访问。由派生类外部，通过派生类的对象对从基类继承来的成员的访问。</p>
+<h1 id="3-1-私有继承的访问规则"><a href="#3-1-私有继承的访问规则" class="headerlink" title="3.1 私有继承的访问规则"></a>3.1 私有继承的访问规则</h1><table>
+<thead>
+<tr>
+<th>基类中的成员</th>
+<th>私有成员</th>
+<th>公有成员</th>
+<th>保护成员</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部访问</td>
+<td>不可访问</td>
+<td>可访问</td>
+<td>可访问</td>
+</tr>
+<tr>
+<td>对象访问</td>
+<td>不可访问</td>
+<td>不可访问</td>
+<td>不可访问</td>
+</tr>
+</tbody>
+</table>
+<p>说明：</p>
+<p>（1）基类中的私有成员在被私有继承时既不能被派生类的对象访问，也不能被派生类的成员函数访问，只能被基类自己的成员函数访问。因此，我们在设计积累时，总要为它的私有数据成员提供公有成员函数，如成员函数showx等，以便使派生类可以间接访问这些数据成员。</p>
+<p>（2）经历了私有继承之后，所有基类的成员都成为了派生类的私有成员或不可直接访问的成员，如果进一步派生的话，基类的全部成员都无法在新的派生类中被访问。</p>
+<h1 id="3-2-公有继承的访问规则"><a href="#3-2-公有继承的访问规则" class="headerlink" title="3.2 公有继承的访问规则"></a>3.2 公有继承的访问规则</h1><table>
+<thead>
+<tr>
+<th>基类中的成员</th>
+<th>私有成员</th>
+<th>公有成员</th>
+<th>保护成员</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部访问</td>
+<td>不可访问</td>
+<td>可访问</td>
+<td>可访问</td>
+</tr>
+<tr>
+<td>对象访问</td>
+<td>不可访问</td>
+<td>可访问</td>
+<td>不可访问</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-3-保护继承的访问规则"><a href="#3-3-保护继承的访问规则" class="headerlink" title="3.3 保护继承的访问规则"></a>3.3 保护继承的访问规则</h1><table>
+<thead>
+<tr>
+<th>基类中的成员</th>
+<th>私有成员</th>
+<th>公有成员</th>
+<th>保护成员</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部访问</td>
+<td>不可访问</td>
+<td>可访问</td>
+<td>可访问</td>
+</tr>
+<tr>
+<td>对象访问</td>
+<td>不可访问</td>
+<td>不可访问</td>
+<td>不可访问</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
 
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/04/21/C++语法09-派生类的概念/" title="C++语法09-派生类的概念">https://codave.github.io/2019/04/21/C++语法09-派生类的概念/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/派生/" rel="tag"><i class="fa fa-tag"></i> 派生</a>
+          
+            <a href="/tags/继承/" rel="tag"><i class="fa fa-tag"></i> 继承</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/21/C++语法08-常类型/" rel="next" title="C++语法08-常类型">
+                <i class="fa fa-chevron-left"></i> C++语法08-常类型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/22/C++语法10-派生类的构造和析构/" rel="prev" title="C++语法10-派生类的构造和析构">
+                C++语法10-派生类的构造和析构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +689,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -371,8 +716,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -469,6 +823,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-派生类的声明"><span class="nav-number">1.</span> <span class="nav-text">1. 派生类的声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基类成员在派生类中的访问属性"><span class="nav-number">2.</span> <span class="nav-text">2. 基类成员在派生类中的访问属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-派生类对基类成员的访问规则"><span class="nav-number">3.</span> <span class="nav-text">3. 派生类对基类成员的访问规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-1-私有继承的访问规则"><span class="nav-number">4.</span> <span class="nav-text">3.1 私有继承的访问规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-2-公有继承的访问规则"><span class="nav-number">5.</span> <span class="nav-text">3.2 公有继承的访问规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-3-保护继承的访问规则"><span class="nav-number">6.</span> <span class="nav-text">3.3 保护继承的访问规则</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,6 +1011,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1144,26 +1518,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

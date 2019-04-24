@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="构造函数,析构函数,派生类,">
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未来可期">
-<meta property="og:url" content="https://codave.github.io/tags/str/index.html">
+<meta name="description" content="派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的">
+<meta name="keywords" content="构造函数,析构函数,派生类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++语法10-派生类的构造和析构">
+<meta property="og:url" content="https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-24T13:18:10.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未来可期">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:title" content="C++语法10-派生类的构造和析构">
+<meta name="twitter:description" content="派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的">
 
 
 
@@ -137,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/tags/str/">
+  <link rel="canonical" href="https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/">
 
 
 
 
 
-  <title>标签: str | 未来可期</title>
+  <title>C++语法10-派生类的构造和析构 | 未来可期</title>
   
 
 
@@ -162,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,52 +300,298 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>str<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Codave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/23/Python语法基础04-字符串/" itemprop="url">
-              
-                <span itemprop="name">Python语法基础04-字符串</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">C++语法10-派生类的构造和析构</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-23T12:22:58+08:00" content="2019-03-23">
-          03-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-22T12:54:34+08:00">
+                2019-04-22
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T21:18:10+08:00">
+                2019-04-24
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/22/C++语法10-派生类的构造和析构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/22/C++语法10-派生类的构造和析构/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/22/C++语法10-派生类的构造和析构/" class="leancloud_visitors" data-flag-title="C++语法10-派生类的构造和析构">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.6k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。<strong>但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。</strong>与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的构造函数所需要的参数进行设置。同样，对撤销派生类对象时的扫尾、清理工作也需要加入新的析构函数来完成。</p>
+</blockquote>
+<h1 id="1-派生类构造函数和析构函数的执行顺序"><a href="#1-派生类构造函数和析构函数的执行顺序" class="headerlink" title="1. 派生类构造函数和析构函数的执行顺序"></a>1. 派生类构造函数和析构函数的执行顺序</h1><p>通常情况下，当创建派生类的对象时，首先执行基类的构造函数，随后再执行派生类的构造函数；当撤销派生类对象时，则先执行派生类的析构函数，随后再执行基类的析构函数。</p>
+<h1 id="2-派生类构造函数和析构函数的构造规则"><a href="#2-派生类构造函数和析构函数的构造规则" class="headerlink" title="2. 派生类构造函数和析构函数的构造规则"></a>2. 派生类构造函数和析构函数的构造规则</h1><h1 id="2-1-简单的派生类的构造函数"><a href="#2-1-简单的派生类的构造函数" class="headerlink" title="2.1 简单的派生类的构造函数"></a>2.1 简单的派生类的构造函数</h1><p>当基类的构造函数没有参数，或没有显示定义构造函数时，派生类可以不向基类传递参数，甚至可以不定义构造函数。<strong>当基类含有带参数的构造函数时，派生类必须定义构造函数，以提供把参数传递给基类构造函数的途径。</strong></p>
+<p>在C++中，派生类构造函数的一般格式为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">派生类名（总参数表）：基类名（参数表）&#123;</span><br><span class="line">  </span><br><span class="line">    派生类新增数据成员的初始化语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面的程序说明如何传递一个参数给派生类的构造函数和传递一个参数给基类的构造函数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>&#123;</span>		<span class="comment">//声明基类Student</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Student(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1)&#123;		<span class="comment">//基类构造函数</span></span><br><span class="line">            number=number1;</span><br><span class="line">            name=name1;</span><br><span class="line">            score=score1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"number:"</span>&lt;&lt;number&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"name:"</span>&lt;&lt;name&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"score:"</span>&lt;&lt;score&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">protected</span>:</span><br><span class="line">        <span class="keyword">int</span> number;</span><br><span class="line">        <span class="built_in">string</span> name;</span><br><span class="line">        <span class="keyword">float</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UStudent</span>:</span><span class="keyword">public</span> Student&#123;		<span class="comment">//声明公有派生类Ustudent</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1)</span><br><span class="line">        :Student(number1,name1,score1)<span class="comment">//定义派生类构造函数要加上调用的基类的构造函数及其参数</span></span><br><span class="line">        &#123;</span><br><span class="line">            major=major1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print1</span><span class="params">()</span></span>&#123;</span><br><span class="line">            print();</span><br><span class="line">            count&lt;&lt;<span class="string">"major:"</span>&lt;&lt;major&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">private</span>：</span><br><span class="line">        <span class="built_in">string</span> major;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    UStudent stu(22116,"张志"，95，"信息安全")；</span><br><span class="line">    stu.print();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>（1）可以将派生类构造函数定义在类的外部，而在类体内只写该函数的声明。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1);</span><br></pre></td></tr></table></figure>
+<p>而在类的外部定义派生类的构造函数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">UStudent::UStudent(<span class="keyword">int</span> number1,<span class="built_in">string</span> name1,<span class="keyword">float</span> score1,<span class="built_in">string</span> major1)</span><br><span class="line">:Student(number1,name1,score1)<span class="comment">//定义派生类构造函数要加上调用的基类的构造函数及其参数</span></span><br><span class="line">&#123;</span><br><span class="line">	major=major1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：在类中声明派生类构造函数时，不包括基类构造函数名及其参数表(即Student(number1,name1,score1))，只在类外定义构造函数时才将它列出。</p>
+<p>（2）若在类使用默认构造函数或不带参数的构造函数，则在派生类中定义构造函数时可略去”：基类名（参数表）”，此时若派生类不需要构造函数，则可不定义派生类构造函数。</p>
+<p>（3）当基类构造函数不带参数时，派生类不一定需要定义构造函数，然后当基类的构造函数哪怕只带有一个参数，它所有的派生类都必须定义构造函数，甚至所定义的派生类构造函数的函数体可能为空，仅仅起参数的传递作用。</p>
+<h1 id="2-2-派生类的析构函数"><a href="#2-2-派生类的析构函数" class="headerlink" title="2.2 派生类的析构函数"></a>2.2 派生类的析构函数</h1><blockquote>
+<p>在派生类中可以根据需要定义自己的析构函数，用来对派生类中的所增加的成员进行清理工作。基类的清理工作仍然由基类的析构函数负责。由于析构函数是不带参数的，在派生系统中是否要自定义析构函数与它所属基类的析构函数无关。在执行派生类的析构函数时，系统会自动调用基类的析构函数，对基类的对象进行清理工作。</p>
+</blockquote>
+<h1 id="2-3-含有对象成员（子对象）的派生类的构造函数"><a href="#2-3-含有对象成员（子对象）的派生类的构造函数" class="headerlink" title="2.3 含有对象成员（子对象）的派生类的构造函数"></a>2.3 含有对象成员（子对象）的派生类的构造函数</h1><p>当派生类中含有内嵌的对象成员（也称子对象）时，其构造函数的一般形式为：</p>
+<p><strong>派生类名（参数总表）：基类名（参数表0），对象成员名1（参数表1），……，对象成员名n（参数表n）</strong>{</p>
+<p>​    <strong>派生类新增成员的初始化语句；</strong></p>
+<p><strong>}</strong></p>
+<p>在定义派生类对象时，构造函数的执行顺序如下：</p>
+<ul>
+<li>调用基类的构造函数，对基类数据成员初始化；</li>
+<li>调用内嵌对象成员的构造函数，对内嵌对象成员的数据成员初始化；</li>
+<li>执行派生类的构造函数体，对派生类数据成员初始化。</li>
+</ul>
+<p>撤销对象时，析构函数的调用顺序与构造函数的调用顺序正好相反。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        Base(<span class="keyword">int</span> i)&#123;</span><br><span class="line">            x=i;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Constrcting base class\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ~Base()&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructing base class\n"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"x="</span>&lt;&lt;x&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span><span class="keyword">public</span> Base&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    Derived(<span class="keyword">int</span> i):Base(i),d(i)		<span class="comment">//缀上要调用的基类构造函数和对象成员构造函数</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Constructing derived class\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Derived()&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructing derived class\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    Base d;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">Derived <span class="title">obj</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">    obj.show();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>（1）在派生类中含有多个内嵌对象成员时，调用内嵌对象成员的构造函数顺序由它们在类中声明的顺序确定。</p>
+<p>（2）如果派生类的基类也是一个派生类，每个派生类只需要负责其直接基类数据成员的初始化。依次上溯。</p>
 
       
     </div>
+    
+    
+    
+	<div>
+	
+	<div>
+    
+        <div style="text-align:center;color: #807272;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+	
+	</div>
+    
 
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Codave
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/" title="C++语法10-派生类的构造和析构">https://codave.github.io/2019/04/22/C++语法10-派生类的构造和析构/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/构造函数/" rel="tag"><i class="fa fa-tag"></i> 构造函数</a>
+          
+            <a href="/tags/析构函数/" rel="tag"><i class="fa fa-tag"></i> 析构函数</a>
+          
+            <a href="/tags/派生类/" rel="tag"><i class="fa fa-tag"></i> 派生类</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/21/C++语法09-派生类的概念/" rel="next" title="C++语法09-派生类的概念">
+                <i class="fa fa-chevron-left"></i> C++语法09-派生类的概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +599,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -371,8 +626,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -469,6 +733,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-派生类构造函数和析构函数的执行顺序"><span class="nav-number">1.</span> <span class="nav-text">1. 派生类构造函数和析构函数的执行顺序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-派生类构造函数和析构函数的构造规则"><span class="nav-number">2.</span> <span class="nav-text">2. 派生类构造函数和析构函数的构造规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1-简单的派生类的构造函数"><span class="nav-number">3.</span> <span class="nav-text">2.1 简单的派生类的构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-2-派生类的析构函数"><span class="nav-number">4.</span> <span class="nav-text">2.2 派生类的析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-含有对象成员（子对象）的派生类的构造函数"><span class="nav-number">5.</span> <span class="nav-text">2.3 含有对象成员（子对象）的派生类的构造函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,6 +921,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1144,26 +1428,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
