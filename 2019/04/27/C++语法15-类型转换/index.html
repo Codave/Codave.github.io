@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="转换构造函数,类型转换函数,">
 
 
 
@@ -98,17 +98,18 @@
 
 
 
-<meta name="description" content="不负过往，不惧未来。">
+<meta name="description" content="1. 系统预定义类型间的转换 类型转换是将一种类型的值转换为另一种类型值。对于系统预定义的标准类型（如int、float、double、char等），C++提供两种类型转换方式：一种是隐式类型转换；另一种是显示类型转换。  1.1 隐式类型转换 隐式类型转换主要遵循以下规则： （1）在赋值表达式A=B的情况下，赋值运算符右端B的值需要转换为A类型进行赋值。 （2）当char或short类型变量与i">
+<meta name="keywords" content="转换构造函数,类型转换函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++语法15-类型转换">
 <meta property="og:url" content="https://codave.github.io/2019/04/27/C++语法15-类型转换/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="不负过往，不惧未来。">
+<meta property="og:description" content="1. 系统预定义类型间的转换 类型转换是将一种类型的值转换为另一种类型值。对于系统预定义的标准类型（如int、float、double、char等），C++提供两种类型转换方式：一种是隐式类型转换；另一种是显示类型转换。  1.1 隐式类型转换 隐式类型转换主要遵循以下规则： （1）在赋值表达式A=B的情况下，赋值运算符右端B的值需要转换为A类型进行赋值。 （2）当char或short类型变量与i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-27T12:28:36.668Z">
+<meta property="og:updated_time" content="2019-06-04T14:32:18.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法15-类型转换">
-<meta name="twitter:description" content="不负过往，不惧未来。">
+<meta name="twitter:description" content="1. 系统预定义类型间的转换 类型转换是将一种类型的值转换为另一种类型值。对于系统预定义的标准类型（如int、float、double、char等），C++提供两种类型转换方式：一种是隐式类型转换；另一种是显示类型转换。  1.1 隐式类型转换 隐式类型转换主要遵循以下规则： （1）在赋值表达式A=B的情况下，赋值运算符右端B的值需要转换为A类型进行赋值。 （2）当char或short类型变量与i">
 
 
 
@@ -358,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T20:28:36+08:00">
-                2019-04-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-04T22:32:18+08:00">
+                2019-06-04
               </time>
             
           </span>
@@ -430,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0字
+                  1.7k字
                 </span>
               
 
@@ -446,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  6分钟
                 </span>
               
             </div>
@@ -467,7 +468,45 @@
       
 
       
-        
+        <h1 id="1-系统预定义类型间的转换"><a href="#1-系统预定义类型间的转换" class="headerlink" title="1. 系统预定义类型间的转换"></a>1. 系统预定义类型间的转换</h1><blockquote>
+<p>类型转换是将一种类型的值转换为另一种类型值。对于系统预定义的标准类型（如int、float、double、char等），C++提供两种类型转换方式：一种是隐式类型转换；另一种是显示类型转换。</p>
+</blockquote>
+<h1 id="1-1-隐式类型转换"><a href="#1-1-隐式类型转换" class="headerlink" title="1.1 隐式类型转换"></a>1.1 隐式类型转换</h1><p> 隐式类型转换主要遵循以下规则：</p>
+<p>（1）在赋值表达式A=B的情况下，赋值运算符右端B的值需要转换为A类型进行赋值。</p>
+<p>（2）当char或short类型变量与int类型变量进行运算时，将char或short类型转换成int类型。</p>
+<p>（3）当两个操作对象类型不一致时，在算术运算前，级别低的类型自动转换为级别高的类型。</p>
+<h1 id="1-2-显示类型转换"><a href="#1-2-显示类型转换" class="headerlink" title="1.2 显示类型转换"></a>1.2 显示类型转换</h1><p>编程人员在程序中可以明确地指出将一种数据类型转换成另一种指定的类型，这种转换成为显示类型转换。</p>
+<h1 id="2-类类型与系统预定义类型间的转换"><a href="#2-类类型与系统预定义类型间的转换" class="headerlink" title="2. 类类型与系统预定义类型间的转换"></a>2. 类类型与系统预定义类型间的转换</h1><p>对于用户自己定义的类类型而言，如何实现它们与其他数据类型之间的转换呢？通常，可归纳为以下：<br>（1）通过转换<strong>构造函数</strong>进行类型转换。</p>
+<p>（2）通过类型转换函数进行类型转换。</p>
+<h1 id="2-1-转换构造函数"><a href="#2-1-转换构造函数" class="headerlink" title="2.1 转换构造函数"></a>2.1 转换构造函数</h1><blockquote>
+<p>转换构造函数也是构造函数的一种，它具有类型转换的作用，它的作用是将一个其他类型的数据转换成它所在类的对象。</p>
+</blockquote>
+<p>通常，使用转换构造函数将一个指定的数据类型转换为类对象的方法如下：</p>
+<p>（1）先声明一个类。</p>
+<p>（2）在这个类中定义一个只有一个参数的构造函数，参数是待转换类型的数据，在函数体中指定转换的方法。</p>
+<p>（3）可以用以下形式进行类型转换。</p>
+<p><strong>类名（待转换类型的数据）</strong></p>
+<p><strong>说明：</strong></p>
+<p>（1）转换构造函数也是一种构造函数，它遵循构造函数的一般规则。转换构造函数只有一个参数，作用是将一个其他类型的数据转换它所在类的对象。但是，有一个参数的构造函数不一定是转换构造函数，它可以是普通的构造函数，仅仅起对象初始化的作用。</p>
+<p>（2）转换构造函数不仅可以将一个系统预定义的标准类型数据转换成类的对象，也可以将另一个类的对象转换成构造函数所在的类对象。（不做详解）</p>
+<h1 id="2-2-类型转换函数"><a href="#2-2-类型转换函数" class="headerlink" title="2.2 类型转换函数"></a>2.2 类型转换函数</h1><p>通过转换构造函数可以将一个指定类型的数据转换为类的对象。但是不能反过来将一个类的对象转换成其他类型的数据，例如不能将一个Complex类的对象转换成double类型的数据。为此，C++提供了一个称为类型转换函数的函数来解决这个转换问题。类型转换的作用就是将一个类的对象转换成另一类型的数据。在类中，定义类型转换函数的一般格式为：</p>
+<p><strong>operator 目标类型 （）{</strong></p>
+<p>​    <strong>函数体</strong></p>
+<p><strong>}</strong></p>
+<p>其中，目标类型为希望转换成的类型名，它既可以是预定义的标准函数也可以是其他类的类型。类型转换函数的函数名为“operator 目标类型”，在函数名前面不能指定函数类型，也不能有参数。通常，其函数体的最后一条语句是return语句，返回值的类型是该函数的目标函数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类型转换的应用</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespaace <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    Complex(<span class="keyword">double</span> r=<span class="number">0</span>,<span class="keyword">double</span> i=<span class="number">0</span>)&#123;</span><br><span class="line">        real=r;</span><br><span class="line">        imag=i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> real;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">double</span> real,imag;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="function">Complex <span class="title">com</span><span class="params">(<span class="number">2.2</span>,<span class="number">4.4</span>)</span></span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Complex类的对象com转换成double型的数据为："</span>；</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="keyword">double</span>(com)&lt;&lt;<span class="built_in">endl</span>；</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于类型转换函数，有以下几点注意事项：</p>
+<p>（1）类型转换函数只能定义为一个类的成员函数而不能定义为类的友元函数。类型转换函数也可以在类体中声明函数原型，而将函数体定义在类的外部。</p>
+<p>（2）类型转换函数既没有参数，也不能在函数名前面指定函数类型。</p>
+<p>（3）类型函数中必须有return语句，即必须送回目标类型的数据作为函数的返回值。</p>
+<p>（4）一个类可以定义多个类型转换函数。C++编译器将根据类型转换函数名自动地选择一个合适的类型转换函数予以调用。</p>
+<h1 id="2-3-转换构造函数和类型转换函数的综合应用"><a href="#2-3-转换构造函数和类型转换函数的综合应用" class="headerlink" title="2.3 转换构造函数和类型转换函数的综合应用"></a>2.3 转换构造函数和类型转换函数的综合应用</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	Complex()&#123;&#125;	<span class="comment">//不带参数的构造函数</span></span><br><span class="line">        Complex(<span class="keyword">int</span> r,<span class="keyword">int</span> i)&#123;	<span class="comment">//带两个参数的构造函数</span></span><br><span class="line">			real=r;imag=i;</span><br><span class="line">        &#125;</span><br><span class="line">        Complex（<span class="keyword">int</span> x)&#123;		<span class="comment">//转换构造函数，将int类型</span></span><br><span class="line">			real=imag=i/<span class="number">2</span>;	</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">operator</span> <span class="title">int</span><span class="params">()</span></span>&#123;</span><br><span class="line">			<span class="keyword">return</span> real+imag;</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123; </span><br><span class="line">        	<span class="built_in">cout</span>&lt;&lt;<span class="string">"real:"</span>&lt;&lt;real&lt;&lt;<span class="string">"\t"</span>&lt;&lt;<span class="string">"imag:"</span>&lt;&lt;imag&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> real,imag;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Complex a1(1,2),a2(3,4);</span><br><span class="line">    Complex a3;</span><br><span class="line">    a3=a1+a2;</span><br><span class="line">    a3.print();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析这个程序，读者一定会感到奇怪，类Complex中有没有定义将两个对象相加的运算符重载函数，怎么还可以进行“a1+a2”的操作呢 ？这是由于C++自动进行隐式转换的缘故。这个自动进行类型转换过程的步骤如下：</p>
+<p>（1）寻找两个Complex类对象相加的运算符重载函数，程序中未找到。</p>
+<p>（2）寻找能将Complex类的对象转换成int型数据的类型转换函数operator int()，程序中找到。于是调用其分别将 对象a1和a2隐式转换成int类型的数据3和7。</p>
+<p>（3）寻找将两个整数相加的运算符函数，这个运算符函数已经在C++系统中预定义。于是调用这个运算符函数将两个int类型的数据3和7相加得到10。</p>
+<p>（4）由于语句“a3=a1+a2;”的赋值号左边是Complex类的对象a3,而右边是int类型数据10，于是隐式调用转换构造函数将int类型数10转换成Complex类的一个临时对象（其real和image都是5），然后将这个临时对象的值赋给Complex类对象a3，执行结果是对象a3的real和image也分别是5。</p>
+
       
     </div>
     
@@ -507,6 +546,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/转换构造函数/" rel="tag"><i class="fa fa-tag"></i> 转换构造函数</a>
+          
+            <a href="/tags/类型转换函数/" rel="tag"><i class="fa fa-tag"></i> 类型转换函数</a>
+          
+        </div>
       
 
       
@@ -584,8 +631,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -624,7 +680,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -683,6 +739,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-系统预定义类型间的转换"><span class="nav-number">1.</span> <span class="nav-text">1. 系统预定义类型间的转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-隐式类型转换"><span class="nav-number">2.</span> <span class="nav-text">1.1 隐式类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-显示类型转换"><span class="nav-number">3.</span> <span class="nav-text">1.2 显示类型转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-类类型与系统预定义类型间的转换"><span class="nav-number">4.</span> <span class="nav-text">2. 类类型与系统预定义类型间的转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1-转换构造函数"><span class="nav-number">5.</span> <span class="nav-text">2.1 转换构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-2-类型转换函数"><span class="nav-number">6.</span> <span class="nav-text">2.2 类型转换函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-转换构造函数和类型转换函数的综合应用"><span class="nav-number">7.</span> <span class="nav-text">2.3 转换构造函数和类型转换函数的综合应用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -710,7 +782,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">32.7k</span>
+    <span title="全站字数总计">34.4k</span>
   
 </div>
 
