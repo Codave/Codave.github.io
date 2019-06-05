@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C++语法18-类模板与类函数]]></title>
+    <url>%2F2019%2F06%2F05%2FC-%E8%AF%AD%E6%B3%9518-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E4%B8%8E%E7%B1%BB%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[所谓类模板，实际上是建立一个通用类，其数据成员、成员函数的返回类型和形参类型不具体指定，用一个虚拟的类型来代表。使用类模板定义对象时，系统会根据实参的类型来取代模板中虚拟类型从而实现了不同类的功能。 定义一个类模板与定义函数模板的格式类似，必须以关键字template开始，后面是尖括号括起来的模板参数，然后是类名，其格式如下： template&lt;typename类型参数&gt; class 类名{ ​ 类成员声明 }； 也可以定义成如下形式： template class 类名{ ​ 类成员声明 }； 与函数模板类似，其中，template是一个声明模板的关键字，它表示声明一个模板。类型参数（通常用C++标示符表示，如T、Type等）实际上是一个虚拟的类型名，现在并未指定它是哪一种具体的类型，但使用类模板时，必须将类型参数实例化。类型参数前需要加关键字typename（或class），typename和class作用相同，都是表示其后的参数是一个虚拟的类型名（即类型参数）。 在声明中，预采用通用数据类型的数据成员、成员函数的参数或返回类型前面需要加上类型参数。 用类模板定义对象时，采用以下形式： 类模板名 &lt;实际类型名&gt;对象名[(实参表列)]； 12345678910111213141516171819202122232425类模板的使用举例#include&lt;iostream&gt;using namespace std;template&lt;typename T&gt;class Compare&#123; public: Compare(T a,T b)&#123; x=a;y=b; &#125; T max()&#123; return (x&gt;y)?x:y; &#125; private: T x,y;&#125;;int main()&#123; Compare&lt;int&gt; com1(3,7); Compare&lt;double&gt; com2(12.34,56.78); Compare&lt;char&gt; com3('a','x'); cout&lt;&lt;"其中的最大值是："&lt;&lt;com1.max()&lt;&lt;nedl; cout&lt;&lt;"其中的最大值是："&lt;&lt;com2.max()&lt;&lt;endl; cout&lt;&lt;"其中的最大值是："&lt;&lt;com3.max()&lt;&lt;endl; return 0;&#125; 说明：类模板中的成员函数也可以在类模板体外进行定义。此时，若成员函数中有类型参数存在，则C++有以下一些特殊的规定： （1）需要在成员函数定义之前进行模板声明； （2）在成员函数名前缀上“类名&lt;类型参数&gt;::”。 在类模板体外定义的成员函数的一般形式如下： 1234template&lt;typename 类型参数&gt;函数类型 类名&lt;类型参数&gt;::成员函数名（形参表）&#123; ...&#125;]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>类模板</tag>
+        <tag>模板类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C++语法17-函数模板与模板函数]]></title>
+    <url>%2F2019%2F06%2F05%2FC-%E8%AF%AD%E6%B3%9517-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E4%B8%8E%E6%A8%A1%E6%9D%BF%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[所谓模板函数，实际上是建立一个通用函数，其函数返回类型和形参类型不具体指定，用一个虚拟的类型来代表。这个通用函数就称为函数模板。在调用函数时系统会根据实参的类型（模板实参）来取代模板中虚拟类型从而实现了不同函数的功能。 函数模板的声明格式如下： template 返回类型 函数名 （模板形参数） { ​ 函数体 } 也可以定义成如下形式： template 返回类型 函数名 （模板形参数） { ​ 函数体 } 说明： （1）在函数模板中允许使用多个类型参数。但是应当注意template定义部分的每个类型参数类型必须有关键字typename(或class)。 1234567891011#include&lt;iostream&gt;using namespace std;template&lt;typename type1,typename type2&gt;void myfunc(type1 x,type2 y)&#123; cout&lt;&lt;x&lt;&lt;" "&lt;&lt;y&lt;&lt;endl;&#125;int main()&#123; myfunc(10,"hao"); myfunc(0.123,10L); return 0;&#125; （2）在template语句与函数模板定义语句之间不允许有别的语句。 （3）同一般函数一样，函数模板也可以重载。 （4）函数模板与同名的非模板函数可以重载。在这种情况下，调用的顺序是：首先寻找一个参数完全匹配的废模板函数，如果找到了就调用它；若是没有找到，则寻找函数模板，将其实例化，产生一个匹配的模板函数，若找到了，就是用它。]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>函数模板</tag>
+        <tag>模板函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C++语法16-虚函数]]></title>
     <url>%2F2019%2F04%2F27%2FC%2B%2B%E8%AF%AD%E6%B3%9516-%E8%99%9A%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[虚函数是重载的另一种表现形式。这是一种动态的重载方式，它提供了一种更为灵活的运行时的多态性机制。虚函数允许函数调用与函数体之间的联系在运行时才建立，也就是在运行时才决定如何动作，即所谓的动态联编。 1. 虚函数的定义虚函数就是在基类中被关键字virtual说明，并在派生类中重新定义的函数。虚函数的作用是允许在派生类中重新定义与基类同名的函数，并且可以通过基类指针或引用来访问基类和派生类中的同名函数。 虚基类的定义是在基类中进行的，它是在基类中需要定义为虚函数的成员函数的声明中冠以关键字virtual。定义虚基类的方法如下： virtual 函数类型 函数名（形参表）{ ​ 函数体 } 在基类中的某个成员函数被声明为虚函数后，此虚函数就可以在一个或多个派生类中被重新定义。在派生类中重新定义时，其函数原型，包括函数类型、函数名、参数个数、参数类型的顺序，都必须与基类中的原型完全相同。 12345678910111213141516171819202122232425262728293031虚函数的使用#include&lt;iostream&gt;using namespace std;class B0&#123; public: virtual void print(char* p)&#123; //定义虚函数print cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;;class B1:public B0&#123; public: virtual void print(char* p)&#123; //重新定义虚函数print cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;;class B2:public B1&#123; public: virtual void print(char* p)&#123; //重新定义虚函数print cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;；int main()&#123; B0 ob0,*op; op=&amp;ob0; op-&gt;print("B0::"); B1 ob1; op=&amp;ob1; op-&gt;print("B1::"); B2 ob2; op=&amp;ob2;op-&gt;print("B2::"); return 0;&#125; 说明： （1）若在基类中，只声明虚函数原型（需加上virtual），而在类外定义虚函数时，则不必再加virtual。 （2）在派生类中，虚函数被重新定义时，其函数的原型与基类中的函数原型（即包括函数类型、函数名、参数个数、参数类型、参数类型的顺序）都必须完全相同。 （3）C++规定，当一个成员函数被定义为虚函数后，其派生类中符合重新定义虚函数要求的同名函数都自动成为虚函数。因此，在派生类中重新定义该虚函数时，关键字virtual可以写也可以不写。但是，为了使程序更加清晰，最好在每一层派生类中定义该函数时都加上关键字virtual。 （4）如果在派生类中没有对基类的虚函数重新定义，则公有派生类继承其直接基类的虚函数。一个虚函数无论继承多少次，它仍然保持其虚函数的特性。 （5）虚函数必须是其所在类的成员函数，而不能是友元函数，也不能是静态成员函数，因为虚函数调用要靠特定的对象来决定该激活哪个函数。 （6）虽然使用对象名和点运算符的方式也可以调用虚函数，但是这种调用是在编译时进行的，是静态联编，它没有利用虚函数的特性。只有通过基类的指针访问虚函数时才能获得运行的多态性。 12345678910111213141516171819202122232425262728293031使用对象名和点运算符的方式调用虚函数。#include&lt;iostream&gt;using namespace std;class B0&#123; public: virtual void print(char* p)&#123; cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;;class B1:public B0&#123; public: virtual void print(char* p)&#123; cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;;class B2:public B1&#123; public: virtual void print(char* p)&#123; cout&lt;&lt;p&lt;&lt;"print()"&lt;&lt;endl; &#125;&#125;int main()&#123; B0 ob0; ob0.print("B0::"); B1 ob1; ob1.print("B1::"); B2 ob2; ob2.print("B2::"); return 0;&#125; 2. 虚析构函数在C++中，不能声明虚析构函数，但是可以声明虚析构函数，之前介绍过，当派生类对象撤销时，一般先调用派生类的析构函数，然后再调用基类的析构函数。]]></content>
