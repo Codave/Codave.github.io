@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： class   派生类名：继承方式1   基类名1，…… ，继承方式n   基类名n{ ​    派生类新增的数据">
+<meta name="description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： 123class 派生类名：继承方式1 基类名1，...... ，继承方式n 基类名n&amp;#123;	派生类新增的数">
 <meta name="keywords" content="多重继承">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++语法12-多重继承">
 <meta property="og:url" content="https://codave.github.io/2019/04/25/C++语法12-多重继承/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： class   派生类名：继承方式1   基类名1，…… ，继承方式n   基类名n{ ​    派生类新增的数据">
+<meta property="og:description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： 123class 派生类名：继承方式1 基类名1，...... ，继承方式n 基类名n&amp;#123;	派生类新增的数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-26T06:52:40.164Z">
+<meta property="og:updated_time" content="2019-06-05T13:47:52.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法12-多重继承">
-<meta name="twitter:description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： class   派生类名：继承方式1   基类名1，…… ，继承方式n   基类名n{ ​    派生类新增的数据">
+<meta name="twitter:description" content="派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。  1. 多重继承派生类的声明在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下： 123class 派生类名：继承方式1 基类名1，...... ，继承方式n 基类名n&amp;#123;	派生类新增的数">
 
 
 
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-26T14:52:40+08:00">
-                2019-04-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:47:52+08:00">
+                2019-06-05
               </time>
             
           </span>
@@ -472,9 +472,7 @@
 <p>派生类只有一个基类，这种派生方法称为单继承或单基派生。当一个派生类具有两个或多个基类时，这种派生方法称为多重继承或多基派生。</p>
 </blockquote>
 <h1 id="1-多重继承派生类的声明"><a href="#1-多重继承派生类的声明" class="headerlink" title="1. 多重继承派生类的声明"></a>1. 多重继承派生类的声明</h1><p>在C++中，声明具有两个以上基类的派生类与声明单基派生类的形式相似，只需将要继承的多个基类用逗号分隔即可，其声明的一般形式如下：</p>
-<p><strong>class   派生类名：继承方式1   基类名1，…… ，继承方式n   基类名n{</strong></p>
-<p>​    <strong>派生类新增的数据成员和成员函数</strong></p>
-<p><strong>}；</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 派生类名：继承方式1 基类名1，...... ，继承方式<span class="title">n</span> 基类名<span class="title">n</span>&#123;</span></span><br><span class="line">	派生类新增的数据成员和成员函数</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
 <p>注意：对基类成员的访问必须是无二义性的，例如下列程序段对基类成员的访问是二义性的，必须想办法消除二义性。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clas X&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Y</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">()</span></span>;</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">g</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Z</span>:</span><span class="keyword">public</span> X,<span class="keyword">public</span> Y&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">int</span> <span class="title">g</span><span class="params">()</span></span>;</span><br><span class="line">   		<span class="function"><span class="keyword">int</span> <span class="title">h</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>如果定义类Z的对象obj：</p>
@@ -485,18 +483,14 @@
 <p>obj.X::f();        //调用类X的f()</p>
 <p>obj.Y::f();            //调用类Y的f()</p>
 <h1 id="2-多重继承派生类的构造函数与析构函数"><a href="#2-多重继承派生类的构造函数与析构函数" class="headerlink" title="2. 多重继承派生类的构造函数与析构函数"></a>2. 多重继承派生类的构造函数与析构函数</h1><p>多重继承下派生类构造函数的定义形式与单继承派生类构造函数的定义形式相似，只是n个基类的构造函数之间用逗号分隔。多重继承下派生类构造函数定义的一般形式如下：</p>
-<p><strong>派生类名（参数总表）：基类名1（参数表1），基类名2（参数表2），…… , 基类名n（参数名n）{</strong></p>
-<p>​        <strong>派生类新增成员的初始化语句</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">派生类名（参数总表）：基类名<span class="number">1</span>（参数表<span class="number">1</span>），基类名<span class="number">2</span>（参数表<span class="number">2</span>），...... , 基类名n（参数名n）&#123;</span><br><span class="line">	派生类新增成员的初始化语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>派生类的参数个数必须包含完成所有基类初始化所需的参数个数。</p>
 <p>多重继承的构造函数的执行顺序与单继承构造函数的执行顺序相同，也是遵循先执行基类的构造函数，再执行对象成员的构造函数，最后执行派生类构造函数的原则。在多个基类之间，则严格按照派生类声明时从左向右的顺序来排列先后。</p>
 <p>由于析构函数是不带参数的，在派生类中是否要定义析构函数与它所属的基类无关，所以与单继承情况类似，基类的析构函数不会因为派生类没有析构函数而得不到执行，他们各自是独立的。析构函数和构造函数的执行顺序正好是相反的。</p>
 <h1 id="3-虚基类"><a href="#3-虚基类" class="headerlink" title="3. 虚基类"></a>3. 虚基类</h1><p>如果一个类有多个直接基类，而这些直接基类又有一个共同的基类，则在最低层的派生类中会保留这个间接的共同基类数据成员的多份同名成员。在访问这些同名的成员时，必须在派生类对象名后面增加直接基类名，使其惟一的标识一个成员，以免产生二义性。</p>
 <h1 id="3-1-虚基类的概念"><a href="#3-1-虚基类的概念" class="headerlink" title="3.1 虚基类的概念"></a>3.1 虚基类的概念</h1><p>在C++中，如果想使这个公共的基类只产生一个复制，则可以将这个基类说明成虚基类。这就要求从类 Base派生新类时，使用关键字virtual将类Base说明成虚基类。</p>
 <p>虚基类在派生类中的声明，其语法形式如下：</p>
-<p><strong>Class   派生类名： virtual  继承方式    基类名{</strong></p>
-<p><strong>……</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class 派生类名：<span class="keyword">virtual</span> 继承方式 基类名&#123;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>经过这样的声明后，当基类通过多条派生路径被一个派生类继承时，该派生类只继承该基类一次，也就是说，基类成员只保留一次。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">虚基类的使用</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        a=<span class="number">5</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base a="</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;		<span class="comment">//a=5</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">protected</span>:</span><br><span class="line">    	<span class="keyword">int</span> a;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base1</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> Base&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> b1;</span><br><span class="line">    Base1()&#123;</span><br><span class="line">        a=a+<span class="number">10</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base1 a="</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;		<span class="comment">//a=15</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base2</span>:</span><span class="keyword">virtual</span> <span class="keyword">public</span> Base&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> b2;</span><br><span class="line">    Base2()&#123;</span><br><span class="line">        a=a+<span class="number">20</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base2 a="</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;		<span class="comment">//a=35</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span><span class="keyword">public</span> Base1,<span class="keyword">public</span> Base2&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="keyword">int</span> d;</span><br><span class="line">    Derived()&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Derived a="</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;   <span class="comment">//a=35</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Derived obj;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="3-2-虚基类的初始化"><a href="#3-2-虚基类的初始化" class="headerlink" title="3.2 虚基类的初始化"></a>3.2 虚基类的初始化</h1><p>虚基类的初始化与一般的多继承的初始化在语法上是一样的，但构造函数的调用顺序不同。在使用虚基类机制时应该注意一下几点：</p>
@@ -786,7 +780,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 

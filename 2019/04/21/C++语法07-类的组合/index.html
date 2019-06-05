@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。  使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-21T12:01:10.578Z">
+<meta property="og:updated_time" content="2019-06-05T13:44:20.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法07-类的组合">
 <meta name="twitter:description" content="在类中定义的数据成员一般都是基本的数据类型或复合数据类型。但是还可以根据需要使用其他类的对象作为正在声明的类的数据成员。在一个类中内嵌另一个类的对象作为数据成员，称为类的组合。该内嵌对象称为对象成员，也成为子对象。  使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-21T20:01:10+08:00">
-                2019-04-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:44:20+08:00">
+                2019-06-05
               </time>
             
           </span>
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  509字
+                  511字
                 </span>
               
 
@@ -474,9 +474,7 @@
 <p>使用对象成员着重要注意的问题是如何完成对象成员的初始化工作。当创建类的对象时，如果这个类具有内嵌的对象成员，那么内嵌对象成员也将被自动创建。因此，在创建对象时既要对本类的基本数据成员初始化，又要对内嵌的对象成员进行初始化。含有对象成员的类，其构造函数和不含对象成员的构造函数有所不同。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Class X&#123;</span><br><span class="line">    类名<span class="number">1</span>	对象成员<span class="number">1</span>；</span><br><span class="line">    类名<span class="number">2</span>	对象成员<span class="number">2</span>；</span><br><span class="line">        ...</span><br><span class="line">    类名n	对象成员n;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>一般来说，类X的构造函数的定义形式为：</p>
-<p><strong>X::X（形参表0）：对象成员1（形参表1），对象成员2（形参表2），……{</strong></p>
-<p>​    <strong>//类X的构造函数体</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X::X（形参表<span class="number">0</span>）：对象成员<span class="number">1</span>（形参表<span class="number">1</span>），对象成员<span class="number">2</span>（形参表<span class="number">2</span>），......&#123;</span><br><span class="line">	<span class="comment">//类X的构造函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>当调用构造函数X::X()时，首先按各内嵌对象成员在类声明中的顺序依次调用它们的构造函数，对这些对象初始化。最后再执行类X的构造函数体，初始化类X中的其他成员。析构函数的调用顺序与构造函数的调用顺序相反。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">例：对象成员的初始化。</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span> x1,<span class="keyword">float</span> y1)&#123;</span><br><span class="line">        x=x1;</span><br><span class="line">        y=y1;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"\n x="</span>&lt;&lt; x &lt;&lt; <span class="string">"y="</span> &lt;&lt;y;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">float</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    B(<span class="keyword">int</span> x1,<span class="keyword">float</span> y1, <span class="keyword">int</span> z1):a(x1,y1)&#123;</span><br><span class="line">        z=z1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        a.show();</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"z="</span>&lt;&lt; z;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    A a;</span><br><span class="line">    <span class="keyword">int</span> z;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">B <span class="title">b</span><span class="params">(<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>)</span></span>;</span><br><span class="line">    b.show();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -728,7 +726,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 

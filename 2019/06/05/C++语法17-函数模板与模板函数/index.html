@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="类模板,模板类,">
+  <meta name="keywords" content="函数模板,模板函数,">
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="所谓类模板，实际上是建立一个通用类，其数据成员、成员函数的返回类型和形参类型不具体指定，用一个虚拟的类型来代表。使用类模板定义对象时，系统会根据实参的类型来取代模板中虚拟类型从而实现了不同类的功能。 定义一个类模板与定义函数模板的格式类似，必须以关键字template开始，后面是尖括号括起来的模板参数，然后是类名，其格式如下：  template&amp;lt;typename类型参数&amp;gt; class">
-<meta name="keywords" content="类模板,模板类">
+<meta name="description" content="所谓模板函数，实际上是建立一个通用函数，其函数返回类型和形参类型不具体指定，用一个虚拟的类型来代表。这个通用函数就称为函数模板。在调用函数时系统会根据实参的类型（模板实参）来取代模板中虚拟类型从而实现了不同函数的功能。 1234567891011121314函数模板的声明格式如下：template&amp;lt;typename 类型参数&amp;gt;返回类型 函数名 模板形参数）&amp;#123;	函数体&amp;#125">
+<meta name="keywords" content="函数模板,模板函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++语法18-类模板与类函数">
-<meta property="og:url" content="https://codave.github.io/2019/06/05/C-语法18-类模板与类函数/index.html">
+<meta property="og:title" content="C++语法17-函数模板与模板函数">
+<meta property="og:url" content="https://codave.github.io/2019/06/05/C++语法17-函数模板与模板函数/index.html">
 <meta property="og:site_name" content="未来可期">
-<meta property="og:description" content="所谓类模板，实际上是建立一个通用类，其数据成员、成员函数的返回类型和形参类型不具体指定，用一个虚拟的类型来代表。使用类模板定义对象时，系统会根据实参的类型来取代模板中虚拟类型从而实现了不同类的功能。 定义一个类模板与定义函数模板的格式类似，必须以关键字template开始，后面是尖括号括起来的模板参数，然后是类名，其格式如下：  template&amp;lt;typename类型参数&amp;gt; class">
+<meta property="og:description" content="所谓模板函数，实际上是建立一个通用函数，其函数返回类型和形参类型不具体指定，用一个虚拟的类型来代表。这个通用函数就称为函数模板。在调用函数时系统会根据实参的类型（模板实参）来取代模板中虚拟类型从而实现了不同函数的功能。 1234567891011121314函数模板的声明格式如下：template&amp;lt;typename 类型参数&amp;gt;返回类型 函数名 模板形参数）&amp;#123;	函数体&amp;#125">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-05T13:17:38.846Z">
+<meta property="og:updated_time" content="2019-06-05T13:35:18.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++语法18-类模板与类函数">
-<meta name="twitter:description" content="所谓类模板，实际上是建立一个通用类，其数据成员、成员函数的返回类型和形参类型不具体指定，用一个虚拟的类型来代表。使用类模板定义对象时，系统会根据实参的类型来取代模板中虚拟类型从而实现了不同类的功能。 定义一个类模板与定义函数模板的格式类似，必须以关键字template开始，后面是尖括号括起来的模板参数，然后是类名，其格式如下：  template&amp;lt;typename类型参数&amp;gt; class">
+<meta name="twitter:title" content="C++语法17-函数模板与模板函数">
+<meta name="twitter:description" content="所谓模板函数，实际上是建立一个通用函数，其函数返回类型和形参类型不具体指定，用一个虚拟的类型来代表。这个通用函数就称为函数模板。在调用函数时系统会根据实参的类型（模板实参）来取代模板中虚拟类型从而实现了不同函数的功能。 1234567891011121314函数模板的声明格式如下：template&amp;lt;typename 类型参数&amp;gt;返回类型 函数名 模板形参数）&amp;#123;	函数体&amp;#125">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://codave.github.io/2019/06/05/C-语法18-类模板与类函数/">
+  <link rel="canonical" href="https://codave.github.io/2019/06/05/C++语法17-函数模板与模板函数/">
 
 
 
 
 
-  <title>C++语法18-类模板与类函数 | 未来可期</title>
+  <title>C++语法17-函数模板与模板函数 | 未来可期</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/06/05/C-语法18-类模板与类函数/">
+    <link itemprop="mainEntityOfPage" href="https://codave.github.io/2019/06/05/C++语法17-函数模板与模板函数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Codave">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++语法18-类模板与类函数</h1>
+          <h1 class="post-title" itemprop="name headline">C++语法17-函数模板与模板函数</h1>
         
 
         <div class="post-meta">
@@ -343,7 +343,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-05T10:24:07+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-05T10:23:36+08:00">
                 2019-06-05
               </time>
             
@@ -359,7 +359,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:17:38+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:35:18+08:00">
                 2019-06-05
               </time>
             
@@ -396,8 +396,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/06/05/C-语法18-类模板与类函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/05/C-语法18-类模板与类函数/" itemprop="commentCount"></span>
+                <a href="/2019/06/05/C++语法17-函数模板与模板函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/05/C++语法17-函数模板与模板函数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,7 +405,7 @@
 
           
           
-             <span id="/2019/06/05/C-语法18-类模板与类函数/" class="leancloud_visitors" data-flag-title="C++语法18-类模板与类函数">
+             <span id="/2019/06/05/C++语法17-函数模板与模板函数/" class="leancloud_visitors" data-flag-title="C++语法17-函数模板与模板函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  655字
+                  403字
                 </span>
               
 
@@ -447,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2分钟
+                  1分钟
                 </span>
               
             </div>
@@ -468,31 +468,14 @@
       
 
       
-        <p>所谓类模板，实际上是建立一个通用类，其数据成员、成员函数的返回类型和形参类型不具体指定，用一个虚拟的类型来代表。使用类模板定义对象时，系统会根据实参的类型来取代模板中虚拟类型从而实现了不同类的功能。</p>
-<p>定义一个类模板与定义函数模板的格式类似，必须以关键字template开始，后面是尖括号括起来的模板参数，然后是类名，其格式如下：</p>
-<blockquote>
-<p>template&lt;typename类型参数&gt;</p>
-<p>class  类名{</p>
-<p>​    类成员声明</p>
-<p>}；</p>
-</blockquote>
-<p>也可以定义成如下形式：</p>
-<blockquote>
-<p>template<class 类型参数=""></class></p>
-<p>class  类名{</p>
-<p>​    类成员声明</p>
-<p>}；</p>
-</blockquote>
-<p>与函数模板类似，其中，template是一个声明模板的关键字，它表示声明一个模板。类型参数（通常用C++标示符表示，如T、Type等）实际上是一个虚拟的类型名，现在并未指定它是哪一种具体的类型，但使用类模板时，必须将类型参数实例化。类型参数前需要加关键字typename（或class），typename和class作用相同，都是表示其后的参数是一个虚拟的类型名（即类型参数）。</p>
-<p>在声明中，预采用通用数据类型的数据成员、成员函数的参数或返回类型前面需要加上类型参数。</p>
-<p>用类模板定义对象时，采用以下形式：</p>
-<p><strong>类模板名 &lt;实际类型名&gt;对象名[(实参表列)]；</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">类模板的使用举例</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Compare</span>&#123;</span></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">    Compare(T a,T b)&#123;</span><br><span class="line">        x=a;y=b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">T <span class="title">max</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (x&gt;y)?x:y;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">    T x,y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Compare&lt;<span class="keyword">int</span>&gt;  com1(<span class="number">3</span>,<span class="number">7</span>);</span><br><span class="line">    Compare&lt;<span class="keyword">double</span>&gt;  com2(<span class="number">12.34</span>,<span class="number">56.78</span>);</span><br><span class="line"> 	Compare&lt;<span class="keyword">char</span>&gt;  com3(<span class="string">'a'</span>,<span class="string">'x'</span>);   </span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"其中的最大值是："</span>&lt;&lt;com1.max()&lt;&lt;nedl;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"其中的最大值是："</span>&lt;&lt;com2.max()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"其中的最大值是："</span>&lt;&lt;com3.max()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>说明：类模板中的成员函数也可以在类模板体外进行定义。此时，若成员函数中有类型参数存在，则C++有以下一些特殊的规定：</p>
-<p>（1）需要在成员函数定义之前进行模板声明；</p>
-<p>（2）在成员函数名前缀上“类名&lt;类型参数&gt;::”。</p>
-<p>在类模板体外定义的成员函数的一般形式如下：    </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> 类型参数&gt;</span><br><span class="line">函数类型  类名&lt;类型参数&gt;::成员函数名（形参表）&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>所谓模板函数，实际上是建立一个通用函数，其函数返回类型和形参类型不具体指定，用一个虚拟的类型来代表。这个通用函数就称为函数模板。在调用函数时系统会根据实参的类型（模板实参）来取代模板中虚拟类型从而实现了不同函数的功能。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">函数模板的声明格式如下：</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> 类型参数&gt;</span><br><span class="line">返回类型 函数名 模板形参数）</span><br><span class="line">&#123;</span><br><span class="line">	函数体</span><br><span class="line"></span><br><span class="line">&#125;；</span><br><span class="line">也可以定义成如下形式：</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> 类型参数&gt;</span></span><br><span class="line"><span class="class">返回类型 函数名（模板形参数）</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	函数体</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>（1）在函数模板中允许使用多个类型参数。但是应当注意template定义部分的每个类型参数类型必须有关键字typename(或class)。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> type1,<span class="keyword">typename</span> type2&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">myfunc</span><span class="params">(type1 x,type2 y)</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	myfunc(<span class="number">10</span>,<span class="string">"hao"</span>);</span><br><span class="line">	myfunc(<span class="number">0.123</span>,<span class="number">10L</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（2）在template语句与函数模板定义语句之间不允许有别的语句。</p>
+<p>（3）同一般函数一样，函数模板也可以重载。</p>
+<p>（4）函数模板与同名的非模板函数可以重载。在这种情况下，调用的顺序是：首先寻找一个参数完全匹配的废模板函数，如果找到了就调用它；若是没有找到，则寻找函数模板，将其实例化，产生一个匹配的模板函数，若找到了，就是用它。</p>
 
       
     </div>
@@ -521,7 +504,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://codave.github.io/2019/06/05/C-语法18-类模板与类函数/" title="C++语法18-类模板与类函数">https://codave.github.io/2019/06/05/C-语法18-类模板与类函数/</a>
+    <a href="https://codave.github.io/2019/06/05/C++语法17-函数模板与模板函数/" title="C++语法17-函数模板与模板函数">https://codave.github.io/2019/06/05/C++语法17-函数模板与模板函数/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -536,9 +519,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/类模板/" rel="tag"><i class="fa fa-tag"></i> 类模板</a>
+            <a href="/tags/函数模板/" rel="tag"><i class="fa fa-tag"></i> 函数模板</a>
           
-            <a href="/tags/模板类/" rel="tag"><i class="fa fa-tag"></i> 模板类</a>
+            <a href="/tags/模板函数/" rel="tag"><i class="fa fa-tag"></i> 模板函数</a>
           
         </div>
       
@@ -551,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/05/C-语法17-函数模板与模板函数/" rel="next" title="C++语法17-函数模板与模板函数">
-                <i class="fa fa-chevron-left"></i> C++语法17-函数模板与模板函数
+              <a href="/2019/04/27/C++语法16-虚函数/" rel="next" title="C++语法16-虚函数">
+                <i class="fa fa-chevron-left"></i> C++语法16-虚函数
               </a>
             
           </div>
@@ -560,6 +543,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/05/C++语法18-类模板与类函数/" rel="prev" title="C++语法18-类模板与类函数">
+                C++语法18-类模板与类函数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -740,7 +727,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 

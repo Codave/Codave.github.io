@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="1. 对象赋值语句 这里所指的对象的赋值是指对其中的数据成员赋值，而不是对成员函数赋值。  例如：A和B是同一类的两个对象，那么下述对象赋值语句 B=A；就能把对象A的数据成员的值逐位复制给对象B。 说明： （1）在使用对象赋值语句进行对象赋值时，两个对象的类型必须相同，如对象的类型不相同，编译时将出错。 （2） 两个对象之间的赋值，仅仅使这些对象中数据成员相同，而两个对象仍是分离的。 （3）将一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-21T08:21:10.024Z">
+<meta property="og:updated_time" content="2019-06-05T13:42:54.786Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法05-对象的赋值和复制">
 <meta name="twitter:description" content="1. 对象赋值语句 这里所指的对象的赋值是指对其中的数据成员赋值，而不是对成员函数赋值。  例如：A和B是同一类的两个对象，那么下述对象赋值语句 B=A；就能把对象A的数据成员的值逐位复制给对象B。 说明： （1）在使用对象赋值语句进行对象赋值时，两个对象的类型必须相同，如对象的类型不相同，编译时将出错。 （2） 两个对象之间的赋值，仅仅使这些对象中数据成员相同，而两个对象仍是分离的。 （3）将一">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-21T16:21:10+08:00">
-                2019-04-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:42:54+08:00">
+                2019-06-05
               </time>
             
           </span>
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  945字
+                  948字
                 </span>
               
 
@@ -486,9 +486,7 @@
 <p>（2）该函数只有一个参数，并且是同类对象的引用。</p>
 <p>（3）每个类都必须有一个拷贝构造构造函数。程序员可以自定义拷贝构造函数，用于按照需要初始化新对象。如果程序员没有定义类的拷贝构造函数，系统就会自动生成产生一个默认拷贝构造函数，用于复制出数据成员值完全相同的新对象。</p>
 <h1 id="2-1-自定义拷贝构造函数"><a href="#2-1-自定义拷贝构造函数" class="headerlink" title="2.1 自定义拷贝构造函数"></a>2.1 自定义拷贝构造函数</h1><p>自定义拷贝函数的一般形式如下：</p>
-<p><strong>类名：：类名（const 类名 &amp;对象名）{</strong></p>
-<p>​        <strong>//拷贝构造函数的函数体</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">类名：：类名（<span class="keyword">const</span> 类名 &amp;对象名）&#123;</span><br><span class="line">	<span class="comment">//拷贝构造函数的函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>调用拷贝构造函数的一般形式为：</p>
 <p>（1）代入法： <strong>类名  对象2（对象1）；</strong></p>
 <p>（2）赋值法： <strong>类名  对象2 = 对象1；</strong></p>
@@ -781,7 +779,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 

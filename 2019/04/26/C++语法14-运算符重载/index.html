@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="在C++中，除了可以对函数重载外，还可以对大多数运算符实施重载。运算符重载与函数重载相比，稍微复杂一点。运算符重载是通过创建运算符重载函数来实现的。运算符重载函数可以是在类外定义的普通函数，也可以是类的成员函数或友元函数。  1. 在类外定义的运算符重载函数C++为运算符重载提供了一种方法，即在进行运算符重载时，必须定义一个运算符重载函数，其名字为operator，后随一个要重载的运算符。例如，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-27T11:35:53.809Z">
+<meta property="og:updated_time" content="2019-06-05T13:53:34.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法14-运算符重载">
 <meta name="twitter:description" content="在C++中，除了可以对函数重载外，还可以对大多数运算符实施重载。运算符重载与函数重载相比，稍微复杂一点。运算符重载是通过创建运算符重载函数来实现的。运算符重载函数可以是在类外定义的普通函数，也可以是类的成员函数或友元函数。  1. 在类外定义的运算符重载函数C++为运算符重载提供了一种方法，即在进行运算符重载时，必须定义一个运算符重载函数，其名字为operator，后随一个要重载的运算符。例如，">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-27T19:35:53+08:00">
-                2019-04-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:53:34+08:00">
+                2019-06-05
               </time>
             
           </span>
@@ -490,20 +490,12 @@
 <p>（9）一般而言，用于类对象的运算符必须重载，但是赋值运算符“ = ”例外，不必用户进行重载。通常情况下，赋值运算符“ = ”可用于同类对象之间的相互赋值。</p>
 <h1 id="2-友元运算符重载函数"><a href="#2-友元运算符重载函数" class="headerlink" title="2. 友元运算符重载函数"></a>2. 友元运算符重载函数</h1><p>运算符重载是通过创建运算符重载函数来实现的，运算符重载函数定义了重载的运算符将要进行的操作。如果运算符重载函数是在类的外部定义的普通函数，这个运算符重载函数只能访问类中的公有数据成员，而不能访问类的私有成员。实际上，类中的数据成员常常是私有成员或保护成员，为此运算符重载函数一般采用如下两种形式定义：一是定义为它将要操作的类的成员函数（简称为成员运算符重载函数）；二是定义为类的友元函数（简称为友元运算符重载函数）。</p>
 <h1 id="2-1-定义友元运算符重载函数的语法形式"><a href="#2-1-定义友元运算符重载函数的语法形式" class="headerlink" title="2.1 定义友元运算符重载函数的语法形式"></a>2.1 定义友元运算符重载函数的语法形式</h1><p>（1）在类的内部，定义友元运算符重载函数的格式如下：</p>
-<p><strong>friend   函数类型   operator运算符（形参表）{</strong></p>
-<p>​    <strong>函数体</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">friend</span> 函数类型 <span class="keyword">operator</span>运算符（形参表）&#123;</span><br><span class="line">	函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>（2）友元运算符重载函数也可以在类中声明友元函数的原型，在类外定义。</p>
 <p>在类中，声明友元运算符重载函数原型的格式如下：</p>
-<p>class X {</p>
-<p>…</p>
-<p>friend   函数类型   operator运算符（形参表）；</p>
-<p>…</p>
-<p>};</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span> &#123;</span></span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">friend</span>   函数类型   <span class="keyword">operator</span>运算符（形参表）；</span><br><span class="line">	...</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
 <p>在类外，定义友元运算符重载函数的格式如下：</p>
-<p>函数类型   operator运算符（形参表）{    </p>
-<p>​        函数体</p>
-<p>}</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">函数类型 <span class="keyword">operator</span>运算符（形参表）&#123;	</span><br><span class="line">	函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意：由于友元运算符重载函数不是该类的成员函数，所以在类外定义时不需要缀上类名。</p>
 <h1 id="2-2-双目运算符重载"><a href="#2-2-双目运算符重载" class="headerlink" title="2.2 双目运算符重载"></a>2.2 双目运算符重载</h1><p>双目运算符（或称二元运算符）有两个操作数，通常在运算符的左右两侧。当用友元函数重载双目运算符时，两个操作数都要传递给运算符重载函数。</p>
 <p>一般而言，如果在类X中采用友元函数重载双目运算符@，而aa和bb是类X的两个对象，则以下两种函数调用方法是等价的：</p>
@@ -526,20 +518,12 @@
 <p>在C++中，可以把运算符重载函数定义成某个类的成员函数，称为成员运算符重载函数。</p>
 </blockquote>
 <h1 id="3-1-定义成员运算符重载函数的语法形式"><a href="#3-1-定义成员运算符重载函数的语法形式" class="headerlink" title="3.1 定义成员运算符重载函数的语法形式"></a>3.1 定义成员运算符重载函数的语法形式</h1><p>（1）在类的内部，定义成员运算符重载函数的格式如下：</p>
-<p><strong>函数类型   operator 运算符（形参表）{</strong></p>
-<p>​        <strong>函数体</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">函数类型 <span class="keyword">operator</span> 运算符（形参表）&#123;</span><br><span class="line">    函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>（2）成员运算符重载函数也可以在类中声明成员函数的原型，在类外定义。</p>
 <p>在类的内部，声明成员运算符重载函数原型的格式如下：</p>
-<p>class  X {</p>
-<p>​    //…</p>
-<p>​    函数类型  operator运算符（形参表）；</p>
-<p>​    //…</p>
-<p>};</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span>&#123;</span></span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">	函数类型  <span class="keyword">operator</span>运算符（形参表）；</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
 <p>在类外，定义成员函数运算符重载函数的格式如下：</p>
-<p>函数类型   X::operator运算符（形参表）{</p>
-<p>​        函数体</p>
-<p>}</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">函数类型 X::<span class="keyword">operator</span>运算符（形参表）&#123;</span><br><span class="line">	函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意：由于成员运算符重载函数是该类的成员函数，所以在类外定义时需要缀上类名。</p>
 <h1 id="3-2-双目运算符重载"><a href="#3-2-双目运算符重载" class="headerlink" title="3.2 双目运算符重载"></a>3.2 双目运算符重载</h1><p> 对双目运算符而言，成员运算符重载函数的形参表中仅有一个参数，它作为运算符的右操作数。另一个操作数（左操作数）是隐含的，是该类的当前对象，它是通过this指针隐含地传递给函数的。</p>
 <p>一般而言，如果在类X中采用成员函数重载双目运算符@，成员运算符函数operator@所需的一个操作数由对象aa通过this指针隐含地传递，它的另一个操作数bb在参数表中显示，则以下两种函数调用方法是等价的：</p>
@@ -862,7 +846,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 

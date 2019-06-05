@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="未来可期">
 <meta property="og:description" content="派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-24T13:18:10.680Z">
+<meta property="og:updated_time" content="2019-06-05T13:45:30.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++语法10-派生类的构造和析构">
 <meta name="twitter:description" content="派生类继承了基类的成员，实现了原有代码的重用，这仅仅是引入继承的目的之一。引入继承的更主要的目的是代码的扩充，只有在派生类中通过添加新的成员，加入新的功能，类的派生才更有意义。但是基类的构造函数和析构函数不能被继承，在派生类中，如果对派生类新增的成员进行初始化，就需要加入派生类的构造函数。与此同时，对所有从基类继承下来的成员的初始化工作，还是由基类的构造函数完成的，但是我们必须在派生类中对基类的">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T21:18:10+08:00">
-                2019-04-24
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-05T21:45:30+08:00">
+                2019-06-05
               </time>
             
           </span>
@@ -489,9 +489,7 @@
 <p>在派生类中可以根据需要定义自己的析构函数，用来对派生类中的所增加的成员进行清理工作。基类的清理工作仍然由基类的析构函数负责。由于析构函数是不带参数的，在派生系统中是否要自定义析构函数与它所属基类的析构函数无关。在执行派生类的析构函数时，系统会自动调用基类的析构函数，对基类的对象进行清理工作。</p>
 </blockquote>
 <h1 id="2-3-含有对象成员（子对象）的派生类的构造函数"><a href="#2-3-含有对象成员（子对象）的派生类的构造函数" class="headerlink" title="2.3 含有对象成员（子对象）的派生类的构造函数"></a>2.3 含有对象成员（子对象）的派生类的构造函数</h1><p>当派生类中含有内嵌的对象成员（也称子对象）时，其构造函数的一般形式为：</p>
-<p><strong>派生类名（参数总表）：基类名（参数表0），对象成员名1（参数表1），……，对象成员名n（参数表n）</strong>{</p>
-<p>​    <strong>派生类新增成员的初始化语句；</strong></p>
-<p><strong>}</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">派生类名（参数总表）：基类名（参数表<span class="number">0</span>），对象成员名<span class="number">1</span>（参数表<span class="number">1</span>），......，对象成员名n（参数表n）&#123;</span><br><span class="line">	派生类新增成员的初始化语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在定义派生类对象时，构造函数的执行顺序如下：</p>
 <ul>
 <li>调用基类的构造函数，对基类数据成员初始化；</li>
@@ -781,7 +779,7 @@
     
       <span class="post-meta-item-text">全站字数总计&#58;</span>
     
-    <span title="全站字数总计">35.4k</span>
+    <span title="全站字数总计">35.5k</span>
   
 </div>
 
